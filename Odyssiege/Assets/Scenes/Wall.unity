@@ -1023,7 +1023,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38747830b513e456e903764cef1216ea, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
 --- !u!1 &2080247519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,10 +1120,8 @@ SpriteRenderer:
   m_MaskInteraction: 0
 --- !u!61 &2080247523
 BoxCollider2D:
-=======
 --- !u!1001 &2135736551
 Prefab:
->>>>>>> ce2c4fecc723f8563898c7db48543377365253f0
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
