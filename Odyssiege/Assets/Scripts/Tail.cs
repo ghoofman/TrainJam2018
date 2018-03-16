@@ -8,8 +8,10 @@ public class Tail : MonoBehaviour {
 
     Player player;
     public int playerId = 0;
-    private bool ShouldMoveToAngle;
-    private float desiredAngle = 20.0f;
+    private const float minAngle = 20.0f;
+    private float desiredAngle = 0.0f;
+    private const float maxAngle = 80.0f;
+    private float maxAngleDelta = 2.0f;
 
     // Use this for initialization
     void Start () {
@@ -19,44 +21,53 @@ public class Tail : MonoBehaviour {
     void Awake()
     {
         player = ReInput.players.GetPlayer(playerId);
+        gameObject.GetComponent<Rigidbody2D>().MoveRotation(minAngle);
     }
 
     // Update is called once per frame
     void Update () {
+        float tailAngle = player.GetAxis("TailAngle");
+        desiredAngle = minAngle + (tailAngle * maxAngle);
+        RotateTowards(desiredAngle);
+
         if (Input.GetKeyUp(KeyCode.K))
         {
             Debug.Log("Adding K");
-            ShouldMoveToAngle = true;
         }
+    }
 
-        if (player.GetButtonDown("Fire"))
+    private void RotateTowards(float desiredAngle)
+    {
+        var angleDelta = desiredAngle - gameObject.GetComponent<Rigidbody2D>().rotation;
+        var realAngleDelta = 0.0f;
+        if (Mathf.Abs(angleDelta) < maxAngleDelta)
         {
-            Debug.Log("Adding L");
-        }
-
-        if (ShouldMoveToAngle == true)
+            realAngleDelta = angleDelta;
+        } else
         {
-            if (ReachedDesiredAngle())
+            if (angleDelta > 0.0f)
             {
-                ShouldMoveToAngle = false;
-            } else
-            {
-                float newAngle = desiredAngle;
-                gameObject.GetComponent<Rigidbody2D>().MoveRotation(newAngle);
+                realAngleDelta = maxAngleDelta;
             }
+            else
+            {
+                realAngleDelta = maxAngleDelta * -1.0f;
+            }
+
         }
+
+        float actualNewRotation = gameObject.GetComponent<Rigidbody2D>().rotation + realAngleDelta;
+        gameObject.GetComponent<Rigidbody2D>().MoveRotation(actualNewRotation);
     }
 
     private bool ReachedDesiredAngle()
     {
-
         if (gameObject.GetComponent<Rigidbody2D>().rotation - desiredAngle < 1.0f)
         {
-            Debug.Log("Hit max");
+            Debug.Log("Hit desired");
             return true;
         }
 
-        Debug.Log("gameObject.GetComponent<Rigidbody2D>().rotation" + gameObject.GetComponent<Rigidbody2D>().rotation);
         return false;
     }
 }
