@@ -19,6 +19,8 @@ public class SpeedCollisionHandler : MonoBehaviour {
 	[Tooltip("Destroy the game object on collision")]
 	public bool DestroyOnCollide = false;
 
+	public float AppliedForce = 1000.0f;
+
 	private float cooldownTime = 0.0f;
 
 	// Use this for initialization
@@ -61,6 +63,7 @@ public class SpeedCollisionHandler : MonoBehaviour {
 				if (OnImpact != null) {
 					Debug.Log("Impact " + OnImpact.GetPersistentEventCount());
 					OnImpact.Invoke (contact.point);
+					contact.rigidbody.AddForce (new Vector2 (AppliedForce, 0));
 				}
 
 				if (DestroyOnCollide) {
