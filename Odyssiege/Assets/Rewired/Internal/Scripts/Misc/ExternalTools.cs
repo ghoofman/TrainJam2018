@@ -70,15 +70,6 @@ namespace Rewired.Utils {
             return null;
 #endif
         }
-        
-        public string GetFocusedEditorWindowTitle() {
-#if UNITY_EDITOR
-            UnityEditor.EditorWindow window = UnityEditor.EditorWindow.focusedWindow;
-            return window != null ? window.title : string.Empty;
-#else
-            return string.Empty;
-#endif
-        }
 
         // Linux Tools
 #if UNITY_5_PLUS && UNITY_STANDALONE_LINUX
@@ -422,38 +413,6 @@ namespace Rewired.Utils {
         public void UnityUI_Graphic_SetRaycastTarget(object graphic, bool value) { }
 #endif
 
-        #endregion
-        
-        #region Touch
-        
-        public bool UnityInput_IsTouchPressureSupported {
-          get {
-#if UNITY_5_3_PLUS
-              return UnityEngine.Input.touchPressureSupported;
-#else
-              return false;
-#endif
-          }
-        }
-        
-        public float UnityInput_GetTouchPressure(ref UnityEngine.Touch touch) {
-#if UNITY_5_3_PLUS
-            return touch.pressure;
-#else
-            return touch.phase != UnityEngine.TouchPhase.Ended &&
-                touch.phase != UnityEngine.TouchPhase.Canceled
-                ? 1.0f : 0.0f;
-#endif
-        }
-        
-        public float UnityInput_GetTouchMaximumPossiblePressure(ref UnityEngine.Touch touch) {
-#if UNITY_5_3_PLUS
-            return touch.maximumPossiblePressure;
-#else
-            return 1.0f;
-#endif
-        }
-        
         #endregion
     }
 }

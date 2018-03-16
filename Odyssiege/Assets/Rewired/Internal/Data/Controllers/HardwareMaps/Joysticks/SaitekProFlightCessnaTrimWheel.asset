@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: 079e4f58-557a-4013-94b6-4c5f97853ad5
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 19000000
   elementIdentifiers:
   - _id: 0
     _name: Wheel

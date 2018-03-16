@@ -42,116 +42,78 @@ MonoBehaviour:
     _compoundElementType: 0
   - _id: 4
     _name: Action Bottom Row 1
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 5
     _name: Action Bottom Row 2
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 6
     _name: Action Bottom Row 3
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 7
     _name: Action Top Row 1
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 8
     _name: Action Top Row 2
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 9
     _name: Action Top Row 3
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 10
     _name: Left Shoulder 1
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 11
     _name: Left Shoulder 2
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 12
     _name: Right Shoulder 1
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 13
     _name: Right Shoulder 2
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 14
     _name: Center 1
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 15
     _name: Center 2
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 16
     _name: Center 3
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 17
     _name: Left Stick Button
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 18
     _name: Right Stick Button
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 19
     _name: D-Pad Up
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 20
     _name: D-Pad Right
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 21
     _name: D-Pad Down
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   - _id: 22
     _name: D-Pad Left
-    _positiveName: 
-    _negativeName: 
     _elementType: 1
     _compoundElementType: 0
   joysticks:
@@ -257,6 +219,11 @@ MonoBehaviour:
       sourceAxisPole: 0
     - templateId: 11
       joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 13
+      joystickId: 5
       joystickId2: 0
       splitAxis: 0
       sourceAxisPole: 0

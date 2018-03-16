@@ -18,7 +18,6 @@ MonoBehaviour:
   templateGuids:
   - 104e31d8-9115-4dd5-a398-2e54d35e6c83
   hideInLists: 0
-  joystickTypes: 2a000000
   elementIdentifiers:
   - _id: 0
     _name: Analog Stick

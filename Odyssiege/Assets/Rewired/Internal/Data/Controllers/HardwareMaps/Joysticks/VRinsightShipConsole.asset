@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: b72e350d-7180-4397-bcae-2ba898bc3857
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 78000000
   elementIdentifiers:
   - _id: 0
     _name: Steering Lever

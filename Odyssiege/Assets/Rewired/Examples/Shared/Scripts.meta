@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 4331d9a5d138362489b6525fca393d20
-labels:
-- Input
-- Joysticks
-- Controllers
-- Rewired
-- Hotplugging
-- Keyboard
-- Mouse
-- Touch
+guid: 87a8219fe7582a143bc61fe49e637fa6
 folderAsset: yes
+timeCreated: 1503612691
+licenseType: Free
 DefaultImporter:
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

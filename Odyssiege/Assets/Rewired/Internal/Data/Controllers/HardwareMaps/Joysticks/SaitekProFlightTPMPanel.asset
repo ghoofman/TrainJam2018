@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: 7154dfcd-0926-4228-93c6-ff9a151b8985
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 14000000
   elementIdentifiers:
   - _id: 0
     _name: Throttle

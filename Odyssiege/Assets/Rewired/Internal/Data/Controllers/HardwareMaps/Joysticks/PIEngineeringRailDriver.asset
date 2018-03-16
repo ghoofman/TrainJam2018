@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: e2095ed1-2809-4c9e-aa2b-c17c8d33b90e
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 79000000
   elementIdentifiers:
   - _id: 0
     _name: Lever 1
