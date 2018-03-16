@@ -33,6 +33,8 @@ namespace Destructible2D
 		[Tooltip("Should the source get spawned in Start?")]
 		public bool SpawnInStart;
 
+		public bool DestroyOnCollide = false;
+
 		public void SpawnAt(Collision2D collision)
 		{
 			if (Prefab != null && isActiveAndEnabled == true)
@@ -44,16 +46,19 @@ namespace Destructible2D
 					Instantiate(Prefab, contacts[i].point, transform.rotation);
 				}
 			}
-			Destroy (gameObject);
+			if(DestroyOnCollide)
+				Destroy (gameObject);
 		}
 
 		public void SpawnAt(Vector2 position)
 		{
-			if (Prefab != null && isActiveAndEnabled == true)
+			if (Prefab != null)
 			{
+				Debug.Log ("SPAWN at: " + position.x + ", " + position.y);
 				Instantiate(Prefab, position, transform.rotation);
 			}
-			Destroy (gameObject);
+			if(DestroyOnCollide)
+				Destroy (gameObject);
 		}
 
 		public void SpawnAt(Vector3 position)
@@ -62,7 +67,8 @@ namespace Destructible2D
 			{
 				Instantiate(Prefab, position, transform.rotation);
 			}
-			Destroy (gameObject);
+			if(DestroyOnCollide)
+				Destroy (gameObject);
 		}
 
 		public void Spawn()
@@ -71,7 +77,8 @@ namespace Destructible2D
 			{
 				Instantiate(Prefab, transform.position, transform.rotation);
 			}
-			Destroy (gameObject);
+			if(DestroyOnCollide)
+				Destroy (gameObject);
 		}
 
 		protected virtual void Start()

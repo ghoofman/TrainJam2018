@@ -55,6 +55,9 @@ namespace Destructible2D
 	[AddComponentMenu(D2dHelper.ComponentMenuPrefix + "Collision Handler")]
 	public class D2dCollisionHandler : MonoBehaviour
 	{
+		[Tooltip("Amount of speed required to explode")]
+		public float SpeedRequiredToExplode = 5.0f;
+
 		[Tooltip("Output debug information about collisions?")]
 		public bool DebugCollisions;
 		
@@ -81,26 +84,30 @@ namespace Destructible2D
 		
 		public D2dVector2Event OnImpact;
 
-		private float cooldownTime;
+		private float cooldownTime = 0.0f;
+
+
+		protected virtual void Update() {
+			if (cooldownTime > 0.0f)
+			{
+				cooldownTime -= Time.deltaTime;
+				return;
+			}
+		}
 
 		protected virtual void OnCollisionEnter2D(Collision2D collision)
 		{
+			if (collision.relativeVelocity.magnitude < SpeedRequiredToExplode || cooldownTime > 0.0f) {
+				return;
+			}
+			Debug.Log("Rel Vel: " + collision.relativeVelocity.magnitude + " > " + SpeedRequiredToExplode);
+
 			if (DebugCollisions == true)
 			{
 				Debug.Log(name + " hit " + collision.collider.name + " for " + collision.relativeVelocity.magnitude);
 			}
 
-			if (ImpactDelay > 0.0f)
-			{
-				if (Time.time >= cooldownTime)
-				{
-					cooldownTime = Time.time + ImpactDelay;
-				}
-				else
-				{
-					return;
-				}
-			}
+			cooldownTime = ImpactDelay;
 
 			var collisionMask = 1 << collision.collider.gameObject.layer;
 
@@ -113,25 +120,9 @@ namespace Destructible2D
 					var contact = contacts[i];
 					var impact  = collision.relativeVelocity.magnitude;
 
-					if (impact >= ImpactThreshold)
-					{
-						if (DamageOnImpact == true)
-						{
-							if (DamageDestructible == null) DamageDestructible = GetComponentInChildren<D2dDestructible>();
+					if (OnImpact != null) 
+						OnImpact.Invoke(contact.point);
 
-							if (DamageDestructible != null)
-							{
-								DamageDestructible.Damage += impact * DamageScale;
-							}
-						}
-
-						if (OnImpact != null) OnImpact.Invoke(contact.point);
-
-						if (UseFirstOnly == true)
-						{
-							break;
-						}
-					}
 				}
 			}
 		}

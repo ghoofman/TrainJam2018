@@ -190,7 +190,7 @@ MonoBehaviour:
   Raycast: 1
   RaycastRadius: 1
   RaycastCount: 32
-  ForcePerRay: 20
+  ForcePerRay: 1
   DamagePerRay: 1
 --- !u!114 &11449438
 MonoBehaviour:

@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 50216232649627458}
   - component: {fileID: 82702232172457900}
   - component: {fileID: 114590657615273674}
-  - component: {fileID: 114276957646725326}
   - component: {fileID: 114572960377451114}
-  - component: {fileID: 114582428000406760}
+  - component: {fileID: 114695681522077522}
+  - component: {fileID: 114007569418190356}
   m_Layer: 0
   m_Name: Mace (immortal)
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945335629530684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.31, y: 3.92, z: 0}
+  m_LocalPosition: {x: -6.5465145, y: 2.9533343, z: 0}
   m_LocalScale: {x: 0.18551761, y: 0.18551762, z: 0.37103525}
   m_Children: []
   m_Father: {fileID: 0}
@@ -181,7 +181,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114276957646725326
+--- !u!114 &114007569418190356
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -189,19 +189,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1945335629530684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 438b16ff95d7cbe44a762bfd4951bdcd, type: 3}
+  m_Script: {fileID: 11500000, guid: b178041e445d14c988292b759aa826fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugCollisions: 0
-  ImpactMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  ImpactThreshold: 1
-  ImpactDelay: 0
-  DamageOnImpact: 0
-  DamageDestructible: {fileID: 0}
-  DamageScale: 1
-  UseFirstOnly: 1
+  SpeedRequiredToExplode: 5
+  ImpactDelay: 1
   OnImpact:
     m_PersistentCalls:
       m_Calls:
@@ -218,6 +210,10 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Destructible2D.D2dVector2Event, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  ImpactMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  DestroyOnCollide: 1
 --- !u!114 &114572960377451114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,17 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 100000, guid: 092aeef3857c50f41ada30e877c781cd, type: 2}
   SpawnInStart: 0
---- !u!114 &114582428000406760
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945335629530684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9ff72d1175a14c699b31cbba9e69e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  DestroyOnCollide: 0
 --- !u!114 &114590657615273674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,6 +243,17 @@ MonoBehaviour:
   PitchMax: 1.1
   Clips:
   - {fileID: 8300000, guid: b1b589847e8b41c4786927022e3e3428, type: 3}
+--- !u!114 &114695681522077522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945335629530684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ff72d1175a14c699b31cbba9e69e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212721712833458338
 SpriteRenderer:
   m_ObjectHideFlags: 1

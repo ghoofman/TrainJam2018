@@ -15,26 +15,29 @@ public class TurretMover : MonoBehaviour {
 		var speed = 1000.0f;
 
 		var rigid = gameObject.GetComponent<Rigidbody2D> ();
+
+		var moveForce = new Vector2 ();
+
 		/* This will get removed, only used for testing */
 		if (Input.GetKey (KeyCode.W)) {
-			rigid.AddForce (new Vector2 (0, speed * Time.deltaTime));
-			//transform.Translate (new Vector3 (0, 1.0f * Time.deltaTime, 0));
+			moveForce.y += 1;
 		}
 
 		if (Input.GetKey (KeyCode.S)) {
-			rigid.AddForce (new Vector2 (0, -speed * Time.deltaTime));
-			//transform.Translate (new Vector3 (0, -1.0f * Time.deltaTime, 0));
+			moveForce.y -= 1;
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
-			rigid.AddForce (new Vector2 (speed * Time.deltaTime, 0));
-			//transform.Translate (new Vector3 (1.0f * Time.deltaTime, 0, 0));
+			moveForce.x += 1;
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
-			rigid.AddForce (new Vector2 (-speed * Time.deltaTime, 0));
-			//transform.Translate (new Vector3 (-1.0f * Time.deltaTime, 0, 0));
+			moveForce.x -= 1;
 		}
+
+		moveForce.Normalize ();
+
+		rigid.AddForce (moveForce * speed * Time.deltaTime);
 
 		if (Input.GetKey (KeyCode.Q)) {
 			transform.Rotate (new Vector3 (0, 0, -45.0f * Time.deltaTime));
