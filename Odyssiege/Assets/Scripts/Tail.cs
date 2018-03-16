@@ -1,33 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
+using Rewired;
+using System;
 
 public class Tail : MonoBehaviour {
-	float mass = 1.0f;
 
-	// Use this for initialization
-	void Start () {
+    Player player;
+    public int playerId = 0;
+    private bool ShouldMoveToAngle;
+    private float desiredAngle = 20.0f;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    void Awake()
+    {
+        player = ReInput.players.GetPlayer(playerId);
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (Input.GetKeyUp(KeyCode.K))
         {
             Debug.Log("Adding K");
-            gameObject.GetComponent<Rigidbody2D>().AddTorque(100.0f);
-		}
-		if (Input.GetKeyUp(KeyCode.M))
-		{
-			mass += 1.0f;
-			gameObject.GetComponent<Rigidbody2D> ().mass = mass;
-		}
-		if (Input.GetKeyUp(KeyCode.N))
-		{
-			mass -= 1.0f;
-			gameObject.GetComponent<Rigidbody2D> ().mass = mass;
-		}
-		
-	}
+            ShouldMoveToAngle = true;
+        }
+
+        if (player.GetButtonDown("Fire"))
+        {
+            Debug.Log("Adding L");
+        }
+
+        if (ShouldMoveToAngle == true)
+        {
+            if (ReachedDesiredAngle())
+            {
+                ShouldMoveToAngle = false;
+            } else
+            {
+                float newAngle = desiredAngle;
+                gameObject.GetComponent<Rigidbody2D>().MoveRotation(newAngle);
+            }
+        }
+    }
+
+    private bool ReachedDesiredAngle()
+    {
+        Debug.Log("gameObject.GetComponent<Rigidbody2D>(): ", gameObject.GetComponent<Rigidbody2D>());
+
+        if (gameObject.GetComponent<Rigidbody2D>().rotation == desiredAngle)
+        {
+            Debug.Log("Hit max");
+            return true;
+        }
+
+        return false;
+    }
 }
