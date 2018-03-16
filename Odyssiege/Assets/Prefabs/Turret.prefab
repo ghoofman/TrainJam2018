@@ -93,6 +93,9 @@ MonoBehaviour:
   Thickness: 0.25
   Hardness: 1
   StampTex: {fileID: 2800000, guid: 340ea8767b1fa3d45bf25912ab89e80c, type: 3}
+  destructPerFrame: 4
+  laserDistLength: 10
+  laserTime: 0.25
 --- !u!120 &120099505936368462
 LineRenderer:
   m_ObjectHideFlags: 1

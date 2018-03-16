@@ -12,21 +12,28 @@ public class TurretMover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		var speed = 1000.0f;
+
+		var rigid = gameObject.GetComponent<Rigidbody2D> ();
 		/* This will get removed, only used for testing */
 		if (Input.GetKey (KeyCode.W)) {
-			transform.Translate (new Vector3 (0, 1.0f * Time.deltaTime, 0));
+			rigid.AddForce (new Vector2 (0, speed * Time.deltaTime));
+			//transform.Translate (new Vector3 (0, 1.0f * Time.deltaTime, 0));
 		}
 
 		if (Input.GetKey (KeyCode.S)) {
-			transform.Translate (new Vector3 (0, -1.0f * Time.deltaTime, 0));
+			rigid.AddForce (new Vector2 (0, -speed * Time.deltaTime));
+			//transform.Translate (new Vector3 (0, -1.0f * Time.deltaTime, 0));
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
-			transform.Translate (new Vector3 (1.0f * Time.deltaTime, 0, 0));
+			rigid.AddForce (new Vector2 (speed * Time.deltaTime, 0));
+			//transform.Translate (new Vector3 (1.0f * Time.deltaTime, 0, 0));
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
-			transform.Translate (new Vector3 (-1.0f * Time.deltaTime, 0, 0));
+			rigid.AddForce (new Vector2 (-speed * Time.deltaTime, 0));
+			//transform.Translate (new Vector3 (-1.0f * Time.deltaTime, 0, 0));
 		}
 
 		if (Input.GetKey (KeyCode.Q)) {
