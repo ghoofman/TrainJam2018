@@ -56,6 +56,7 @@ public class BombArrow : MonoBehaviour {
 
 			contactPoint = contacts[0].point;
 			collidedWith = contacts [0].rigidbody;
+			gameObject.transform.SetParent(collidedWith.transform);
 		}
 	}
 }
