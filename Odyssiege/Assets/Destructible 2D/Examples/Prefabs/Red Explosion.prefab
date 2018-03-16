@@ -183,8 +183,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   Stamp: 1
-  StampTex: {fileID: 2800000, guid: 31fbfa5dbe879504b9ff7cd4a5e1cad3, type: 3}
-  StampSize: {x: 2, y: 2}
+  StampTex: {fileID: 2800000, guid: 77d9f6ad633cc4c9c8f93dda248966bf, type: 3}
+  StampSize: {x: 1, y: 1}
   StampHardness: 1
   StampRandomDirection: 1
   Raycast: 1

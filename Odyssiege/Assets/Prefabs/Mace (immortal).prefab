@@ -214,6 +214,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   DestroyOnCollide: 1
+  AppliedForce: 1000
+  MaxLifeTime: 2
 --- !u!114 &114572960377451114
 MonoBehaviour:
   m_ObjectHideFlags: 1

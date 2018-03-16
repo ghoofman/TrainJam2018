@@ -23,6 +23,9 @@ public class SpeedCollisionHandler : MonoBehaviour {
 
 	private float cooldownTime = 0.0f;
 
+	public float MaxLifeTime = 2.0f;
+	private float timeAlive = 0.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -34,6 +37,12 @@ public class SpeedCollisionHandler : MonoBehaviour {
 		{
 			cooldownTime -= Time.deltaTime;
 			return;
+		}
+		timeAlive += Time.deltaTime;
+		if (timeAlive > MaxLifeTime) {
+			if (DestroyOnCollide) {
+				Destroy (gameObject);
+			}
 		}
 	}
 
