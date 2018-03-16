@@ -175,6 +175,8 @@ GameObject:
   - component: {fileID: 114859099683637340}
   - component: {fileID: 114640835746315274}
   - component: {fileID: 114831803138281980}
+  - component: {fileID: 114328359952532324}
+  - component: {fileID: 114458878769891332}
   m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
@@ -608,6 +610,41 @@ MonoBehaviour:
   playerId: 0
   xAxis: RightStickX
   yAxis: RightStickY
+--- !u!114 &114328359952532324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942037200134970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b178041e445d14c988292b759aa826fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedRequiredToExplode: 2
+  ImpactDelay: 0
+  OnImpact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114831803138281980}
+        m_MethodName: SpawnAt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dVector2Event, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ImpactMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  DestroyOnCollide: 0
+  AppliedForce: 1000
+  MaxLifeTime: 2
 --- !u!114 &114422262020179146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,6 +661,20 @@ MonoBehaviour:
   minAngle: 20
   maxAngle: 80
   moveDirection: 1
+--- !u!114 &114458878769891332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942037200134970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219c397b38044224ebec4db6a2fd3468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 100000, guid: 092aeef3857c50f41ada30e877c781cd, type: 2}
+  SpawnInStart: 0
+  DestroyOnCollide: 0
 --- !u!114 &114640835746315274
 MonoBehaviour:
   m_ObjectHideFlags: 1
