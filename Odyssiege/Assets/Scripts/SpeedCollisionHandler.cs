@@ -46,7 +46,6 @@ public class SpeedCollisionHandler : MonoBehaviour {
 
 		Debug.Log(name + " hit " + collision.collider.name + " for " + collision.relativeVelocity.magnitude);
 
-
 		cooldownTime = ImpactDelay;
 
 		var collisionMask = 1 << collision.collider.gameObject.layer;
@@ -63,14 +62,13 @@ public class SpeedCollisionHandler : MonoBehaviour {
 				if (OnImpact != null) {
 					Debug.Log("Impact " + OnImpact.GetPersistentEventCount());
 					OnImpact.Invoke (contact.point);
-					contact.rigidbody.AddForce (new Vector2 (AppliedForce, 0));
+					contact.rigidbody.AddForceAtPosition (new Vector2 (AppliedForce, 0), contact.point);
 				}
 
 				if (DestroyOnCollide) {
 					Destroy (gameObject);
 					return;
 				}
-
 			}
 		}
 	}
