@@ -21,12 +21,20 @@ public class TurretMover : MonoBehaviour {
 			transform.Translate (new Vector3 (0, -1.0f * Time.deltaTime, 0));
 		}
 
+		if (Input.GetKey (KeyCode.D)) {
+			transform.Translate (new Vector3 (1.0f * Time.deltaTime, 0, 0));
+		}
+
+		if (Input.GetKey (KeyCode.A)) {
+			transform.Translate (new Vector3 (-1.0f * Time.deltaTime, 0, 0));
+		}
+
 		if (Input.GetKey (KeyCode.Q)) {
-			transform.Rotate (new Vector3 (0, 0, -20.0f * Time.deltaTime));
+			transform.Rotate (new Vector3 (0, 0, -45.0f * Time.deltaTime));
 		}
 
 		if (Input.GetKey (KeyCode.E)) {
-			transform.Rotate (new Vector3 (0, 0, 20.0f * Time.deltaTime));
+			transform.Rotate (new Vector3 (0, 0, 45.0f * Time.deltaTime));
 		}
 	}
 }
