@@ -5,7 +5,7 @@ using Rewired;
 using System;
 
 public class Tail : MonoBehaviour {
-    public string axis = "TailAngle";
+    public string axis = "LT";
     Player player;
     public int playerId = 0;
     public float minAngle = 20.0f;
