@@ -12,6 +12,7 @@ public class Tail : MonoBehaviour {
     private float desiredAngle = 0.0f;
     public float maxAngle = 80.0f;
     private float maxAngleDelta = 2.0f;
+    public float moveDirection = 1.0f;
 
     // Use this for initialization
     void Start () {
@@ -26,8 +27,9 @@ public class Tail : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        float tailAngle = player.GetAxis(axis);
-        desiredAngle = minAngle + (tailAngle * maxAngle);
+        float controllerAngle = player.GetAxis(axis);
+        controllerAngle *= moveDirection;
+        desiredAngle = minAngle + (controllerAngle * maxAngle);
         RotateTowards(desiredAngle);
 
         if (Input.GetKeyUp(KeyCode.K))
@@ -40,7 +42,7 @@ public class Tail : MonoBehaviour {
     {
         var angleDelta = desiredAngle - gameObject.GetComponent<Rigidbody2D>().rotation;
         var realAngleDelta = 0.0f;
-        if (Mathf.Abs(angleDelta) < maxAngleDelta)
+        if (Mathf.Abs(angleDelta) < Mathf.Abs(maxAngleDelta))
         {
             realAngleDelta = angleDelta;
         } else
@@ -62,7 +64,7 @@ public class Tail : MonoBehaviour {
 
     private bool ReachedDesiredAngle()
     {
-        if (gameObject.GetComponent<Rigidbody2D>().rotation - desiredAngle < 1.0f)
+        if (Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().rotation - desiredAngle) < 1.0f)
         {
             Debug.Log("Hit desired");
             return true;
