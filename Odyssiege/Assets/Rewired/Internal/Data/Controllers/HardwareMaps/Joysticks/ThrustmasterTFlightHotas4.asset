@@ -19,7 +19,6 @@ MonoBehaviour:
   - 061a00cf-d8c2-4f8d-8cb5-a15a010bc53e
   - f6fe76f8-be2a-4db2-b853-9e3652075913
   hideInLists: 0
-  joystickTypes: 0a0000000b000000140000001500000017000000
   elementIdentifiers:
   - _id: 0
     _name: Stick X

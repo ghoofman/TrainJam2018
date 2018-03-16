@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: 4c2437d8-438b-400f-bd43-16ba0aadfcc1
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 7b000000
   elementIdentifiers:
   - _id: 0
     _name: Lateral Tilt

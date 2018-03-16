@@ -18,7 +18,6 @@ MonoBehaviour:
   templateGuids:
   - f6fe76f8-be2a-4db2-b853-9e3652075913
   hideInLists: 0
-  joystickTypes: 17000000
   elementIdentifiers:
   - _id: 0
     _name: Left Pedal

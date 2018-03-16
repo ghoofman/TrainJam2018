@@ -164,30 +164,6 @@
             </summary>
             <returns>The duration the axis has been continuously inactive.</returns>
         </member>
-        <member name="M:Rewired.InputActionEventData.GetAxisCoordinateMode">
-            Gets the current coordinate mode of the axis.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            <returns>The axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.InputActionEventData.GetAxisCoordinateModePrev">
-            Gets the coordinate mode of the axis on the previous frame.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            <returns>The axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.InputActionEventData.GetAxisRawCoordinateMode">
-            Gets the current coordinate mode of the raw axis.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            <returns>The raw axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.InputActionEventData.GetAxisRawCoordinateModePrev">
-            Gets the coordinate mode of the raw axis on the previous frame.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            <returns>The raw axis coordinate mode.</returns>
-        </member>
         <member name="M:Rewired.InputActionEventData.GetButton">
             <summary>
             Gets the button held state of an Action. This will return TRUE as long as the button is held.
@@ -215,10 +191,12 @@
             </summary>
             <returns>The button just released state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetButtonSinglePressHold" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetButtonSinglePressDown" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetButtonSinglePressUp" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetButtonDoublePressDown" -->
+        <member name="M:Rewired.InputActionEventData.GetButtonDoublePressDown">
+            <summary>
+            Gets the button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
+            </summary>
+            <returns>The button just pressed state</returns>
+        </member>
         <member name="M:Rewired.InputActionEventData.GetButtonDoublePressDown(System.Single)">
             <summary>
             Gets the button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
@@ -226,21 +204,20 @@
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The button just pressed state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetButtonDoublePressHold" -->
+        <member name="M:Rewired.InputActionEventData.GetButtonDoublePressHold">
+            <summary>
+            Gets the button double pressed and held state of an Action. This will return TRUE after a double press and the button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
+            </summary>
+            <returns>The button held state</returns>
+        </member>
         <member name="M:Rewired.InputActionEventData.GetButtonDoublePressHold(System.Single)">
             <summary>
             Gets the button double pressed and held state of an Action. This will return TRUE after a double press and the button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
             </summary>
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The button held state</returns>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetButtonDoublePressUp" -->
-        <member name="M:Rewired.InputActionEventData.GetButtonDoublePressUp(System.Single)">
-            <summary>
-            Gets the button double pressed and just released state of an Action. This will return TRUE only on the first frame after double press is released.
-            </summary>
-            <param name="speed">Allowed time for a double press in seconds.</param>
-            <returns>The button just released state</returns>
         </member>
         <member name="M:Rewired.InputActionEventData.GetButtonTimedPress(System.Single)">
             <summary>
@@ -412,10 +389,12 @@
             </summary>
             <returns>The negative button just released state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetNegativeButtonSinglePressHold" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetNegativeButtonSinglePressDown" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetNegativeButtonSinglePressUp" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetNegativeButtonDoublePressDown" -->
+        <member name="M:Rewired.InputActionEventData.GetNegativeButtonDoublePressDown">
+            <summary>
+            Gets the negative button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
+            </summary>
+            <returns>The negative button just pressed state</returns>
+        </member>
         <member name="M:Rewired.InputActionEventData.GetNegativeButtonDoublePressDown(System.Single)">
             <summary>
             Gets the negative button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
@@ -423,21 +402,20 @@
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The negative button just pressed state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetNegativeButtonDoublePressHold" -->
+        <member name="M:Rewired.InputActionEventData.GetNegativeButtonDoublePressHold">
+            <summary>
+            Gets the negative button double pressed and held state of an Action. This will return TRUE after a double press and the negative button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
+            </summary>
+            <returns>The negative button held state</returns>
+        </member>
         <member name="M:Rewired.InputActionEventData.GetNegativeButtonDoublePressHold(System.Single)">
             <summary>
             Gets the negative button double pressed and held state of an Action. This will return TRUE after a double press and the negative button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
             </summary>
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The negative button held state</returns>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.InputActionEventData.GetNegativeButtonDoublePressUp" -->
-        <member name="M:Rewired.InputActionEventData.GetNegativeButtonDoublePressUp(System.Single)">
-            <summary>
-            Gets the negative button double pressed and just released state of an Action. This will return TRUE only on the first frame after double press is released.
-            </summary>
-            <param name="speed">Allowed time for a double press in seconds.</param>
-            <returns>The negative button just released state</returns>
         </member>
         <member name="M:Rewired.InputActionEventData.GetNegativeButtonTimedPress(System.Single)">
             <summary>
@@ -1561,36 +1539,6 @@
             The display name of the element in this assignment.
             </summary>
         </member>
-        <member name="T:Rewired.InputActionSourceData">
-            <summary>
-            Provides information about the current sources contributing to the value of an Input Action.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputActionSourceData.controller">
-            <summary>
-            Gets the Controller that contributed to the value of the Action.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputActionSourceData.controllerType">
-            <summary>
-            Gets the type of the Controller that contributed to the value of the Action.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputActionSourceData.controllerMap">
-            <summary>
-            Gets the ControllerMap that contributed to the value of the Action.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputActionSourceData.actionElementMap">
-            <summary>
-            Gets the ActionElementMap that contributed to the value of the Action.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputActionSourceData.elementIdentifierName">
-            <summary>
-            Gets the element identifier name of the element that contributed to the value of the Action.
-            </summary>
-        </member>
         <member name="P:Rewired.ButtonStateRecorder.lastTimeStateChangedToPressed">
             <summary>
             Returns the last time the button state became pressed exactly.
@@ -1621,6 +1569,36 @@
             Only for input sources that get their device connections from within
             </summary>
         </member>
+        <member name="T:Rewired.InputActionSourceData">
+            <summary>
+            Provides information about the current sources contributing to the value of an Input Action.
+            </summary>
+        </member>
+        <member name="P:Rewired.InputActionSourceData.controller">
+            <summary>
+            Gets the Controller that contributed to the value of the Action.
+            </summary>
+        </member>
+        <member name="P:Rewired.InputActionSourceData.controllerType">
+            <summary>
+            Gets the type of the Controller that contributed to the value of the Action.
+            </summary>
+        </member>
+        <member name="P:Rewired.InputActionSourceData.controllerMap">
+            <summary>
+            Gets the ControllerMap that contributed to the value of the Action.
+            </summary>
+        </member>
+        <member name="P:Rewired.InputActionSourceData.actionElementMap">
+            <summary>
+            Gets the ActionElementMap that contributed to the value of the Action.
+            </summary>
+        </member>
+        <member name="P:Rewired.InputActionSourceData.elementIdentifierName">
+            <summary>
+            Gets the element identifier name of the element that contributed to the value of the Action.
+            </summary>
+        </member>
         <member name="P:Rewired.TouchInfo.isValid">
             <summary>
             Does this contain valid touch data?
@@ -1634,28 +1612,6 @@
         <member name="F:Rewired.HardwareControllerMapIdentifier.actualInputPlatform">
             <summary>
             This is the true specific input platform based on the matched map or default map. This does not necessarily match the inputSource or even the platform!
-            </summary>
-        </member>
-        <member name="M:Rewired.ThreadSafeUnityInput.PostInitialize">
-            <summary>
-            Runs after this.Initialize and after Input Manager constructors but before they initialize.
-            </summary>
-        </member>
-        <member name="M:Rewired.ThreadSafeUnityInput.Update">
-            <summary>
-            This should only be called on the main thread.
-            </summary>
-        </member>
-        <member name="T:Rewired.ThreadSafeUnityInput.Keyboard">
-            <summary>
-            Any class that accesses this MUST call Monitor(true) on initialization and Monitor(false) when finished.
-            Monitor acts as a ref count to determine if Unity should be polled.
-            </summary>
-        </member>
-        <member name="T:Rewired.ThreadSafeUnityInput.Mouse">
-            <summary>
-            Any class that accesses this MUST call Monitor(true) on initialization and Monitor(false) when finished.
-            Monitor acts as a ref count to determine if Unity should be polled.
             </summary>
         </member>
         <member name="T:Rewired.UI.UIAnchor">
@@ -3027,42 +2983,6 @@
             <param name="index">Button index</param>
             <returns>Previous button held state</returns>
         </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressHold(System.Int32,System.Single)">
-            <summary>
-            Gets the double press and hold state of the button at the specified index.
-            This will return TRUE after the double press is detected and for as long as the button is held thereafter.
-            </summary>
-            <param name="index">Button index</param>
-            <param name="speed">Double press speed in seconds</param>
-            <returns>Button double press and hold state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressDown(System.Int32,System.Single)">
-            <summary>
-            Gets the double press down state of the button at the specified index.
-            This will return TRUE only on the first frame the double press is detected.
-            </summary>
-            <param name="index">Button index</param>
-            <param name="speed">Double press speed in seconds</param>
-            <returns>Button double press down state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressHold(System.Int32)">
-            <summary>
-            Gets the double press and hold state of the button at the specified index.
-            This will return TRUE after the double press is detected and for as long as the button is held thereafter.
-            This will use the default double press speed.
-            </summary>
-            <param name="index">Button index</param>
-            <returns>Button double press and hold state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressDown(System.Int32)">
-            <summary>
-            Gets the double press down state of the button at the specified index.
-            This will return TRUE only on the first frame the double press is detected.
-            This will use the default double press speed.
-            </summary>
-            <param name="index">Button index</param>
-            <returns>Button double press down state</returns>
-        </member>
         <member name="M:Rewired.Controller.GetButtonTimePressed(System.Int32)">
             <summary>
             Gets the length of time the button at index has been active.
@@ -3131,106 +3051,6 @@
             </summary>
             <returns>Button changed state</returns>
         </member>
-        <member name="M:Rewired.Controller.GetButtonById(System.Int32)">
-            <summary>
-            Gets the button held state of the hardware button at the specified element identifier id. This will return TRUE as long as the button is held.
-            This does not take into acount any controller mapping or Actions -- this is the unmapped physical button value only.
-            Use the Player class to get button values mapped to Actions.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Button held state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDownById(System.Int32)">
-            <summary>
-            Gets the button just pressed state of the hardware button at the specified element identifier id. This will only return TRUE only on the first frame the button is pressed
-            This does not take into acount any controller mapping or Actions -- this is the unmapped physical button value only.
-            Use the Player class to get button values mapped to Actions.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Button just pressed state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonUpById(System.Int32)">
-            <summary>
-            Gets the button just released state of the hardware button at the specified element identifier id. This will only return TRUE only on the first frame the button is released
-            This does not take into acount any controller mapping or Actions -- this is the unmapped physical button value only.
-            Use the Player class to get button values mapped to Actions.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Button just released state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressHoldById(System.Int32,System.Single)">
-            <summary>
-            Gets the double press and hold state of the button at the specified element identifier id.
-            This will return TRUE after the double press is detected and for as long as the button is held thereafter.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <param name="speed">Double press speed in seconds</param>
-            <returns>Button double press and hold state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressDownById(System.Int32,System.Single)">
-            <summary>
-            Gets the double press down state of the button at the specified element identifier id.
-            This will return TRUE only on the first frame the double press is detected.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <param name="speed">Double press speed in seconds</param>
-            <returns>Button double press down state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressHoldById(System.Int32)">
-            <summary>
-            Gets the double press and hold state of the button at the specified element identifier id.
-            This will return TRUE after the double press is detected and for as long as the button is held thereafter.
-            This will use the default double press speed.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Button double press and hold state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonDoublePressDownById(System.Int32)">
-            <summary>
-            Gets the double press down state of the button at the specified element identifier id.
-            This will return TRUE only on the first frame the double press is detected.
-            This will use the default double press speed.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Button double press down state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonPrevById(System.Int32)">
-            <summary>
-            Gets the previous button held state of the hardware button at the specified element identifier id. This will return TRUE if the button was held in the previous frame.
-            This does not take into acount any controller mapping or Actions -- this is the unmapped physical button value only.
-            Use the Player class to get button values mapped to Actions.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Previous button held state</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonTimePressedById(System.Int32)">
-            <summary>
-            Gets the length of time the button with the element identifier id has been active.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Time in seconds</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonTimeUnpressedById(System.Int32)">
-            <summary>
-            Gets the length of time the button with the element identifier id has been inactive.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Time in seconds</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonLastTimePressedById(System.Int32)">
-            <summary>
-            Gets the last timestamp the button with the element identifier id was active.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Timestamp</returns>
-        </member>
-        <member name="M:Rewired.Controller.GetButtonLastTimeUnpressedById(System.Int32)">
-            <summary>
-            Gets the last timestamp the button with the element identifier id was inactive.
-            </summary>
-            <param name="elementIdentifierId">Element identifier id</param>
-            <returns>Timestamp</returns>
-        </member>
         <member name="M:Rewired.Controller.GetLastTimeActive">
             <summary>
             Gets the last timestamp any button was active.
@@ -3248,14 +3068,14 @@
         </member>
         <member name="M:Rewired.Controller.GetLastTimeAnyElementChanged">
             <summary>
-            Gets the last timestamp any element changed state.
+            Gets the last timestamp any button changed state.
             NOTE: If comparing time against current time, always compare to ReInput.time.unscaledTime.
             </summary>
             <returns>Timestamp</returns>
         </member>
         <member name="M:Rewired.Controller.GetLastTimeAnyElementChanged(System.Boolean)">
             <summary>
-            Gets the last timestamp any element changed state.
+            Gets the last timestamp any button changed state.
             NOTE: If comparing time against current time, always compare to ReInput.time.unscaledTime.
             <param name="useRawValues">Use raw axis values</param>
             </summary>
@@ -3540,11 +3360,6 @@
             <summary>
             Gets the last time the button changed state.
             NOTE: If comparing time against current time, always compare to ReInput.time.unscaledTime.
-            </summary>
-        </member>
-        <member name="P:Rewired.Controller.Button.state">
-            <summary>
-            Gets the button state flags.
             </summary>
         </member>
         <member name="T:Rewired.Controller.CompoundElement">
@@ -3839,14 +3654,14 @@
         </member>
         <member name="M:Rewired.ControllerWithAxes.GetLastTimeAnyElementChanged">
             <summary>
-            Gets the last timestamp any element changed state.
+            Gets the last timestamp any axis changed state.
             NOTE: If comparing time against current time, always compare to ReInput.time.unscaledTime.
             </summary>
             <returns>Timestamp</returns>
         </member>
         <member name="M:Rewired.ControllerWithAxes.GetLastTimeAnyElementChanged(System.Boolean)">
             <summary>
-            Gets the last timestamp any element changed state.
+            Gets the last timestamp any axis changed state.
             NOTE: If comparing time against current time, always compare to ReInput.time.unscaledTime.
             <param name="useRawValues">Use raw axis values</param>
             </summary>
@@ -4564,13 +4379,6 @@
             A joystick with buttons and axes.
             </summary>
         </member>
-        <member name="M:Rewired.Joystick.IsType(Rewired.JoystickType)">
-            <summary>
-            Checks whether this Joystick matches a specific type.
-            </summary>
-            <param name="joystickType">The Joystick type to match.</param>
-            <returns>True if the type matches, false if it does not.</returns>
-        </member>
         <member name="M:Rewired.Joystick.GetCalibrationMapSaveData">
             <summary>
             Gets calibration map save data from this joystick.
@@ -4635,11 +4443,6 @@
         <member name="M:Rewired.Joystick.StopVibration">
             <summary>
             Stops vibration on all motors.
-            </summary>
-        </member>
-        <member name="P:Rewired.Joystick.joystickTypes">
-            <summary>
-            The joystick types that apply to this Joystick. A Joystick may have more than one Joystick Type.
             </summary>
         </member>
         <member name="P:Rewired.Joystick.systemId">
@@ -4782,66 +4585,6 @@
             Configuration variables for the Input Manager.
             </summary>
             <exclude></exclude>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVar_disableKeyboard">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVar_ignoreInputWhenAppNotInFocus">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVar_useEnhancedDeviceSupport">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVar_useNativeMouse">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVar_useNativeKeyboard">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVar_joystickRefreshRate">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.SetPlatformVar_ignoreInputWhenAppNotInFocus(System.Boolean)">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.SetPlatformVar_useEnhancedDeviceSupport(System.Boolean)">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.SetPlatformVar_useNativeMouse(System.Boolean)">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.SetPlatformVar_useNativeKeyboard(System.Boolean)">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.SetPlatformVar_joystickRefreshRate(System.Int32)">
-            <summary>
-            Runtime only!
-            </summary>
-        </member>
-        <member name="M:Rewired.Data.ConfigVars.GetPlatformVars">
-            <summary>
-            Runtime only!
-            </summary>
         </member>
         <member name="T:Rewired.Data.ConfigVars.PlatformVars">
             <summary>
@@ -5304,6 +5047,9 @@
         <member name="T:Rewired.Data.Mapping.HardwareAxisType">
             <exclude></exclude>
         </member>
+        <member name="T:Rewired.Data.Mapping.AxisDataFormat">
+            <exclude></exclude>
+        </member>
         <member name="T:Rewired.Data.Mapping.AxisCalibrationType">
             <exclude></exclude>
         </member>
@@ -5573,34 +5319,9 @@
             The type of axis.
             </summary>
         </member>
-        <member name="F:Rewired.AxisType.None">
-            <summary>
-            Not an axis.
-            </summary>
-        </member>
-        <member name="F:Rewired.AxisType.Normal">
-            <summary>
-            A full axis with both positive and negative sides.
-            </summary>
-        </member>
-        <member name="F:Rewired.AxisType.Split">
-            <summary>
-            One half of an axis with only a positive or negative side.
-            </summary>
-        </member>
         <member name="T:Rewired.Pole">
             <summary>
             A positive or negative value.
-            </summary>
-        </member>
-        <member name="F:Rewired.Pole.Positive">
-            <summary>
-            Positive value.
-            </summary>
-        </member>
-        <member name="F:Rewired.Pole.Negative">
-            <summary>
-            Negative value.
             </summary>
         </member>
         <member name="T:Rewired.AxisRange">
@@ -5608,59 +5329,9 @@
             The range of an axis.
             </summary>
         </member>
-        <member name="F:Rewired.AxisRange.Full">
-            <summary>
-            A complete axis with both positive and negative sides.
-            </summary>
-        </member>
-        <member name="F:Rewired.AxisRange.Positive">
-            <summary>
-            Only the positive side of the axis.
-            </summary>
-        </member>
-        <member name="F:Rewired.AxisRange.Negative">
-            <summary>
-            Only the negative side of the axis.
-            </summary>
-        </member>
-        <member name="T:Rewired.AxisCoordinateMode">
-            <summary>
-            The axis coordinate mode.
-            </summary>
-        </member>
-        <member name="F:Rewired.AxisCoordinateMode.Absolute">
-            <summary>
-            Represents the position of the axis in relation to a fixed point.
-            </summary>
-        </member>
-        <member name="F:Rewired.AxisCoordinateMode.Relative">
-            <summary>
-            Represents the change in position of the axis since the last time the value was retreived.
-            </summary>
-        </member>
         <member name="T:Rewired.ControllerType">
             <summary>
             The type of a controller.
-            </summary>
-        </member>
-        <member name="F:Rewired.ControllerType.Keyboard">
-            <summary>
-            A keyboard.
-            </summary>
-        </member>
-        <member name="F:Rewired.ControllerType.Mouse">
-            <summary>
-            A mouse.
-            </summary>
-        </member>
-        <member name="F:Rewired.ControllerType.Joystick">
-            <summary>
-            A joystick.
-            </summary>
-        </member>
-        <member name="F:Rewired.ControllerType.Custom">
-            <summary>
-            A Custom Controller.
             </summary>
         </member>
         <member name="T:Rewired.ControllerElementType">
@@ -5688,7 +5359,12 @@
             Unity update loop type.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:Rewired.InputActionEventType" -->
+        <member name="T:Rewired.InputActionEventType">
+            <summary>
+            Input action events. When using event based input, this is used to specify when to send an event.
+            Values in this enum should not be serialized as integers because they are subject to change as new events are added.
+            </summary>
+        </member>
         <member name="F:Rewired.InputActionEventType.Update">
             <summary>
             Event fires every time input is updated.
@@ -5718,14 +5394,14 @@
             <summary>
             Event fires when a button is double pressed and every frame that it is held afterwards.
             Accepts optional arguments: speed [float]
-            If no arguments are passed, <see cref="P:Rewired.InputBehavior.buttonDoublePressSpeed"/> will be used.
+            If no arguments are passed, InputBehavior.buttonDoublePressSpeed will be used.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonJustDoublePressed">
             <summary>
             Event fires only on the first frame a button is double pressed.
             Accepts optional arguments: speed [float]
-            If no arguments are passed, <see cref="P:Rewired.InputBehavior.buttonDoublePressSpeed"/> will be used.
+            If no arguments are passed, InputBehavior.buttonDoublePressSpeed will be used.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonPressedForTime">
@@ -5752,42 +5428,42 @@
             <summary>
             Event fires when a button has been pressed for a specific time period and every frame that it is held afterwards.
             The button short press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.ButtonPressedForTime">ButtonPressedForTime</see> instead.
+            For a custom duration, use ButtonPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonJustShortPressed">
             <summary>
             Event fires only on the frame that a button has been pressed for a specific time period.
             The button short press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.ButtonJustPressedForTime">ButtonJustPressedForTime</see> instead.
+            For a custom duration, use ButtonJustPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonShortPressJustReleased">
             <summary>
             Event fires only on the frame that a button that has been pressed for a specific time period is released.
             The button short press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="!:InputActionEventType.ButtonJustPressedForTimeAndReleased">ButtonJustPressedForTimeAndReleased</see> instead.
+            For a custom duration, use ButtonJustPressedForTimeAndReleased instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonLongPressed">
             <summary>
             Event fires when a button has been pressed for a specific time period and every frame that it is held afterwards.
             The button long press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.ButtonPressedForTime">ButtonPressedForTime</see> instead.
+            For a custom duration, use ButtonPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonJustLongPressed">
             <summary>
             Event fires only on the frame that a button has been pressed for a specific time period.
             The button long press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.ButtonJustPressedForTime">ButtonJustPressedForTime</see> instead.
+            For a custom duration, use ButtonJustPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonLongPressJustReleased">
             <summary>
             Event fires only on the frame that a button that has been pressed for a specific time period is released.
             The button long press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="!:InputActionEventType.ButtonJustPressedForTimeAndReleased">ButtonJustPressedForTimeAndReleased</see> instead.
+            For a custom duration, use ButtonJustPressedForTimeAndReleased instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.ButtonRepeating">
@@ -5821,14 +5497,14 @@
             <summary>
             Event fires when a button is double pressed and every frame that it is held afterwards.
             Accepts optional arguments: speed [float]
-            If no arguments are passed, <see cref="P:Rewired.InputBehavior.buttonDoublePressSpeed"/> will be used.
+            If no arguments are passed, InputBehavior.buttonDoublePressSpeed will be used.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonJustDoublePressed">
             <summary>
             Event fires only on the first frame a button is double pressed.
             Accepts optional arguments: speed [float]
-            If no arguments are passed, <see cref="P:Rewired.InputBehavior.buttonDoublePressSpeed"/> will be used.
+            If no arguments are passed, InputBehavior.buttonDoublePressSpeed will be used.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonPressedForTime">
@@ -5855,42 +5531,42 @@
             <summary>
             Event fires when a button has been pressed for a specific time period and every frame that it is held afterwards.
             The button short press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.NegativeButtonPressedForTime">NegativeButtonPressedForTime</see> instead.
+            For a custom duration, use NegativeButtonPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonJustShortPressed">
             <summary>
             Event fires only on the frame that a button has been pressed for a specific time period.
             The button short press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.NegativeButtonJustPressedForTime">NegativeButtonJustPressedForTime</see> instead.
+            For a custom duration, use NegativeButtonJustPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonShortPressJustReleased">
             <summary>
             Event fires only on the frame that a button that has been pressed for a specific time period is released.
             The button short press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="!:InputActionEventType.NegativeButtonJustPressedForTimeAndReleased">NegativeButtonJustPressedForTimeAndReleased</see> instead.
+            For a custom duration, use NegativeButtonJustPressedForTimeAndReleased instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonLongPressed">
             <summary>
             Event fires when a button has been pressed for a specific time period and every frame that it is held afterwards.
             The button long press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.NegativeButtonPressedForTime">NegativeButtonPressedForTime</see> instead.
+            For a custom duration, use NegativeButtonPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonJustLongPressed">
             <summary>
             Event fires only on the frame that a button has been pressed for a specific time period.
             The button long press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="F:Rewired.InputActionEventType.NegativeButtonJustPressedForTime">NegativeButtonJustPressedForTime</see> instead.
+            For a custom duration, use NegativeButtonJustPressedForTime instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonLongPressJustReleased">
             <summary>
             Event fires only on the frame that a button that has been pressed for a specific time period is released.
             The button long press time and expiration are set in the Input Behavior assigned to the Action.
-            For a custom duration, use <see cref="!:InputActionEventType.NegativeButtonJustPressedForTimeAndReleased">NegativeButtonJustPressedForTimeAndReleased</see> instead.
+            For a custom duration, use NegativeButtonJustPressedForTimeAndReleased instead.
             </summary>
         </member>
         <member name="F:Rewired.InputActionEventType.NegativeButtonRepeating">
@@ -5920,34 +5596,9 @@
             Event fires every frame the raw axis value is zero.
             </summary>
         </member>
-        <member name="F:Rewired.InputActionEventType.ButtonDoublePressJustReleased">
-            <summary>
-            Event fires only on the first frame after a button is released after a double press.
-            Accepts optional arguments: speed [float]
-            If no arguments are passed, <see cref="P:Rewired.InputBehavior.buttonDoublePressSpeed"/> will be used.
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "F:Rewired.InputActionEventType.ButtonSinglePressed" -->
-        <!-- Badly formed XML comment ignored for member "F:Rewired.InputActionEventType.ButtonJustSinglePressed" -->
-        <!-- Badly formed XML comment ignored for member "F:Rewired.InputActionEventType.ButtonSinglePressJustReleased" -->
-        <member name="F:Rewired.InputActionEventType.NegativeButtonDoublePressJustReleased">
-            <summary>
-            Event fires only on the first frame after a negative button is released after a double press.
-            Accepts optional arguments: speed [float]
-            If no arguments are passed, <see cref="P:Rewired.InputBehavior.buttonDoublePressSpeed"/> will be used.
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "F:Rewired.InputActionEventType.NegativeButtonSinglePressed" -->
-        <!-- Badly formed XML comment ignored for member "F:Rewired.InputActionEventType.NegativeButtonJustSinglePressed" -->
-        <!-- Badly formed XML comment ignored for member "F:Rewired.InputActionEventType.NegativeButtonSinglePressJustReleased" -->
         <member name="T:Rewired.AxisSensitivityType">
             <summary>
             Axis sensitivity calculation type.
-            </summary>
-        </member>
-        <member name="T:Rewired.JoystickType">
-            <summary>
-            Joystick type.
             </summary>
         </member>
         <member name="T:Rewired.Utils.Interfaces.IExternalTools">
@@ -6176,44 +5827,6 @@
         <member name="E:Rewired.Internal.StandaloneAxis2D.RawValueChangedEvent">
             <summary>
             Event fired when the raw value changes.
-            </summary>
-        </member>
-        <member name="T:Rewired.VirtualButton">
-            <summary>
-            A virtual button that is used to track button states for things like
-            keyboard + modifier keys and mouse axes being treated as digital buttons.
-            This is auto-cleared every update by Control Manager.
-            You cannot set the button value to false, only true.
-            It can be set multiple times per frame as well without issue.
-            </summary>
-        </member>
-        <member name="M:Rewired.VirtualButton.SetOn(Rewired.UpdateLoopType,System.Boolean)">
-            <summary>
-            This does not store the valuePrev at this time so it can be set multiple times per update.
-            You cannot set a negative value here because the button may be fed by multiple sources and
-            negatives cannot cancel out positives. The button value will be cleared at the end up update.
-            </summary>
-        </member>
-        <member name="M:Rewired.VirtualButton.InnerButton.SetOn(System.Boolean)">
-            <summary>
-            This does not store the valuePrev at this time so it can be set multiple times per update.
-            You cannot set a negative value here because the button may be fed by multiple sources and
-            negatives cannot cancel out positives. The button value will be cleared at the end up update.
-            </summary>
-        </member>
-        <member name="T:Rewired.VirtualButton.InnerButton.ButtonValueFlags">
-            <summary>
-            Represents the value and previous 
-            </summary>
-        </member>
-        <member name="M:Rewired.VirtualControl.GetAxisFrameDelta_NOTFINISHED">
-            <summary>
-            This is not finished! DO NOT USE!
-            </summary>
-        </member>
-        <member name="M:Rewired.VirtualControl.GetAxisRawFrameDelta_NOTFINISHED">
-            <summary>
-            This is not finished! DO NOT USE!
             </summary>
         </member>
         <member name="T:Rewired.ActionElementMap">
@@ -7968,30 +7581,9 @@
             DO NOT USE ControllerMap or ControllerMapWithAxes!
             </summary>
         </member>
-        <member name="M:Rewired.HardwareControllerMap_Game.#ctor(System.String,System.Int32,Rewired.ControllerElementIdentifier[],System.Int32[],System.Int32[],Rewired.AxisCalibrationData[],Rewired.AxisRange[],Rewired.Data.Mapping.HardwareAxisInfo[],Rewired.Data.Mapping.HardwareButtonInfo[],Rewired.Data.Mapping.HardwareJoystickMap.CompoundElement[])">
-            <summary>
-            Overload for Custom Controllers.
-            </summary>
-        </member>
-        <member name="M:Rewired.HardwareControllerMap_Game.#ctor(System.String,Rewired.HardwareControllerMapIdentifier,Rewired.JoystickType[],Rewired.ControllerElementIdentifier[],System.Int32[],System.Int32[],Rewired.AxisCalibrationData[],Rewired.AxisRange[],Rewired.Data.Mapping.HardwareAxisInfo[],Rewired.Data.Mapping.HardwareButtonInfo[],Rewired.Data.Mapping.HardwareJoystickMap.CompoundElement[])">
-            <summary>
-            Overload for Joysticks.
-            </summary>
-        </member>
-        <member name="M:Rewired.HardwareControllerMap_Game.#ctor(System.String,Rewired.HardwareControllerMapIdentifier,Rewired.ControllerElementIdentifier[],System.Int32[],System.Int32[],Rewired.AxisCalibrationData[],Rewired.AxisRange[],Rewired.Data.Mapping.HardwareAxisInfo[],Rewired.Data.Mapping.HardwareButtonInfo[],Rewired.Data.Mapping.HardwareJoystickMap.CompoundElement[])">
-            <summary>
-            Overload for keyboard/mouse.
-            </summary>
-        </member>
         <member name="T:Rewired.InputAction">
             <summary>
             Represents a single action.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputAction.userAssignable">
-            <summary>
-            Determines whether the Action will appear in certain lists such as in a control remapping UI.
-            Note: This value is not used in the conflict checking system and has no impact on whether an Action is protected from reassignment.
             </summary>
         </member>
         <member name="T:Rewired.InputBehavior">
@@ -8377,11 +7969,6 @@
             The conflicting mappings will be left as-is and the new assignment will be added.
             </summary>
         </member>
-        <member name="F:Rewired.InputMapper.ConflictResponse.Ignore">
-            <summary>
-            The conflict will be ignored and polling will continue.
-            </summary>
-        </member>
         <member name="T:Rewired.InputMapper.EventData">
             <summary>
             Base class for event data.
@@ -8572,12 +8159,6 @@
             If both allowKeyboardKeysWithModifiers and allowKeyboardModifierKeyAsPrimary are true, the modifier key must be held down
             for this duration in seconds before it will be accepted as a primary key assignment. This is used to allow the user to be able to map
             modifier key + key combinations while also allowing them to map modifier keys as the primary key.
-            </summary>
-        </member>
-        <member name="P:Rewired.InputMapper.Options.isElementAllowedCallback">
-            <summary>
-            A callback used to determine whether a particular controller element is allowed for mapping.
-            Set this if you want to manually disallow specific controller elements from being used.
             </summary>
         </member>
         <member name="T:Rewired.PlayerSaveData">
@@ -8792,8 +8373,22 @@
             <param name="actionId">Id of the Action</param>
             <returns>The button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDown(System.Int32)" -->
+        <member name="M:Rewired.Player.GetButtonDown(System.String)">
+            <summary>
+            Gets the button just pressed state of an Action. This will only return TRUE only on the first frame the button is pressed or for the duration of the Button Down Buffer time limit if set in the Input Behavior assigned to this Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button just pressed state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonDown(System.Int32)">
+            <summary>
+            Gets the button just pressed state of an Action. This will only return TRUE only on the first frame the button is pressed or for the duration of the Button Down Buffer time limit if set in the Input Behavior assigned to this Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button just pressed state</returns>
+        </member>
         <member name="M:Rewired.Player.GetButtonUp(System.String)">
             <summary>
             Get the button just released state for an Action. This will only return TRUE for the first frame the button is released.
@@ -8824,12 +8419,6 @@
             <param name="actionId">Id of the Action</param>
             <returns>The previous button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonSinglePressHold(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonSinglePressHold(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonSinglePressDown(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonSinglePressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonSinglePressUp(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonSinglePressUp(System.String)" -->
         <member name="M:Rewired.Player.GetButtonDoublePressHold(System.String,System.Single)">
             <summary>
             Gets the button double pressed and held state of an Action. This will return TRUE after a double press and the button is then held.
@@ -8846,8 +8435,22 @@
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDoublePressHold(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDoublePressHold(System.Int32)" -->
+        <member name="M:Rewired.Player.GetButtonDoublePressHold(System.String)">
+            <summary>
+            Gets the button double pressed and held state of an Action. This will return TRUE after a double press and the button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonDoublePressHold(System.Int32)">
+            <summary>
+            Gets the button double pressed and held state of an Action. This will return TRUE after a double press and the button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button held state</returns>
+        </member>
         <member name="M:Rewired.Player.GetButtonDoublePressDown(System.String,System.Single)">
             <summary>
             Gets the button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
@@ -8864,26 +8467,22 @@
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The button just pressed state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDoublePressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDoublePressDown(System.Int32)" -->
-        <member name="M:Rewired.Player.GetButtonDoublePressUp(System.String,System.Single)">
+        <member name="M:Rewired.Player.GetButtonDoublePressDown(System.String)">
             <summary>
-            Gets the button double pressed and just released state of an Action. This will return TRUE only on the first frame after double press is released.
+            Gets the button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
+            The double press speed is set in the Input Behavior assigned to the Action.
             </summary>
             <param name="actionName">Name of the Action</param>
-            <param name="speed">Allowed time for a double press in seconds.</param>
-            <returns>The button just released state</returns>
+            <returns>The button just pressed state</returns>
         </member>
-        <member name="M:Rewired.Player.GetButtonDoublePressUp(System.Int32,System.Single)">
+        <member name="M:Rewired.Player.GetButtonDoublePressDown(System.Int32)">
             <summary>
-            Gets the button double pressed and just released state of an Action. This will return TRUE only on the first frame after double press is released.
+            Gets the button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
+            The double press speed is set in the Input Behavior assigned to the Action.
             </summary>
             <param name="actionId">Id of the Action</param>
-            <param name="speed">Allowed time for a double press in seconds.</param>
-            <returns>The button just released state</returns>
+            <returns>The button just pressed state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDoublePressUp(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonDoublePressUp(System.Int32)" -->
         <member name="M:Rewired.Player.GetButtonTimedPress(System.String,System.Single)">
             <summary>
             Gets the button held state of an Action after being held for a period of time.
@@ -9002,20 +8601,174 @@
             <param name="expireIn">Time in seconds after activation that the press will expire. Once expired, it will no longer return true even if released. [0 = Never expire]</param>
             <returns>The button up state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonShortPress(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonShortPress(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonShortPressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonShortPressDown(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonShortPressUp(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonShortPressUp(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonLongPress(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonLongPress(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonLongPressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonLongPressDown(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonLongPressUp(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonLongPressUp(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonRepeating(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetButtonRepeating(System.Int32)" -->
+        <member name="M:Rewired.Player.GetButtonShortPress(System.String)">
+            <summary>
+            Gets the button held state of an Action after being held for a period of time.
+            This will return TRUE only after the button has been held
+            for the specified time and will continue to return TRUE
+            until the button is released.
+            This also applies to axes being used as buttons.
+            The button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPress instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonShortPress(System.Int32)">
+            <summary>
+            Gets the button held state of an Action after being held for a period of time.
+            This will return TRUE only after the button has been held
+            for the specified time and will continue to return TRUE
+            until the button is released.
+            This also applies to axes being used as buttons.
+            The button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPress instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonShortPressDown(System.String)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the button had been held for the specified time.
+            This also applies to axes being used as buttons.
+            The button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressDown instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonShortPressDown(System.Int32)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the button had been held for the specified time.
+            This also applies to axes being used as buttons.
+            The button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressDown instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonShortPressUp(System.String)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as buttons.
+            The button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressUp instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonShortPressUp(System.Int32)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as buttons.
+            The button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressUp instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonLongPress(System.String)">
+            <summary>
+            Gets the button held state of an Action after being held for a period of time.
+            This will return TRUE only after the button has been held
+            for the specified time and will continue to return TRUE
+            until the button is released.
+            This also applies to axes being used as buttons.
+            The button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPress instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonLongPress(System.Int32)">
+            <summary>
+            Gets the button held state of an Action after being held for a period of time.
+            This will return TRUE only after the button has been held
+            for the specified time and will continue to return TRUE
+            until the button is released.
+            This also applies to axes being used as buttons.
+            The button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPress instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonLongPressDown(System.String)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the button had been held for the specified time.
+            This also applies to axes being used as buttons.
+            The button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressDown instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonLongPressDown(System.Int32)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the button had been held for the specified time.
+            This also applies to axes being used as buttons.
+            The button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressDown instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonLongPressUp(System.String)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as buttons.
+            The button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressUp instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonLongPressUp(System.Int32)">
+            <summary>
+            Gets the button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as buttons.
+            The button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetButtonTimedPressUp instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonRepeating(System.String)">
+            <summary>
+            Gets the repeating button state of an Action.
+            This will return TRUE when immediately pressed, then FALSE until the Input Behaviour button repeat delay has elapsed,
+            then TRUE for a 1-frame duration repeating at the interval specified in the Input Behavior assigned to the Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The button state.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetButtonRepeating(System.Int32)">
+            <summary>
+            Gets the repeating button state of an Action.
+            This will return TRUE when immediately pressed, then FALSE until the Input Behaviour button repeat delay has elapsed,
+            then TRUE for a 1-frame duration repeating at the interval specified in the Input Behavior assigned to the Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The button state.</returns>
+        </member>
         <member name="M:Rewired.Player.GetAnyButton">
             <summary>
             Gets the button held state of all Actions. This will return TRUE as long as any button is held.
@@ -9023,7 +8776,14 @@
             </summary>
             <returns>The button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAnyButtonDown" -->
+        <member name="M:Rewired.Player.GetAnyButtonDown">
+            <summary>
+            Gets the button just pressed state of all Actions. This will only return TRUE only on the first frame any button is pressed or for the duration of the Button Down Buffer time limit if set in the Input Behavior assigned to the Action.
+            This will return TRUE each time any button is pressed even if others are being held down.
+            This also applies to axes being used as buttons.
+            </summary>
+            <returns>The button just pressed state</returns>
+        </member>
         <member name="M:Rewired.Player.GetAnyButtonUp">
             <summary>
             Get the button just released state for all Actions. This will only return TRUE for the first frame the button is released.
@@ -9083,8 +8843,22 @@
             <param name="actionId">Id of the Action</param>
             <returns>The negative button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDown(System.Int32)" -->
+        <member name="M:Rewired.Player.GetNegativeButtonDown(System.String)">
+            <summary>
+            Gets the negative button just pressed state of an Action. This will only return TRUE only on the first frame the negative button is pressed or for the duration of the Button Down Buffer time limit if set in the Input Behavior assigned to this Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button just pressed state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonDown(System.Int32)">
+            <summary>
+            Gets the negative button just pressed state of an Action. This will only return TRUE only on the first frame the negative button is pressed or for the duration of the Button Down Buffer time limit if set in the Input Behavior assigned to this Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button just pressed state</returns>
+        </member>
         <member name="M:Rewired.Player.GetNegativeButtonUp(System.String)">
             <summary>
             Get the negative button just released state for an Action. This will only return TRUE for the first frame the negative button is released.
@@ -9115,12 +8889,6 @@
             <param name="actionId">Id of the Action</param>
             <returns>The previous negative button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonSinglePressHold(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonSinglePressHold(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonSinglePressDown(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonSinglePressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonSinglePressUp(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonSinglePressUp(System.String)" -->
         <member name="M:Rewired.Player.GetNegativeButtonDoublePressHold(System.String,System.Single)">
             <summary>
             Gets the negative button double pressed and held state of an Action. This will return TRUE after a double press and the negative button is then held.
@@ -9137,8 +8905,22 @@
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The negative button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDoublePressHold(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDoublePressHold(System.Int32)" -->
+        <member name="M:Rewired.Player.GetNegativeButtonDoublePressHold(System.String)">
+            <summary>
+            Gets the negative button double pressed and held state of an Action. This will return TRUE after a double press and the negative button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonDoublePressHold(System.Int32)">
+            <summary>
+            Gets the negative button double pressed and held state of an Action. This will return TRUE after a double press and the negative button is then held.
+            The double press speed is set in the Input Behavior assigned to the Action.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button held state</returns>
+        </member>
         <member name="M:Rewired.Player.GetNegativeButtonDoublePressDown(System.String,System.Single)">
             <summary>
             Gets the negative button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
@@ -9155,26 +8937,22 @@
             <param name="speed">Allowed time for a double press in seconds.</param>
             <returns>The negative button just pressed state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDoublePressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDoublePressDown(System.Int32)" -->
-        <member name="M:Rewired.Player.GetNegativeButtonDoublePressUp(System.String,System.Single)">
+        <member name="M:Rewired.Player.GetNegativeButtonDoublePressDown(System.String)">
             <summary>
-            Gets the negative button double pressed and just released state of an Action. This will return TRUE only on the first frame after double press is released.
+            Gets the negative button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
+            The double press speed is set in the Input Behavior assigned to the Action.
             </summary>
             <param name="actionName">Name of the Action</param>
-            <param name="speed">Allowed time for a double press in seconds.</param>
-            <returns>The negative button just released state</returns>
+            <returns>The negative button just pressed state</returns>
         </member>
-        <member name="M:Rewired.Player.GetNegativeButtonDoublePressUp(System.Int32,System.Single)">
+        <member name="M:Rewired.Player.GetNegativeButtonDoublePressDown(System.Int32)">
             <summary>
-            Gets the negative button double pressed and just released state of an Action. This will return TRUE only on the first frame after double press is released.
+            Gets the negative button double pressed state of an Action. This will return TRUE only on the first frame of a double press.
+            The double press speed is set in the Input Behavior assigned to the Action.
             </summary>
             <param name="actionId">Id of the Action</param>
-            <param name="speed">Allowed time for a double press in seconds.</param>
-            <returns>The negative button just released state</returns>
+            <returns>The negative button just pressed state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDoublePressUp(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonDoublePressUp(System.Int32)" -->
         <member name="M:Rewired.Player.GetNegativeButtonTimedPress(System.String,System.Single)">
             <summary>
             Gets the negative button held state of an Action after being held for a period of time.
@@ -9293,20 +9071,174 @@
             <param name="expireIn">Time in seconds after activation that the press will expire. Once expired, it will no longer return true even if released. [0 = Never expire]</param>
             <returns>The negative button up state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonShortPress(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonShortPress(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonShortPressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonShortPressDown(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonShortPressUp(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonShortPressUp(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonLongPress(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonLongPress(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonLongPressDown(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonLongPressDown(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonLongPressUp(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonLongPressUp(System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonRepeating(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetNegativeButtonRepeating(System.Int32)" -->
+        <member name="M:Rewired.Player.GetNegativeButtonShortPress(System.String)">
+            <summary>
+            Gets the negative button held state of an Action after being held for a period of time.
+            This will return TRUE only after the negative button has been held
+            for the specified time and will continue to return TRUE
+            until the negative button is released.
+            This also applies to axes being used as negative buttons.
+            The negative button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPress instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonShortPress(System.Int32)">
+            <summary>
+            Gets the negative button held state of an Action after being held for a period of time.
+            This will return TRUE only after the negative button has been held
+            for the specified time and will continue to return TRUE
+            until the negative button is released.
+            This also applies to axes being used as negative buttons.
+            The negative button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPress instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonShortPressDown(System.String)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the negative button had been held for the specified time.
+            This also applies to axes being used as negative buttons.
+            The negative button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressDown instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonShortPressDown(System.Int32)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the negative button had been held for the specified time.
+            This also applies to axes being used as negative buttons.
+            The negative button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressDown instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonShortPressUp(System.String)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the negative button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as negative buttons.
+            The negative button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressUp instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonShortPressUp(System.Int32)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the negative button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as negative buttons.
+            The negative button short press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressUp instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonLongPress(System.String)">
+            <summary>
+            Gets the negative button held state of an Action after being held for a period of time.
+            This will return TRUE only after the negative button has been held
+            for the specified time and will continue to return TRUE
+            until the negative button is released.
+            This also applies to axes being used as negative buttons.
+            The negative button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPress instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonLongPress(System.Int32)">
+            <summary>
+            Gets the negative button held state of an Action after being held for a period of time.
+            This will return TRUE only after the negative button has been held
+            for the specified time and will continue to return TRUE
+            until the negative button is released.
+            This also applies to axes being used as negative buttons.
+            The negative button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPress instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button held state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonLongPressDown(System.String)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the negative button had been held for the specified time.
+            This also applies to axes being used as negative buttons.
+            The negative button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressDown instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonLongPressDown(System.Int32)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time.
+            This will return TRUE only on the frame in which
+            the negative button had been held for the specified time.
+            This also applies to axes being used as negative buttons.
+            The negative button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressDown instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button down state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonLongPressUp(System.String)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the negative button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as negative buttons.
+            The negative button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressUp instead.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonLongPressUp(System.Int32)">
+            <summary>
+            Gets the negative button state of an Action after being held for a period of time and then released.
+            This will return TRUE only on the frame in which the negative button had
+            been held for at least the specified time and then released.
+            This also applies to axes being used as negative buttons.
+            The negative button long press time is set in the Input Behavior assigned to the Action.
+            For a custom duration, use GetNegativeButtonTimedPressUp instead.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button up state</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonRepeating(System.String)">
+            <summary>
+            Gets the repeating negative button state of an Action.
+            This will return TRUE when immediately pressed, then FALSE until the Input Behaviour button repeat delay has elapsed,
+            then TRUE for a 1-frame duration repeating at the interval specified in the Input Behavior assigned to the Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The negative button state.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetNegativeButtonRepeating(System.Int32)">
+            <summary>
+            Gets the repeating negative button state of an Action.
+            This will return TRUE when immediately pressed, then FALSE until the Input Behaviour button repeat delay has elapsed,
+            then TRUE for a 1-frame duration repeating at the interval specified in the Input Behavior assigned to the Action.
+            This also applies to axes being used as buttons.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The negative button state.</returns>
+        </member>
         <member name="M:Rewired.Player.GetAnyNegativeButton">
             <summary>
             Gets the negative button held state of all Actions. This will return TRUE as long as any negative button is held.
@@ -9314,7 +9246,14 @@
             </summary>
             <returns>The negative button held state</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAnyNegativeButtonDown" -->
+        <member name="M:Rewired.Player.GetAnyNegativeButtonDown">
+            <summary>
+            Gets the negative button just pressed state of all Actions. This will only return TRUE only on the first frame any negative button is pressed or for the duration of the Button Down Buffer time limit if set in the Input Behavior assigned to the Action.
+            This will return TRUE each time any negative button is pressed even if others are being held down.
+            This also applies to axes being used as buttons.
+            </summary>
+            <returns>The negative button just pressed state</returns>
+        </member>
         <member name="M:Rewired.Player.GetAnyNegativeButtonUp">
             <summary>
             Get the negative button just released state for all Actions. This will only return TRUE for the first frame the negative button is released.
@@ -9372,24 +9311,52 @@
             <param name="actionId">Id of the Action</param>
             <returns>The axis value.</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxisRaw(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxisRaw(System.Int32)" -->
+        <member name="M:Rewired.Player.GetAxisRaw(System.String)">
+            <summary>
+            Gets the raw axis value of an Action. The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The raw axis value.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetAxisRaw(System.Int32)">
+            <summary>
+            Gets the raw axis value of an Action. The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The raw axis value.</returns>
+        </member>
         <member name="M:Rewired.Player.GetAxisPrev(System.String)">
             <summary>
-            Gets the axis value of an Action during the previous frame.
+            Gets the axis value of an Action during the previous frame..
             </summary>
             <param name="actionName">Name of the Action</param>
             <returns>The previous axis value.</returns>
         </member>
         <member name="M:Rewired.Player.GetAxisPrev(System.Int32)">
             <summary>
-            Gets the axis value of an Action during the previous frame.
+            Gets the axis value of an Action during the previous frame..
             </summary>
             <param name="actionId">Id of the Action</param>
             <returns>The previous axis value.</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxisRawPrev(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxisRawPrev(System.Int32)" -->
+        <member name="M:Rewired.Player.GetAxisRawPrev(System.String)">
+            <summary>
+            Gets the raw axis value of an Action during the previous frame. The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The previous raw axis value.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetAxisRawPrev(System.Int32)">
+            <summary>
+            Gets the raw axis value of an Action during the previous frame. The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The previous raw axis value.</returns>
+        </member>
         <member name="M:Rewired.Player.GetAxisDelta(System.String)">
             <summary>
             Gets the change in axis value of an Action since the previous frame.
@@ -9404,8 +9371,22 @@
             <param name="actionId">Id of the Action</param>
             <returns>The change in axis value.</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxisRawDelta(System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxisRawDelta(System.Int32)" -->
+        <member name="M:Rewired.Player.GetAxisRawDelta(System.String)">
+            <summary>
+            Gets the change in raw axis value of an Action since the previous frame. The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="actionName">Name of the Action</param>
+            <returns>The change in raw axis value.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetAxisRawDelta(System.Int32)">
+            <summary>
+            Gets the change in raw axis value of an Action since the previous frame. The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="actionId">Id of the Action</param>
+            <returns>The change in raw axis value.</returns>
+        </member>
         <member name="M:Rewired.Player.GetAxis2D(System.String,System.String)">
             <summary>
             Gets the axis value of two Actions.
@@ -9438,10 +9419,46 @@
             <param name="yAxisActionId">Id of the Y axis Action</param>
             <returns>The 2D axis value.</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxis2DRaw(System.String,System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxis2DRaw(System.Int32,System.Int32)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxis2DRawPrev(System.String,System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Player.GetAxis2DRawPrev(System.Int32,System.Int32)" -->
+        <member name="M:Rewired.Player.GetAxis2DRaw(System.String,System.String)">
+            <summary>
+            Gets the raw axis value of two Actions.
+            The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="xAxisActionName">Name of the X axis Action</param>
+            <param name="yAxisActionName">Name of the Y axis Action</param>
+            <returns>The raw 2D axis value.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetAxis2DRaw(System.Int32,System.Int32)">
+            <summary>
+            Gets the raw axis value of two Actions.
+            The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="xAxisActionId">Id of the X axis Action</param>
+            <param name="yAxisActionId">Id of the Y axis Action</param>
+            <returns>The raw 2D axis value.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetAxis2DRawPrev(System.String,System.String)">
+            <summary>
+            Gets the raw axis value of two Actions during the previous frame.
+            The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="xAxisActionName">Name of the X axis Action</param>
+            <param name="yAxisActionName">Name of the Y axis Action</param>
+            <returns>The raw 2D axis value.</returns>
+        </member>
+        <member name="M:Rewired.Player.GetAxis2DRawPrev(System.Int32,System.Int32)">
+            <summary>
+            Gets the raw axis value of two Actions during the previous frame.
+            The raw value excludes any digital axis simulation modification by the Input Behavior assigned to this Action.
+            This raw value is modified by dead zone and axis calibration settings in the controller. To get truly raw values, you must get the raw value directly from the Controller element.
+            </summary>
+            <param name="xAxisActionId">Id of the X axis Action</param>
+            <param name="yAxisActionId">Id of the Y axis Action</param>
+            <returns>The raw 2D axis value.</returns>
+        </member>
         <member name="M:Rewired.Player.GetAxisTimeActive(System.String)">
             <summary>
             Gets the length of time in seconds that an axis has been continuously active. Returns 0 if the axis is not currently active.
@@ -9497,78 +9514,6 @@
             </summary>
             <param name="actionId">Id of the Action</param>
             <returns>The duration the axis has been continuously inactive.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisCoordinateMode(System.String)">
-            <summary>
-            Gets the current coordinate mode of the axis.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionName">Name of the Action</param>
-            <returns>The axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisCoordinateMode(System.Int32)">
-            <summary>
-            Gets the current coordinate mode of the axis.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionId">Id of the Action</param>
-            <returns>The axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisRawCoordinateMode(System.String)">
-            <summary>
-            Gets the current coordinate mode of the raw axis.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionName">Name of the Action</param>
-            <returns>The raw axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisRawCoordinateMode(System.Int32)">
-            <summary>
-            Gets the current coordinate mode of the raw axis.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionId">Id of the Action</param>
-            <returns>The raw axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisCoordinateModePrev(System.String)">
-            <summary>
-            Gets the coordinate mode of the axis on the previous frame.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionName">Name of the Action</param>
-            <returns>The axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisCoordinateModePrev(System.Int32)">
-            <summary>
-            Gets the coordinate mode of the axis on the previous frame.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionId">Id of the Action</param>
-            <returns>The axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisRawCoordinateModePrev(System.String)">
-            <summary>
-            Gets the coordinate mode of the raw axis on the previous frame.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionName">Name of the Action</param>
-            <returns>The raw axis coordinate mode.</returns>
-        </member>
-        <member name="M:Rewired.Player.GetAxisRawCoordinateModePrev(System.Int32)">
-            <summary>
-            Gets the coordinate mode of the raw axis on the previous frame.
-            This can be used to detect whether the axis is returning a delta value
-            (mouse, touchpad, etc.) or an absolute value (joystick).
-            </summary>
-            <param name="actionId">Id of the Action</param>
-            <returns>The raw axis coordinate mode.</returns>
         </member>
         <member name="M:Rewired.Player.GetCurrentInputSources(System.String)">
             <summary>
@@ -9818,7 +9763,7 @@
         </member>
         <member name="M:Rewired.Player.SetVibration(System.Int32,System.Single,System.Single)">
             <summary>
-            Sets vibration level for a motor at a specified index with a timeout in all <see cref="T:Rewired.Joystick">Joysticks</see> assigned to the Player.
+            Sets vibration level for a motor at a specified index with a timeout in all <see cref="T:Rewired.Joystick">Joysticks</see> assigned to the Player..
             </summary>
             <param name="motorIndex">Motor index</param>
             <param name="motorLevel">Motor level [float: 0.0 - 1.0]</param>
@@ -9826,7 +9771,7 @@
         </member>
         <member name="M:Rewired.Player.SetVibration(System.Int32,System.Single,System.Boolean)">
             <summary>
-            Sets vibration level for a motor at a specified index in all <see cref="T:Rewired.Joystick">Joysticks</see> assigned to the Player.
+            Sets vibration level for a motor at a specified index in all <see cref="T:Rewired.Joystick">Joysticks</see> assigned to the Player..
             </summary>
             <param name="motorIndex">Motor index</param>
             <param name="motorLevel">Motor level [float: 0.0 - 1.0]</param>
@@ -9834,7 +9779,7 @@
         </member>
         <member name="M:Rewired.Player.SetVibration(System.Int32,System.Single,System.Single,System.Boolean)">
             <summary>
-            Sets vibration level for a motor at a specified index with a timeout in all <see cref="T:Rewired.Joystick">Joysticks</see> assigned to the Player.
+            Sets vibration level for a motor at a specified index with a timeout in all <see cref="T:Rewired.Joystick">Joysticks</see> assigned to the Player..
             </summary>
             <param name="motorIndex">Motor index</param>
             <param name="motorLevel">Motor level [float: 0.0 - 1.0]</param>
@@ -12154,39 +12099,12 @@
         </member>
         <member name="M:Rewired.ReInput.Reset">
             <summary>
-            Completely clears and reinitializes the Input Manager.
-            This is equivalent to destroying the Rewired Input Manager and reinstantiating it.
-            The current input configuration (Joystick ids, controller assignments, modified Controller Maps) will be reset.
-            All stored references to Rewired objects (Player, Joystick, ReInput.ControllerHelper, etc.) will become invalid.
-            All event listeners will be cleared.
-            </summary>
-        </member>
-        <member name="F:Rewired.ReInput.currentFrame">
-            <summary>
-            Frame count for current loop.
-            </summary>
-        </member>
-        <member name="F:Rewired.ReInput.previousFrame">
-            <summary>
-            Previous frame count for current loop.
+            Completely clears and reinitializes the Input Manager. This is equivalent to destroying the Rewired Input Manager and reinstantiating it.
             </summary>
         </member>
         <member name="F:Rewired.ReInput.absFrame">
             <summary>
             Total frame count of all update loops combined.
-            Valid value starts at 1, not 0.
-            </summary>
-        </member>
-        <member name="M:Rewired.ReInput.EarlyUpdate">
-            <summary>
-            This runs every once every main Unity thread update at the beginning
-            of FixedUpdate or Update, whichever runs first.
-            </summary>
-        </member>
-        <member name="M:Rewired.ReInput.ApplicationFocusChanged(System.Boolean)">
-            <summary>
-            This gets called regardless of whether or not Rewired is initialized.
-            Nothing else should be done here except to pass the event to UnityVariableWatcher.
             </summary>
         </member>
         <member name="E:Rewired.ReInput.ControllerConnectedEvent">
@@ -12212,39 +12130,6 @@
         <member name="E:Rewired.ReInput.EditorRecompileEvent">
             <summary>
             Event triggered when editor begins recompiling scripts.
-            </summary>
-        </member>
-        <member name="E:Rewired.ReInput.PreShutDownEvent">
-            <summary>
-            Event triggered immediately before Rewired shuts down.
-            Rewired objects are still valid during this event.
-            </summary>
-        </member>
-        <member name="E:Rewired.ReInput.ShutDownEvent">
-            <summary>
-            Event triggered after Rewired shuts down.
-            </summary>
-        </member>
-        <member name="E:Rewired.ReInput.EarlyUpdateEvent">
-            <summary>
-            This fires every once every main Unity thread update at the beginning
-            of FixedUpdate or Update, whichever runs first.
-            This event always executes on the main thread.
-            </summary>
-        </member>
-        <member name="E:Rewired.ReInput.UpdateStartedEvent">
-            <summary>
-            This event fires every update loop before Rewired's core update.
-            </summary>
-        </member>
-        <member name="E:Rewired.ReInput.UpdateEndedEvent">
-            <summary>
-            This event fires every update loop after Rewired's core update is finished.
-            </summary>
-        </member>
-        <member name="E:Rewired.ReInput.LateUpdateEvent">
-            <summary>
-            This event fires every Unity LateUpdate.
             </summary>
         </member>
         <member name="P:Rewired.ReInput.players">
@@ -12302,10 +12187,9 @@
             Is the input system ready?
             </summary>
         </member>
-        <member name="P:Rewired.ReInput.currentUnityFrame">
+        <member name="T:Rewired.ReInput.TimeManager">
             <summary>
-            The current Unity frame.
-            This only updates once per main thread frame in either FixedUpdate or Update, whichever runs first.
+            Manages unscaled time.
             </summary>
         </member>
         <member name="T:Rewired.ReInput.ConfigHelper">
@@ -12316,13 +12200,6 @@
         <member name="P:Rewired.ReInput.ConfigHelper.useXInput">
             <summary>
             Toggles the use of XInput in Windows Standalone and Windows UWP during runtime. Rewired will be completely reset if this value is changed.
-            </summary>
-        </member>
-        <member name="P:Rewired.ReInput.ConfigHelper.updateLoop">
-            <summary>
-            Changes the Update Loop setting during runtime. Rewired will be completely reset if this value is changed.
-            This can be set to multiple values simultaneously.
-            Note: Update is required. Update will be enabled even if you unset the Update flag.
             </summary>
         </member>
         <member name="P:Rewired.ReInput.ConfigHelper.windowsStandalonePrimaryInputSource">
@@ -12394,20 +12271,9 @@
             Toggles the use of enhanced device support during runtime. Rewired will be completely reset if this value is changed.
             </summary>
         </member>
-        <member name="P:Rewired.ReInput.ConfigHelper.joystickRefreshRate">
-            <summary>
-            The joystick refresh rate in frames per second. [0 - 2000] [0 = Default]
-            Set this to a higher value if you need higher precision input timing at high frame rates such as for a music beat game. Higher values result in higher CPU usage. Note that setting this to a very high value when the game is running at a low frame rate will not result in higher precision input.
-            This settings only applies to input sources that use a separate thread to poll for joystick input values (currently XInput and Direct Input). This setting does not apply to event-based input sources such as Raw Input.
-            This setting can be changed without resetting Rewired.
-            </summary>
-        </member>
         <member name="P:Rewired.ReInput.ConfigHelper.ignoreInputWhenAppNotInFocus">
             <summary>
-            Ignores input if the application is not in focus This setting has no effect on some platforms.
-            NOTE: Disabling this does not guarantee that input will be processed when the application is out of focus.
-            Whether input is received by the application or not is dependent on A) the input device type B) the current platform C) the input source(s) being used.
-            This setting can be changed without resetting Rewired.
+            Ignores input if the application is not in focus This setting has no effect on some platforms. NOTE: Disabling this does not guarantee that input will be processed when the application is out of focus. Whether input is received by the application or not is dependent on A) the input device type B) the current platform C) the input source(s) being used. This setting can be changed without resetting Rewired.
             </summary>
         </member>
         <member name="P:Rewired.ReInput.ConfigHelper.android_supportUnknownGamepads">
@@ -12426,15 +12292,6 @@
             If enabled, the corner directions on all hats will activate the adjacent 2 cardinal direction buttons instead of the corner button.
             This is useful if you need joystick hats to behave like D-Pads instead of 8-way hats.
             This setting can be changed without resetting Rewired.
-            </summary>
-        </member>
-        <member name="P:Rewired.ReInput.ConfigHelper.deferControllerConnectedEventsOnStart">
-            <summary>
-            Defer controller connected events for controllers already connected when Rewired initializes until the Start event instead of
-            during initialization. Normally, it's impossible to receive controller connection events at the start of runtime because Rewired
-            initializes before any other script is able to subscribe to the controller connected event. Enabling this will defer the controller
-            connected events until the Start event, allowing your scripts to subscribe to the controller connected event in Awake and still
-            receive the event callback. If disabled, controller connection events for controllers already connected before runtime starts will be missed.
             </summary>
         </member>
         <member name="P:Rewired.ReInput.ConfigHelper.autoAssignJoysticks">
@@ -13598,29 +13455,11 @@
         <member name="P:Rewired.ReInput.TimeHelper.currentFrame">
             <summary>
             The current frame in the current update loop.
-            This value does not match UnityEngine.Time.frameCount.
-            </summary>
-        </member>
-        <member name="T:Rewired.ReInput.TimeManager">
-            <summary>
-            Manages unscaled time.
             </summary>
         </member>
         <member name="T:Rewired.ReInput.UnityTouch">
             <summary>
             Provides access to touch-related members.
-            </summary>
-        </member>
-        <member name="T:Rewired.ReInput.UnityVariableWatcher">
-            <summary>
-            Allows accessing Unity variables from another thread.
-            Values are retrieved on Update and made available.
-            Also provides a way to detect when a value changes.
-            </summary>
-        </member>
-        <member name="M:Rewired.ReInput.UnityVariableWatcher.Update">
-            <summary>
-            Called in the first of either Update or FixedUpdate every thread frame.
             </summary>
         </member>
         <member name="F:Rewired.InputSources.SDL2.SDL.SDL_EventType.SDL_USEREVENT">
@@ -13751,419 +13590,18 @@
         <member name="T:Rewired.Dev.Tools.UnityJoystickElementIdentifier">
             <exclude></exclude>
         </member>
-        <member name="T:Rewired.Utils.Classes.Data.ADictionary`2">
+        <member name="T:Rewired.Utils.Classes.Data.DictionaryNoAlloc`2">
             <summary>
-            Modified version of Dictionary that uses custom equality comparers to prevente heap allocations on iOS when doing lookups.
-            Can use custom equality comparers. Default comparers for primitives don't generate allocations.
-            Can be iterated and accessed by index. Read by index speed is nearly as fast as a List in a build.
+            Modified version of Dictionary that doesn't generate heap allocations on iOS when doing lookups.
+            Still generates allocations if doing ContainsValue or value comparisons
             </summary>
-            <typeparam name="TKey">Key type</typeparam>
-            <typeparam name="TValue">Value type</typeparam>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
         </member>
-        <member name="F:Rewired.Utils.Classes.Data.ADictionary`2._entries">
+        <member name="T:Rewired.Utils.Classes.Data.CircularArray`1">
             <summary>
-            Exposed for speed. DO NOT MODIFY ANYTHING!
+            A fixed-length circular array. Items scroll off the list when new ones are added.
             </summary>
-        </member>
-        <member name="F:Rewired.Utils.Classes.Data.ADictionary`2._count">
-            <summary>
-            Exposed for speed. DO NOT MODIFY!
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Utils.Classes.Data.ADictionary`2.Add(`0,`1)" -->
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Utils.Classes.Data.ADictionary`2.Clear" -->
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.ContainsKey(`0)">
-            <summary>
-            Determines whether the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/> contains the specified key.
-            </summary>
-            <param name="key">The key to locate in the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/>.</param>
-            <returns>true if the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/> contains an element with the specified key; otherwise, false.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.ContainsValue(`1)">
-            <summary>
-            Determines whether the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/> contains a specific value.
-            </summary>
-            <param name="value">The value to locate in the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/>. The value can be null for reference types.</param>
-            <returns>true if the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/> contains an element with the specified value; otherwise, false.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetEnumerator">
-            <summary>
-            Returns an enumerator that iterates through the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/>.
-            </summary>
-            <returns>A <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2.Enumerator"/> structure for the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/>.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.Remove(`0)">
-            <summary>
-            Removes the value with the specified key from the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/>.
-            </summary>
-            <param name="key">The key of the element to remove.</param>
-            <returns>true if the element is successfully found and removed; otherwise, false. This method returns false if key is not found in the <see cref="T:Rewired.Utils.Classes.Data.ADictionary`2"/>.</returns>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:Rewired.Utils.Classes.Data.ADictionary`2.TryGetValue(`0,`1@)" -->
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.IndexOfKey(`0)">
-            <summary>
-            Gets the index of the entry with the specified key.
-            </summary>
-            <param name="key">The key</param>
-            <returns>Returns the index of the entry with the specified key. Returns -1 if the key was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.IndexOfValue(`1)">
-            <summary>
-            Gets the index of the first entry with the specified value.
-            </summary>
-            <param name="value">The value</param>
-            <returns>Returns the index of the first entry with the specified value. Returns -1 if the value was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.IsValidAt(System.Int32)">
-            <summary>
-            Determines if the entry at the specified index is valid.
-            Invalid entries are not used by the dictionary.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <returns>Returns true if the entry at the specified index is valid. Returns false if invalid.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetKeyAt(System.Int32)">
-            <summary>
-            Gets the key at the specified index.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <returns>Returns the key at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">index is out of range.</exception>
-            <exception cref="T:System.ArgumentException">index points to an invalid entry.</exception>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetValueAt(System.Int32)">
-            <summary>
-            Gets the value at the specified index.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <returns>Returns the value at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">index is out of range.</exception>
-            <exception cref="T:System.ArgumentException">index points to an invalid entry.</exception>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetEntryAt(System.Int32)">
-            <summary>
-            Gets the entry at the specified index.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <returns>Returns the entry at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">index is out of range.</exception>
-            <exception cref="T:System.ArgumentException">index points to an invalid entry.</exception>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.TryGetKeyAt(System.Int32,`0@)">
-            <summary>
-            Gets the key at the specified index.
-            This is the fastest method to use for indexed access when the dictionary is full and no items have been removed.
-            Up to 50% faster than GetNext... on a full dictionary.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <param name="key">The key</param>
-            <returns>Returns true if the entry at the index was valid. Returns false if not.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.TryGetValueAt(System.Int32,`1@)">
-            <summary>
-            Gets the value at the specified index.
-            This is the fastest method to use for indexed access when the dictionary is full and no items have been removed.
-            Up to 50% faster than GetNext... on a full dictionary.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <param name="value">The value</param>
-            <returns>Returns true if the entry at the index was valid. Returns false if not.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.TryGetEntryAt(System.Int32,System.Collections.Generic.KeyValuePair{`0,`1}@)">
-            <summary>
-            Gets the entry at the specified index.
-            This is the fastest method to use for indexed access when the dictionary is full and no items have been removed.
-            Up to 50% faster than GetNext... on a full dictionary.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <param name="entry">The entry</param>
-            <returns>Returns true if the entry at the index was valid. Returns false if not.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetNextIndex(System.Int32@)">
-            <summary>
-            Gets the index of the next valid entry. Index is incremented to match the index of the item.
-            Usage: for(int i = -1; dict.GetNextIndex(ref i);) { }
-            </summary>
-            <param name="index">The index. This should be -1 when starting an iteration at the beginning.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetNextIndex(System.Int32)">
-            <summary>
-            Gets the index of the next valid entry.
-            Usage: for(int i = dict.IndexOfFirst; dict.TryGetValue(i, out value); i = dict.GetNextIndex(i);) { }
-            </summary>
-            <param name="index">The index.</param>
-            <returns>Returns the index of the next valid entry in the collection. Returns -1 if no more valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetNextKey(System.Int32@,`0@)">
-            <summary>
-            Gets the next valid key. Index is incremented to match the index of the item.
-            This is the fastest method to use for indexed access if many entries have been removed from the dictionary
-            because it will skip those that have become invalid without a separate function call for each.
-            Usage: for(int i = -1; dict.GetNextKey(ref i, out key);) { }
-            </summary>
-            <param name="index">The index. This should be -1 when starting an iteration at the beginning.</param>
-            <param name="key">The key.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetNextValue(System.Int32@,`1@)">
-            <summary>
-            Gets the next valid value. Index is incremented to match the index of the item.
-            This is the fastest method to use for indexed access if many entries have been removed from the dictionary
-            because it will skip those that have become invalid without a separate function call for each.
-            Usage: for(int i = -1; dict.GetNextValue(ref i, out value);) { }
-            </summary>
-            <param name="index">The index. This should be -1 when starting an iteration at the beginning.</param>
-            <param name="value">The value.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetNextEntry(System.Int32@,System.Collections.Generic.KeyValuePair{`0,`1}@)">
-            <summary>
-            Gets the next valid entry. Index is incremented to match the index of the item.
-            This is the fastest method to use for indexed access if many entries have been removed from the dictionary
-            because it will skip those that have become invalid without a separate function call for each.
-            Usage: for(int i = -1; dict.GetNextEntry(ref i, out entry);) { }
-            </summary>
-            <param name="index">The index. This should be -1 when starting an iteration at the beginning.</param>
-            <param name="entry">The entry.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetPreviousIndex(System.Int32@)">
-            <summary>
-            Gets the index of the previous valid entry. Index is incremented to match the index of the item.
-            Usage: for(int i = dict.TotalCount; dict.GetPreviousIndex(ref i);) { }
-            </summary>
-            <param name="index">The index. This should be set to <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/>  when starting an iteration at the end.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetPreviousIndex(System.Int32)">
-            <summary>
-            Gets the index of the previous valid entry.
-            Usage: for(int i = dict.IndexOfLast; dict.TryGetValue(i, out value); i = dict.GetPreviousIndex(i);) { }
-            </summary>
-            <param name="index">The index.</param>
-            <returns>Returns the index of the previous valid entry in the collection. Returns -1 if no more valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetPreviousKey(System.Int32@,`0@)">
-            <summary>
-            Gets the previous valid key. Index is incremented to match the index of the item.
-            This is the fastest method to use for indexed access if many entries have been removed from the dictionary
-            because it will skip those that have become invalid without a separate function call for each.
-            Usage: for(int i = dict.TotalCount; dict.GetPreviousKey(ref i, out key);) { }
-            </summary>
-            <param name="index">The index. This should be set to <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/>  when starting an iteration at the end.</param>
-            <param name="key">The key.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetPreviousValue(System.Int32@,`1@)">
-            <summary>
-            Gets the previous valid value. Index is incremented to match the index of the item.
-            This is the fastest method to use for indexed access if many entries have been removed from the dictionary
-            because it will skip those that have become invalid without a separate function call for each.
-            Usage: for(int i = dict.TotalCount; dict.GetPreviousValue(ref i, out value);) { }
-            </summary>
-            <param name="index">The index. This should be set to <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/>  when starting an iteration at the end.</param>
-            <param name="value">The value.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.GetPreviousEntry(System.Int32@,System.Collections.Generic.KeyValuePair{`0,`1}@)">
-            <summary>
-            Gets the previous valid entry. Index is incremented to match the index of the item.
-            This is the fastest method to use for indexed access if many entries have been removed from the dictionary
-            because it will skip those that have become invalid without a separate function call for each.
-            Usage: for(int i = dict.TotalCount; dict.GetPreviousEntry(ref i, out entry);) { }
-            </summary>
-            <param name="index">The index. This should be set to <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/>  when starting an iteration at the end.</param>
-            <param name="entry">The entry.</param>
-            <returns>Returns true if there was another valid entry found in the collection. Returns false if no valid entries were found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.ADictionary`2.RemoveAt(System.Int32)">
-            <summary>
-            Removes the entry at the specified index.
-            </summary>
-            <param name="index">The index. Use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> to get the count for iteration.</param>
-            <returns>Returns true if the entry at the specified index was removed. Returns false if the entry was invalid.</returns>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.ADictionary`2.Count">
-            <summary>
-            Returns the count of valid entries in the dictionary.
-            WARNING: Do not use Count when iterating for index accessing. Count does not
-            represent the total size of the indexed entries.
-            Always use <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount"/> instead when accessing entries by index.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.ADictionary`2.TotalCount">
-            <summary>
-            Returns the count of all entries in the dictionary including invalid entries.
-            Always use this instead of <see cref="P:Rewired.Utils.Classes.Data.ADictionary`2.Count"/> when accessing entries by index.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.ADictionary`2.Item(`0)">
-            <summary>
-            Gets or sets the value associated with the specified key.
-            </summary>
-            <param name="key">The key of the value to get or set.</param>
-            <returns>The value for the specified key.</returns>
-            <exception cref="T:System.ArgumentNullException">key is null</exception>
-            <exception cref="T:System.Collections.Generic.KeyNotFoundException">The property is retrieved and key does not exist in the collection.</exception>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.ADictionary`2.IndexOfFirst">
-            <summary>
-            Gets the index of the first valid entry.
-            Returns -1 if no valid entry was found.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.ADictionary`2.IndexOfLast">
-            <summary>
-            Gets the index of the last valid entry.
-            Returns -1 if no valid entry was found.
-            </summary>
-        </member>
-        <member name="T:Rewired.Utils.Classes.Data.IndexedDictionary`2">
-            <summary>
-            A Dictionary that stores data sequentially and can be indexed.
-            Key lookups are O(n) where n is the length of the collection.
-            Does not generate garbage on iOS.
-            </summary>
-            <typeparam name="TKey">Key type</typeparam>
-            <typeparam name="TValue">Value type</typeparam>
-        </member>
-        <member name="T:Rewired.Utils.Classes.Data.RingBuffer`1">
-            <summary>
-            A fixed-length ring buffer.
-            Old items are overwritten when new items are added when the buffer is full.
-            </summary>
-            <typeparam name="T">Type</typeparam>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.#ctor(System.Int32)">
-            <summary>
-            Creates an instance of this class.
-            </summary>
-            <param name="capacity">The maximum capacity of the buffer.</param>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Enqueue(`0)">
-            <summary>
-            Adds an item to the head of the buffer.
-            </summary>
-            <param name="item">The item to add to the buffer.</param>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.EnqueueIfUnique(`0)">
-            <summary>
-            Adds an item to the head of the buffer if it does not already exist in the buffer.
-            </summary>
-            <param name="item">The item to add to the buffer.</param>
-            <returns>True if the item was added or false if the item already exists in the buffer.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Dequeue">
-            <summary>
-            Removes the oldest item from the buffer.
-            </summary>
-            <returns>The oldest item in the buffer.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Peek">
-            <summary>
-            Gets the oldest item in the buffer but does not remove it.
-            </summary>
-            <returns>The oldest item in the buffer.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Contains(`0)">
-            <summary>
-            Determines if the buffer contains the specified item.
-            </summary>
-            <param name="item">The item to search for in the buffer.</param>
-            <returns>True if the item exists in the buffer or false if it does not.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Contains(`0,System.Collections.Generic.IEqualityComparer{`0})">
-            <summary>
-            Determines if the buffer contains the specified item.
-            </summary>
-            <param name="item">The item to search for in the buffer.</param>
-            <param name="comparer">The equality comparer to be used to determine if the item is in the buffer.</param>
-            <returns>True if the item exists in the buffer or false if it does not.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.IndexOf(`0)">
-            <summary>
-            Gets the index of the first matching item in the buffer.
-            </summary>
-            <param name="item">The item to search for in the buffer.</param>
-            <returns>The index of the item or -1 if the item was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.IndexOf(`0,System.Collections.Generic.IEqualityComparer{`0})">
-            <summary>
-            Gets the index of the first matching item in the buffer.
-            </summary>
-            <param name="item">The item to remove from the buffer.</param>
-            <param name="comparer">The equality comparer to be used to determine if the item is in the buffer.</param>
-            <returns>The index of the item or -1 if the item was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Remove(`0)">
-            <summary>
-            Removes the first matching item from the buffer.
-            </summary>
-            <param name="item">The item to remove from the buffer.</param>
-            <returns>True if the item was removed or false if the item was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Remove(`0,System.Collections.Generic.IEqualityComparer{`0})">
-            <summary>
-            Removes the first matching item from the buffer.
-            </summary>
-            <param name="item">The item to remove from the buffer.</param>
-            <param name="comparer">The equality comparer to be used to determine if the item is in the buffer.</param>
-            <returns>True if the item was removed or false if the item was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.RemoveAt(System.Int32)">
-            <summary>
-            Removes the item at the specified index from the buffer.
-            </summary>
-            <param name="index">The index of the item to remove.</param>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.RemoveAll(`0)">
-            <summary>
-            Removes all matching items from the buffer.
-            </summary>
-            <param name="item">The item to remove from the buffer.</param>
-            <returns>The number of items removed from the buffer.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.RemoveAll(`0,System.Collections.Generic.IEqualityComparer{`0})">
-            <summary>
-            Removes all matching items from the buffer.
-            </summary>
-            <param name="item">The item to remove from the buffer.</param>
-            <param name="comparer">The equality comparer to be used to determine if the item is in the buffer.</param>
-            <returns>The number of items removed from the buffer.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.RingBuffer`1.Clear">
-            <summary>
-            Clears the buffer.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.RingBuffer`1.Count">
-            <summary>
-            The number of items in the buffer.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.RingBuffer`1.Capacity">
-            <summary>
-            The maximum capacity of the buffer.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.RingBuffer`1.OverrunCount">
-            <summary>
-            The number of overruns that have occurred since the last dequeue.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.RingBuffer`1.EqualityComparer">
-            <summary>
-            The equality comparer used in equality comparisons.
-            Set this to null to restore the default equality comparer.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Data.RingBuffer`1.Item(System.Int32)">
-            <summary>
-            Gets or sets the item at the specified index.
-            </summary>
-            <param name="index">The index of the item to be get or set.</param>
-            <returns>The item at the specified index.</returns>
         </member>
         <member name="T:Rewired.Utils.Classes.Data.AList`1">
             <summary>
@@ -14229,18 +13667,55 @@
             <param name="openSpaceEquals">Definition of an open space</param>
             <returns>Index where item added. -1 if not added.</returns>
         </member>
+        <member name="T:Rewired.Utils.Classes.Data.FixedLengthQueue`1">
+            <summary>
+            A fixed-length queue. Just a wrapper around a queue that enforces a maximum capacity.
+            </summary>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.RAFixedLengthQueue`1">
+            <summary>
+            A fixed-length queue. New items are added at the end. When Dequeue is called, the first item is taken out of the queue and the list collapsed.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.ThreadSafeList`1.ProcessList(System.Action{`0})">
+            <summary>
+            Perform some process on the entire list with a delegate.
+            List is locked during the entire iteration.
+            </summary>
+            <param name="del"></param>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.ThreadSafeQueue`1.ProcessQueue(System.Action{`0,System.Object},System.Object)">
+            <summary>
+            Processes the entire queue with a delegate.
+            Queue is locked during the entire iteration and the queue will be empty when finished.
+            </summary>
+            <param name="del"></param>
+            <param name="other"></param>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.UnorderedIndexMapDictionary`2">
+            <summary>
+            "Dictionary" that uses linear search to find entries.
+            When removing keys, order is nor preserved.
+            Slower than true Dictionary because it doesn't use a hash table, but no GC on iOS
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.UnorderedIndexMapIntDictionary`1">
+            <summary>
+            int key "Dictionary" that uses linear search to find entries.
+            When removing keys, order is nor preserved.
+            Slower than true Dictionary because it doesn't use a hash table, but no GC on iOS
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
         <member name="T:Rewired.Utils.Classes.Data.NativeBuffer">
             <summary>
             Creates a buffer in native memory.
             WARNING: Data writes are unsafe and will result in crashes 
             or memory corruption if incoming pointers are not valid.
             </summary>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.NativeBuffer.DumpToHexString">
-            <summary>
-            Dumps memory to a hex string.
-            </summary>
-            <returns>Hex string reresentation of the block of memory.</returns>
         </member>
         <member name="M:Rewired.Utils.Classes.Data.NativeBuffer.ReadBit(System.Int32,System.Byte)">
             <summary>
@@ -14281,33 +13756,6 @@
             Writes until buffer is full.
             </summary>
             <returns>Number of bytes written</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.NativeBuffer.Resize(System.Int32,System.Boolean)">
-            <summary>
-            Resizes the buffer.
-            </summary>
-            <param name="size">The new buffer size.</param>
-            <param name="preserveData">If true, memory will be copied to the new buffer. If the new buffer is smaller than the previous, the data will be truncated.</param>
-            <returns>True if the buffer was resized or is already the target size. False if there was an error.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.NativeBuffer.Clear">
-            <summary>
-            Zero fills the memory.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.NativeBuffer.Release">
-            <summary>
-            Frees the native memory.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Data.NativeBuffer.Copy(Rewired.Utils.Classes.Data.NativeBuffer,Rewired.Utils.Classes.Data.NativeBuffer)">
-            <summary>
-            Copies one buffer to another.
-            The destination buffer will be resized if necessary.
-            </summary>
-            <param name="source">The buffer from which the data will be copied..</param>
-            <param name="destination">The buffer to which the data will be copied.</param>
-            <returns>True on success, false on error.</returns>
         </member>
         <member name="T:Rewired.Utils.Classes.Data.NativeRingBuffer">
             <summary>
@@ -14376,6 +13824,81 @@
         <member name="M:Rewired.Utils.Classes.Data.NativeRingBuffer.AdvanceReadPosition(System.Int32)">
             <summary>
             Do not call this anywhere except within Read
+            </summary>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer">
+            <summary>
+            A simple, fast ring buffer that uses native memory.
+            </summary>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.#ctor(System.Int32)">
+            <summary>
+            Creates a new buffer.
+            </summary>
+            <param name="size">The size of the buffer in bytes.</param>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Write(System.IntPtr,System.Int32,Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Handle@)">
+            <summary>
+            Writes data to the buffer.
+            </summary>
+            <param name="source">Source data pointer.</param>
+            <param name="length">Length of the data in bytes.</param>
+            <param name="handle">Handle to the data new entry.</param>
+            <returns>True on success, false on failure.</returns>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Read(Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Handle,System.Byte[])">
+            <summary>
+            Read from the buffer.
+            </summary>
+            <param name="handle">Handle to the position in the buffer. Includes the number of bytes to read.</param>
+            <param name="buffer">The buffer to fill.</param>
+            <returns>Number of bytes read.</returns>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Read(Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Handle,System.IntPtr,System.Int32)">
+            <summary>
+            Read from the buffer.
+            </summary>
+            <param name="handle">Handle to the position in the buffer. Includes the number of bytes to read.</param>
+            <param name="buffer">The buffer to fill.</param>
+            <returns>Number of bytes read.</returns>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.GetPointer(Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Handle)">
+            <summary>
+            Get a pointer to memory from a Handle.
+            </summary>
+            <param name="handle">Handle to the position in the buffer.</param>
+            <returns>The pointer. Returns IntPtr.Zero if the Handle was invalid.</returns>
+        </member>
+        <member name="M:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.TryGetPointer(Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.Handle,System.IntPtr@)">
+            <summary>
+            Try to get a pointer to memory from a Handle.
+            </summary>
+            <param name="handle">Handle to the position in the buffer.</param>
+            <param name="pointer">he pointer. IntPtr.Zero if the Handle was invalid.</param>
+            <returns>True on success, false on failure.</returns>
+        </member>
+        <member name="P:Rewired.Utils.Classes.Data.SimpleNativeRingBuffer.size">
+            <summary>
+            The size of the buffer in bytes.
+            </summary>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.PinnedGenericArrayBuffer">
+            <summary>
+            This buffer allows you to store an Array of any type to be used as a native buffer
+            and be able to dynamically determine which type you are using at runtime. (No generic T).
+            Allows you to act on the buffer as a managed array or send the buffer out to unmanaged code.
+            </summary>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.PinnedByteArrayBuffer">
+            <summary>
+            Buffer for native interop. Creates a managed array and pins it for the lifetime of the object.
+            Permanent pinning may have negative impact on performance.
+            </summary>
+        </member>
+        <member name="T:Rewired.Utils.Classes.Data.PinnedArrayBuffer`1">
+            <summary>
+            Buffer for native interop. Creates a managed array and pins it for the lifetime of the object.
+            Permanent pinning may have negative impact on performance.
             </summary>
         </member>
         <member name="M:Rewired.Utils.ExtensionMethods.IsNullOrDestroyed(System.Object)">
@@ -14489,49 +14012,6 @@
             when the UnityEngine.Object has been destroyed.
             </summary>
             <typeparam name="T">Argument type</typeparam>
-        </member>
-        <member name="M:Rewired.Utils.TempListPool.Clear">
-            <summary>
-            Clears everything and frees memory.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.TempListPool.Clear(System.Type)">
-            <summary>
-            Clear lists of the specified type and free memory.
-            </summary>
-            <param name="listType">The list type to clear.</param>
-        </member>
-        <member name="M:Rewired.Utils.TempListPool.TListPool.Clear">
-            <summary>
-            Clears the pool and frees memory.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.TempListPool.TListPool.Clear(System.Type)">
-            <summary>
-            Clear lists of the specified type and free memory.
-            </summary>
-            <param name="listType">The list type to clear.</param>
-        </member>
-        <member name="T:Rewired.Utils.TempListPool.TList`1">
-            <summary>
-            A <see cref="T:System.Collections.Generic.List`1"/> wrapper that implements <see cref="T:System.IDisposable"/>.
-            Always call Dispose or use the using pattern when working with <see cref="T:Rewired.Utils.TempListPool.TList`1"/> to avoid garbage.
-            When disposed, the object will be returned to the pool for reuse. Do not keep any references around
-            because the <see cref="T:Rewired.Utils.TempListPool.TList`1"/> may be reused for another list.
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:Rewired.Utils.TempListPool.TList`1.#ctor">
-            <summary>
-            Creates a new instance of the class.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.TempListPool.TList`1.Rewired#Utils#TempListPool#ITListSetter{T}#SetList(System.Collections.Generic.List{`0})">
-            <summary>
-            This is used by the pool to set the list value.
-            FOR INTERNAL USE ONLY. DO NOT CALL THIS METHOD.
-            </summary>
-            <param name="list"></param>
         </member>
         <member name="M:Rewired.Utils.InputTools.TransformAxis2DComponentValue(System.Single,System.Single,System.Single,System.Single)">
             <summary>
@@ -14665,40 +14145,6 @@
             </summary>
             <param name="text"></param>
             <returns></returns>
-        </member>
-        <member name="M:Rewired.Utils.MiscTools.Tick(System.UInt32)">
-            <summary>
-            Increment a UInt32 tick. Wraps to 1. Zero is not a valid UInt32 tick.
-            </summary>
-            <param name="counter">The current tick count</param>
-            <returns>Incremented tick</returns>
-        </member>
-        <member name="M:Rewired.Utils.MiscTools.Tick(System.Int32)">
-            <summary>
-            Increment an Int32 tick. Wraps to 0. Negative values are not valid Int32 ticks.
-            </summary>
-            <param name="counter">The current tick count</param>
-            <returns>Incremented tick</returns>
-        </member>
-        <member name="M:Rewired.Utils.MiscTools.TickPrev(System.UInt32)">
-            <summary>
-            Decrements a UInt32 tick. Wraps to 1. Zero is not a valid UInt32 tick.
-            </summary>
-            <param name="counter">The current tick count</param>
-            <returns>Incremented tick</returns>
-        </member>
-        <member name="M:Rewired.Utils.MiscTools.TickPrev(System.Int32)">
-            <summary>
-            Decrements an Int32 tick. Wraps to 0. Negative values are not valid Int32 ticks.
-            </summary>
-            <param name="counter">The current tick count</param>
-            <returns>Incremented tick</returns>
-        </member>
-        <member name="M:Rewired.Utils.ReflectionTools.IsAssemblyLoaded(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Must use this to check whether assemblies are loaded prior to calling System.Type.GetType or
-            the assembly will get dynamically loaded in the .NET 4.6 backend!
-            </summary>
         </member>
         <member name="M:Rewired.Utils.UnityTools.DetermineWebplayerPlatformType(Rewired.Platforms.Platform,Rewired.Platforms.EditorPlatform)">
             <summary>
@@ -15161,13 +14607,6 @@
             Warning: Memory allocations in Unity 4.x!
             </summary>
         </member>
-        <member name="T:Rewired.Utils.Classes.Utility.Locker">
-            <summary>
-            Locks the target if and unlocks on dispose.
-            Safe to use with a null target.
-            Use with using statement.
-            </summary>
-        </member>
         <member name="M:Rewired.Utils.Classes.Utility.ThreadHelper.Start(System.Boolean)">
             <summary>
             Starts the thread.
@@ -15205,7 +14644,7 @@
         </member>
         <member name="M:Rewired.Utils.Classes.Utility.ThreadHelper.ResetTimeout">
             <summary>
-            Resets the timeout timer so the thread does not self-terminate.
+            Resets the timeout timer so the thread does self-terminate.
             </summary>
         </member>
         <member name="P:Rewired.Utils.Classes.Utility.ThreadHelper.isRunning">
@@ -15221,7 +14660,6 @@
         <member name="P:Rewired.Utils.Classes.Utility.ThreadHelper.useHighPrecitionTimer">
             <summary>
             Is the high precision timer being used? This greatly increases CPU resources because the thread does not sleep.
-            Note: This is enabled automatically if using a fixed time step and FPS is set to the FORCE_HIGH_PRECISION_TIMER_AT_FPS threshold or above.
             </summary>
         </member>
         <member name="P:Rewired.Utils.Classes.Utility.ThreadHelper.useFixedTimeStep">
@@ -15385,6 +14823,13 @@
             <param name="numBytesToWrite">Number of bytes to write to the buffer.</param>
             <returns>Number of bytes written</returns>
         </member>
+        <member name="T:Rewired.Utils.Classes.Utility.Locker">
+            <summary>
+            Locks the target if and unlocks on dispose.
+            Safe to use with a null target.
+            Use with using statement.
+            </summary>
+        </member>
         <member name="T:Rewired.Utils.Classes.Utility.GCHandleHelper">
             <summary>
             Simple wrapper for GCHandle.
@@ -15395,26 +14840,6 @@
             <summary>
             Pins an object.
             Use with using statement.
-            </summary>
-        </member>
-        <member name="T:Rewired.Utils.Classes.Utility.IPoolableObject">
-            <summary>
-            Interface for a simple poolable object that maintains a reference to its parent pool so it can be returned easily.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.IPoolableObject.Return">
-            <summary>
-            Return the object to its pool.
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.IPoolableObject.Clear">
-            <summary>
-            Clear the object.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Utility.IPoolableObject.pool">
-            <summary>
-            The object's parent pool.
             </summary>
         </member>
         <member name="T:Rewired.Utils.Classes.Utility.SetAndRestoreVar`1">
@@ -15528,120 +14953,6 @@
         <member name="P:Rewired.Utils.Classes.Utility.Stopwatch.isRunning">
             <summary>
             Is the stopwatch currently running?
-            </summary>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.EnumNameValueCache`1.GetName(System.Int64)">
-            <summary>
-            Gets the name from the value.
-            You must cast the enum to a long using unchecked((long)value).
-            This is done to prevent garbage generated by EqualityComparer&lt;T&gt;.Equals on enums.
-            </summary>
-            <param name="value">The enum value cast to a long. You must cast the enum to a long using unchecked((long)value).</param>
-            <returns>The name.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.EnumNameValueCache`1.TryGetName(System.Int64,System.String@)">
-            <summary>
-            Tries to get the name from the value.
-            You must cast the enum to a long using unchecked((long)value).
-            This is done to prevent garbage generated by EqualityComparer&lt;T&gt;.Equals on enums.
-            </summary>
-            <param name="value">The enum value cast to a long. You must cast the enum to a long using unchecked((long)value).</param>
-            <param name="name">The name.</param>
-            <returns>True if successful, otherwise false.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.EnumNameValueCache`1.IndexOf(System.Int64)">
-            <summary>
-            Gets the index of the value.
-            You must cast the enum to a long using unchecked((long)value).
-            This is done to prevent garbage generated by EqualityComparer&lt;T&gt;.Equals on enums.
-            </summary>
-            <param name="value">The enum value cast to a long. You must cast the enum to a long using unchecked((long)value).</param>
-            <returns>The index of the value. Returns -1 if the value was not found.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.EnumNameValueCache`1.Contains(System.Int64)">
-            <summary>
-            Determines if the specified value exists in the enum.
-            You must cast the enum to a long using unchecked((long)value).
-            This is done to prevent garbage generated by EqualityComparer&lt;T&gt;.Equals on enums.
-            </summary>
-            <param name="value">The enum value cast to a long. You must cast the enum to a long using unchecked((long)value).</param>
-            <returns>True if the value exists, otherwise false.</returns>
-        </member>
-        <member name="T:Rewired.Utils.Classes.Utility.ValueWatcher">
-            <summary>
-            Watches a value for changes and can trigger an event when it changes.
-            </summary>
-        </member>
-        <member name="T:Rewired.Utils.Classes.Utility.ValueWatcher`1">
-            <summary>
-            Watches a value for changes and can trigger an event when it changes.
-            </summary>
-            <typeparam name="T">Value type.</typeparam>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.#ctor(`0,System.Boolean)">
-            <summary>
-            Creates an instance.
-            </summary>
-            <param name="initialValue">The initial value.</param>
-            <param name="autoTriggerEvent">Should the changed event be triggered immediately when the value changes?</param>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.#ctor(`0,System.Func{`0},System.Boolean)">
-            <summary>
-            Creates an instance.
-            </summary>
-            <param name="initialValue">The initial value.</param>
-            <param name="getValueDelegate">The delegate used to retrieve the value when <see cref="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.Update"/> is called.</param>
-            <param name="autoTriggerEvent">Should the changed event be triggered immediately when the value changes?</param>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.Update">
-            <summary>
-            Updates the value from the delegate.
-            </summary>
-            <returns>True if the value changed, false otherwise.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.Use">
-            <summary>
-            Uses the event. Changed is set to false.
-            </summary>
-            <returns>True if the value was previously changed, false if there was no change to use.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.TriggerEvent">
-            <summary>
-            Triggers the changed event if the value has changed and uses it.
-            </summary>
-            <returns>True if the event fired, false otherwise.</returns>
-        </member>
-        <member name="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.Set(`0)">
-            <summary>
-            Sets the value.
-            </summary>
-            <param name="value">The new value.</param>
-            <returns>True if the value changed, false otherwise.</returns>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Utility.ValueWatcher`1.autoTriggerEvent">
-            <summary>
-            Should the changed event be triggered immediately when the value changes?
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Utility.ValueWatcher`1.getValueDelegate">
-            <summary>
-            Gets or sets the delegate used to retrieve the value when <see cref="M:Rewired.Utils.Classes.Utility.ValueWatcher`1.Update"/> is called.
-            </summary>
-        </member>
-        <member name="P:Rewired.Utils.Classes.Utility.ValueWatcher`1.value">
-            <summary>
-            Gets the current value.
-            </summary>
-        </member>
-        <member name="E:Rewired.Utils.Classes.Utility.ValueWatcher`1.ChangedEvent">
-            <summary>
-            Event that triggers when the value changes.
-            </summary>
-        </member>
-        <member name="T:Rewired.Utils.EqualityComparerNoAlloc`1">
-            <summary>
-            Custom replacements for primitive equality comparers due to Mono bugs on iOS that cause memory allocations.
-            This bug may not exist anymore with IL2CPP. Not sure.
             </summary>
         </member>
         <member name="T:Rewired.Platforms.XboxOne.IXboxOneInputSource">

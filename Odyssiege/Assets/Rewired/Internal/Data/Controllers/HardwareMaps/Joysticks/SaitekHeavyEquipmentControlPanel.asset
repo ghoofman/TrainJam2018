@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: c94c929f-7c09-4d06-8f26-255a58656968
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 8c000000
   elementIdentifiers:
   - _id: 0
     _name: Stick X (Blue)

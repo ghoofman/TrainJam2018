@@ -17,7 +17,6 @@ MonoBehaviour:
   controllerGuid: 258052eb-aa32-4ac1-8c6a-78a353a9a6ba
   templateGuids: []
   hideInLists: 0
-  joystickTypes: 7a000000
   elementIdentifiers:
   - _id: 0
     _name: Cyclic X

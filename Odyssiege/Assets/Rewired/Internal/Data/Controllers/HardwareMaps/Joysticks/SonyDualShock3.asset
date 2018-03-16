@@ -18,7 +18,6 @@ MonoBehaviour:
   templateGuids:
   - 83b427e4-086f-47f3-bb06-be266abd1ca5
   hideInLists: 0
-  joystickTypes: 0100000002000000
   elementIdentifiers:
   - _id: 0
     _name: Left Stick X
@@ -445,7 +444,7 @@ MonoBehaviour:
           _isPressureSensitive: 0
       - customCalculation: {fileID: 0}
         customCalculationSourceData: []
-        elementIdentifier: 15
+        elementIdentifier: 14
         sourceType: 0
         sourceButton: 10
         sourceAxis: 0
@@ -463,9 +462,27 @@ MonoBehaviour:
           _isPressureSensitive: 0
       - customCalculation: {fileID: 0}
         customCalculationSourceData: []
-        elementIdentifier: 16
+        elementIdentifier: 15
         sourceType: 0
         sourceButton: 11
+        sourceAxis: 0
+        sourceAxisPole: 0
+        axisDeadZone: 0
+        sourceHat: 0
+        sourceHatType: 0
+        sourceHatDirection: 0
+        requireMultipleButtons: 0
+        requiredButtons: 
+        ignoreIfButtonsActive: 0
+        ignoreIfButtonsActiveButtons: 
+        buttonInfo:
+          _excludeFromPolling: 0
+          _isPressureSensitive: 0
+      - customCalculation: {fileID: 0}
+        customCalculationSourceData: []
+        elementIdentifier: 16
+        sourceType: 2
+        sourceButton: 0
         sourceAxis: 0
         sourceAxisPole: 0
         axisDeadZone: 0
@@ -489,7 +506,7 @@ MonoBehaviour:
         axisDeadZone: 0
         sourceHat: 0
         sourceHatType: 0
-        sourceHatDirection: 0
+        sourceHatDirection: 1
         requireMultipleButtons: 0
         requiredButtons: 
         ignoreIfButtonsActive: 0
@@ -507,24 +524,6 @@ MonoBehaviour:
         axisDeadZone: 0
         sourceHat: 0
         sourceHatType: 0
-        sourceHatDirection: 1
-        requireMultipleButtons: 0
-        requiredButtons: 
-        ignoreIfButtonsActive: 0
-        ignoreIfButtonsActiveButtons: 
-        buttonInfo:
-          _excludeFromPolling: 0
-          _isPressureSensitive: 0
-      - customCalculation: {fileID: 0}
-        customCalculationSourceData: []
-        elementIdentifier: 19
-        sourceType: 2
-        sourceButton: 0
-        sourceAxis: 0
-        sourceAxisPole: 0
-        axisDeadZone: 0
-        sourceHat: 0
-        sourceHatType: 0
         sourceHatDirection: 2
         requireMultipleButtons: 0
         requiredButtons: 
@@ -535,7 +534,7 @@ MonoBehaviour:
           _isPressureSensitive: 0
       - customCalculation: {fileID: 0}
         customCalculationSourceData: []
-        elementIdentifier: 20
+        elementIdentifier: 19
         sourceType: 2
         sourceButton: 0
         sourceAxis: 0
@@ -1252,7 +1251,7 @@ MonoBehaviour:
           sourceOtherAxis: 0
         - customCalculation: {fileID: 0}
           customCalculationSourceData: []
-          elementIdentifier: 15
+          elementIdentifier: 14
           sourceType: 0
           sourceButton: 10
           sourceAxis: 0
@@ -1271,9 +1270,28 @@ MonoBehaviour:
           sourceOtherAxis: 0
         - customCalculation: {fileID: 0}
           customCalculationSourceData: []
-          elementIdentifier: 16
+          elementIdentifier: 15
           sourceType: 0
           sourceButton: 11
+          sourceAxis: 0
+          sourceAxisPole: 0
+          axisDeadZone: 0
+          sourceHat: 0
+          sourceHatType: 0
+          sourceHatDirection: 0
+          requireMultipleButtons: 0
+          requiredButtons: 
+          ignoreIfButtonsActive: 0
+          ignoreIfButtonsActiveButtons: 
+          buttonInfo:
+            _excludeFromPolling: 0
+            _isPressureSensitive: 0
+          sourceOtherAxis: 0
+        - customCalculation: {fileID: 0}
+          customCalculationSourceData: []
+          elementIdentifier: 16
+          sourceType: 2
+          sourceButton: 0
           sourceAxis: 0
           sourceAxisPole: 0
           axisDeadZone: 0
@@ -1298,7 +1316,7 @@ MonoBehaviour:
           axisDeadZone: 0
           sourceHat: 0
           sourceHatType: 0
-          sourceHatDirection: 0
+          sourceHatDirection: 1
           requireMultipleButtons: 0
           requiredButtons: 
           ignoreIfButtonsActive: 0
@@ -1317,25 +1335,6 @@ MonoBehaviour:
           axisDeadZone: 0
           sourceHat: 0
           sourceHatType: 0
-          sourceHatDirection: 1
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-          sourceOtherAxis: 0
-        - customCalculation: {fileID: 0}
-          customCalculationSourceData: []
-          elementIdentifier: 19
-          sourceType: 2
-          sourceButton: 0
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
           sourceHatDirection: 2
           requireMultipleButtons: 0
           requiredButtons: 
@@ -1347,7 +1346,7 @@ MonoBehaviour:
           sourceOtherAxis: 0
         - customCalculation: {fileID: 0}
           customCalculationSourceData: []
-          elementIdentifier: 20
+          elementIdentifier: 19
           sourceType: 2
           sourceButton: 0
           sourceAxis: 0
@@ -3206,22 +3205,6 @@ MonoBehaviour:
             _excludeFromPolling: 0
             _isPressureSensitive: 0
         - elementIdentifier: 16
-          sourceType: 0
-          sourceButton: 12
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 17
           sourceType: 2
           sourceButton: 0
           sourceAxis: 0
@@ -3237,7 +3220,7 @@ MonoBehaviour:
           buttonInfo:
             _excludeFromPolling: 0
             _isPressureSensitive: 0
-        - elementIdentifier: 18
+        - elementIdentifier: 17
           sourceType: 2
           sourceButton: 0
           sourceAxis: 0
@@ -3253,7 +3236,7 @@ MonoBehaviour:
           buttonInfo:
             _excludeFromPolling: 0
             _isPressureSensitive: 0
-        - elementIdentifier: 19
+        - elementIdentifier: 18
           sourceType: 2
           sourceButton: 0
           sourceAxis: 0
@@ -3269,7 +3252,7 @@ MonoBehaviour:
           buttonInfo:
             _excludeFromPolling: 0
             _isPressureSensitive: 0
-        - elementIdentifier: 20
+        - elementIdentifier: 19
           sourceType: 2
           sourceButton: 0
           sourceAxis: 0
@@ -3278,370 +3261,6 @@ MonoBehaviour:
           sourceHat: 0
           sourceHatType: 0
           sourceHatDirection: 3
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-    - description: Sony DualShock 3 (Ubuntu 17.04, wired)
-      matchingCriteria:
-        axisCount: 11
-        buttonCount: 19
-        disabled: 0
-        tag: 
-        hatCount: 0
-        manufacturer_useRegex: 0
-        productName_useRegex: 1
-        systemName_useRegex: 0
-        manufacturer:
-        - Sony
-        productName:
-        - PLAYSTATION\(R\)3 Controller.*
-        systemName: []
-        productGUID:
-        - 0268054c
-      elements:
-        axes:
-        - elementIdentifier: 0
-          sourceType: 1
-          sourceAxis: 0
-          sourceAxisRange: 0
-          invert: 0
-          axisDeadZone: .150000006
-          calibrateAxis: 0
-          axisZero: 0
-          axisMin: 0
-          axisMax: 0
-          axisInfo:
-            _dataFormat: 0
-            _excludeFromPolling: 0
-          sourceButton: 0
-          buttonAxisContribution: 0
-          sourceHat: 0
-          sourceHatDirection: 0
-          sourceHatRange: 0
-        - elementIdentifier: 1
-          sourceType: 1
-          sourceAxis: 1
-          sourceAxisRange: 0
-          invert: 1
-          axisDeadZone: .150000006
-          calibrateAxis: 0
-          axisZero: 0
-          axisMin: 0
-          axisMax: 0
-          axisInfo:
-            _dataFormat: 0
-            _excludeFromPolling: 0
-          sourceButton: 0
-          buttonAxisContribution: 0
-          sourceHat: 0
-          sourceHatDirection: 0
-          sourceHatRange: 0
-        - elementIdentifier: 2
-          sourceType: 1
-          sourceAxis: 2
-          sourceAxisRange: 0
-          invert: 0
-          axisDeadZone: .150000006
-          calibrateAxis: 0
-          axisZero: 0
-          axisMin: 0
-          axisMax: 0
-          axisInfo:
-            _dataFormat: 0
-            _excludeFromPolling: 0
-          sourceButton: 0
-          buttonAxisContribution: 0
-          sourceHat: 0
-          sourceHatDirection: 0
-          sourceHatRange: 0
-        - elementIdentifier: 3
-          sourceType: 1
-          sourceAxis: 3
-          sourceAxisRange: 0
-          invert: 1
-          axisDeadZone: .150000006
-          calibrateAxis: 0
-          axisZero: 0
-          axisMin: 0
-          axisMax: 0
-          axisInfo:
-            _dataFormat: 0
-            _excludeFromPolling: 0
-          sourceButton: 0
-          buttonAxisContribution: 0
-          sourceHat: 0
-          sourceHatDirection: 0
-          sourceHatRange: 0
-        buttons:
-        - elementIdentifier: 4
-          sourceType: 0
-          sourceButton: 14
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 5
-          sourceType: 0
-          sourceButton: 13
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 6
-          sourceType: 0
-          sourceButton: 15
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 7
-          sourceType: 0
-          sourceButton: 12
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 8
-          sourceType: 0
-          sourceButton: 10
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 9
-          sourceType: 0
-          sourceButton: 8
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 10
-          sourceType: 0
-          sourceButton: 11
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 11
-          sourceType: 0
-          sourceButton: 9
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 12
-          sourceType: 0
-          sourceButton: 0
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 13
-          sourceType: 0
-          sourceButton: 3
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 14
-          sourceType: 0
-          sourceButton: 16
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 15
-          sourceType: 0
-          sourceButton: 1
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 16
-          sourceType: 2
-          sourceButton: 0
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 2
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 17
-          sourceType: 0
-          sourceButton: 4
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 18
-          sourceType: 0
-          sourceButton: 5
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 19
-          sourceType: 0
-          sourceButton: 6
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
-          requireMultipleButtons: 0
-          requiredButtons: 
-          ignoreIfButtonsActive: 0
-          ignoreIfButtonsActiveButtons: 
-          buttonInfo:
-            _excludeFromPolling: 0
-            _isPressureSensitive: 0
-        - elementIdentifier: 20
-          sourceType: 0
-          sourceButton: 7
-          sourceAxis: 0
-          sourceAxisPole: 0
-          axisDeadZone: 0
-          sourceHat: 0
-          sourceHatType: 0
-          sourceHatDirection: 0
           requireMultipleButtons: 0
           requiredButtons: 
           ignoreIfButtonsActive: 0

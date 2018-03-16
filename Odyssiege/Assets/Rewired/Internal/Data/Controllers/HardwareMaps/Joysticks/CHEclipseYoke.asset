@@ -18,7 +18,6 @@ MonoBehaviour:
   templateGuids:
   - f311fa16-0ccc-41c0-ac4b-50f7100bb8ff
   hideInLists: 0
-  joystickTypes: 16000000
   elementIdentifiers:
   - _id: 0
     _name: Rotate Yoke
