@@ -8,8 +8,9 @@ public class Tail : MonoBehaviour {
 
     Player player;
     public int playerId = 0;
-    private bool ShouldMoveToAngle;
-    private float desiredAngle = 20.0f;
+    private const float minAngle = 20.0f;
+    private float desiredAngle = 0.0f;
+    private const float maxAngle = 80.0f;
 
     // Use this for initialization
     void Start () {
@@ -19,37 +20,25 @@ public class Tail : MonoBehaviour {
     void Awake()
     {
         player = ReInput.players.GetPlayer(playerId);
+        gameObject.GetComponent<Rigidbody2D>().MoveRotation(minAngle);
     }
 
     // Update is called once per frame
     void Update () {
+        float tailAngle = player.GetAxis("TailAngle");
+        desiredAngle = minAngle + (tailAngle * maxAngle);
+        gameObject.GetComponent<Rigidbody2D>().MoveRotation(desiredAngle);
+
+        Debug.Log("TailAngle");
+
         if (Input.GetKeyUp(KeyCode.K))
         {
             Debug.Log("Adding K");
-            ShouldMoveToAngle = true;
-        }
-
-        if (player.GetButtonDown("Fire"))
-        {
-            Debug.Log("Adding L");
-        }
-
-        if (ShouldMoveToAngle == true)
-        {
-            if (ReachedDesiredAngle())
-            {
-                ShouldMoveToAngle = false;
-            } else
-            {
-                float newAngle = desiredAngle;
-                gameObject.GetComponent<Rigidbody2D>().MoveRotation(newAngle);
-            }
         }
     }
 
     private bool ReachedDesiredAngle()
     {
-
         if (gameObject.GetComponent<Rigidbody2D>().rotation - desiredAngle < 1.0f)
         {
             Debug.Log("Hit max");
