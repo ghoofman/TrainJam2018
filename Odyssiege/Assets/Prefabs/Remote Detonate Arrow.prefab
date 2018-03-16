@@ -37,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221540153711130}
-  m_LocalRotation: {x: -0, y: -0, z: 0.12410588, w: 0.992269}
-  m_LocalPosition: {x: -10.15, y: 0.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.20142582, w: 0.9795038}
+  m_LocalPosition: {x: -12.67, y: 0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 23.241001}
 --- !u!50 &50685791315057746
 Rigidbody2D:
   serializedVersion: 4
@@ -116,6 +116,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Destructible2D.D2dVector2Event, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  ForceToAdd: 1000
+  ExplosionForce: 50000
 --- !u!114 &114974248292905134
 MonoBehaviour:
   m_ObjectHideFlags: 1

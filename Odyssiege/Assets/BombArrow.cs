@@ -9,6 +9,10 @@ public class BombArrow : MonoBehaviour {
 	private bool collided = false;
 	private Vector2 contactPoint;
 
+	public float ForceToAdd = 500.0f;
+	private Rigidbody2D collidedWith;
+	public float ExplosionForce = 500.0f;
+
 	// Use this for initialization
 	void Start () {
 		var rigid = gameObject.GetComponent<Rigidbody2D> ();
@@ -21,18 +25,20 @@ public class BombArrow : MonoBehaviour {
 			if (!started) {
 				started = true;
 				var rigid = gameObject.GetComponent<Rigidbody2D> ();
-				rigid.AddForce (new Vector2 (650, 400));
-				rigid.AddTorque (-50.0f);
+				var forceDir = gameObject.transform.rotation * (new Vector3 (1, 0, 0));
+				rigid.AddForce (forceDir * ForceToAdd);
 				rigid.simulated = true;
+				rigid.AddTorque (-gameObject.transform.rotation.eulerAngles.z);
 			} else {
 				if (OnImpact != null) {
 					if (collided) {
 						OnImpact.Invoke (contactPoint);
+						collidedWith.AddForceAtPosition (new Vector2 (ExplosionForce, 0), contactPoint);
+						Destroy (gameObject);
 					} else {
 						OnImpact.Invoke (transform.position);
 					}
 				}
-				Destroy (gameObject);
 			}
 		}
 //		var rigid = gameObject.GetComponent<Rigidbody2D> ();
@@ -49,6 +55,7 @@ public class BombArrow : MonoBehaviour {
 			rigid.simulated = false;
 
 			contactPoint = contacts[0].point;
+			collidedWith = contacts [0].rigidbody;
 		}
 	}
 }
