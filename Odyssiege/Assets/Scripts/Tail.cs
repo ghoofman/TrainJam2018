@@ -5,12 +5,12 @@ using Rewired;
 using System;
 
 public class Tail : MonoBehaviour {
-
+    public string axis = "TailAngle";
     Player player;
     public int playerId = 0;
-    private const float minAngle = 20.0f;
+    public float minAngle = 20.0f;
     private float desiredAngle = 0.0f;
-    private const float maxAngle = 80.0f;
+    public float maxAngle = 80.0f;
     private float maxAngleDelta = 2.0f;
 
     // Use this for initialization
@@ -26,7 +26,7 @@ public class Tail : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        float tailAngle = player.GetAxis("TailAngle");
+        float tailAngle = player.GetAxis(axis);
         desiredAngle = minAngle + (tailAngle * maxAngle);
         RotateTowards(desiredAngle);
 
