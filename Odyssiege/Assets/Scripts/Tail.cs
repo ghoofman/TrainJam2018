@@ -49,14 +49,14 @@ public class Tail : MonoBehaviour {
 
     private bool ReachedDesiredAngle()
     {
-        Debug.Log("gameObject.GetComponent<Rigidbody2D>(): ", gameObject.GetComponent<Rigidbody2D>());
 
-        if (gameObject.GetComponent<Rigidbody2D>().rotation == desiredAngle)
+        if (gameObject.GetComponent<Rigidbody2D>().rotation - desiredAngle < 1.0f)
         {
             Debug.Log("Hit max");
             return true;
         }
 
+        Debug.Log("gameObject.GetComponent<Rigidbody2D>().rotation" + gameObject.GetComponent<Rigidbody2D>().rotation);
         return false;
     }
 }
