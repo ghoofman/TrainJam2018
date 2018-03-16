@@ -44,6 +44,7 @@ namespace Destructible2D
 					Instantiate(Prefab, contacts[i].point, transform.rotation);
 				}
 			}
+			Destroy (gameObject);
 		}
 
 		public void SpawnAt(Vector2 position)
@@ -52,6 +53,7 @@ namespace Destructible2D
 			{
 				Instantiate(Prefab, position, transform.rotation);
 			}
+			Destroy (gameObject);
 		}
 
 		public void SpawnAt(Vector3 position)
@@ -60,6 +62,7 @@ namespace Destructible2D
 			{
 				Instantiate(Prefab, position, transform.rotation);
 			}
+			Destroy (gameObject);
 		}
 
 		public void Spawn()
@@ -68,6 +71,7 @@ namespace Destructible2D
 			{
 				Instantiate(Prefab, transform.position, transform.rotation);
 			}
+			Destroy (gameObject);
 		}
 
 		protected virtual void Start()
