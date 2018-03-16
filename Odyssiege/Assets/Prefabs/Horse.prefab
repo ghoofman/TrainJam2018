@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212729323415038722}
   - component: {fileID: 50242408740479460}
   - component: {fileID: 58926402282759778}
+  - component: {fileID: 114257725445505314}
   m_Layer: 0
   m_Name: Wheel-Wood-Small
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 212901477361804872}
   - component: {fileID: 58788879964487010}
   - component: {fileID: 50275688215214248}
+  - component: {fileID: 114012238916511754}
   m_Layer: 8
   m_Name: Wheel-Wood-Big
   m_TagString: Untagged
@@ -578,6 +580,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.5, y: 4.83}
   m_EdgeRadius: 0
+--- !u!114 &114012238916511754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070877516503790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c6db71da4ff224a8ba5b2ec807e2b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 0
+  xAxis: LeftStickX
+  yAxis: LeftStickY
+--- !u!114 &114257725445505314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058544830893888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c6db71da4ff224a8ba5b2ec807e2b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 0
+  xAxis: RightStickX
+  yAxis: RightStickY
 --- !u!114 &114422262020179146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -628,6 +658,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   DestroyOnCollide: 0
   AppliedForce: 1000
+  MaxLifeTime: 2
 --- !u!114 &114831803138281980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -945,7 +976,7 @@ WheelJoint2D:
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: -10
+    m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
 --- !u!235 &235397097525169322
 WheelJoint2D:
@@ -966,7 +997,7 @@ WheelJoint2D:
     m_DampingRatio: 0.7
     m_Frequency: 2
     m_Angle: 90
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: -10
+    m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
