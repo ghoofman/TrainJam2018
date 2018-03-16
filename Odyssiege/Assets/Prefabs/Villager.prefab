@@ -35,8 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4611976972592302}
   - component: {fileID: 212579210329117968}
-  - component: {fileID: 61113068332948574}
   - component: {fileID: 114379602732062358}
+  - component: {fileID: 61907067155983044}
   m_Layer: 0
   m_Name: VillagerSprite
   m_TagString: Untagged
@@ -65,13 +65,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658173539363236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.82, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4532685707303744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61113068332948574
+--- !u!61 &61907067155983044
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -87,14 +87,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.6666667, y: 4.7}
+    oldSize: {x: 1.48, y: 1.5}
     newSize: {x: 3.6666667, y: 4.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.6666667, y: 4.7}
+  m_Size: {x: 1.48, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &114379602732062358
 MonoBehaviour:
@@ -141,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01595081bace38a4eb96b91e715b942e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d78f2d8a5ab3b486ba9276aefc9787f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
