@@ -11,6 +11,7 @@ public class Tail : MonoBehaviour {
     private const float minAngle = 20.0f;
     private float desiredAngle = 0.0f;
     private const float maxAngle = 80.0f;
+    private float maxAngleDelta = 2.0f;
 
     // Use this for initialization
     void Start () {
@@ -27,9 +28,7 @@ public class Tail : MonoBehaviour {
     void Update () {
         float tailAngle = player.GetAxis("TailAngle");
         desiredAngle = minAngle + (tailAngle * maxAngle);
-        gameObject.GetComponent<Rigidbody2D>().MoveRotation(desiredAngle);
-
-        Debug.Log("TailAngle");
+        RotateTowards(desiredAngle);
 
         if (Input.GetKeyUp(KeyCode.K))
         {
@@ -37,15 +36,38 @@ public class Tail : MonoBehaviour {
         }
     }
 
+    private void RotateTowards(float desiredAngle)
+    {
+        var angleDelta = desiredAngle - gameObject.GetComponent<Rigidbody2D>().rotation;
+        var realAngleDelta = 0.0f;
+        if (Mathf.Abs(angleDelta) < maxAngleDelta)
+        {
+            realAngleDelta = angleDelta;
+        } else
+        {
+            if (angleDelta > 0.0f)
+            {
+                realAngleDelta = maxAngleDelta;
+            }
+            else
+            {
+                realAngleDelta = maxAngleDelta * -1.0f;
+            }
+
+        }
+
+        float actualNewRotation = gameObject.GetComponent<Rigidbody2D>().rotation + realAngleDelta;
+        gameObject.GetComponent<Rigidbody2D>().MoveRotation(actualNewRotation);
+    }
+
     private bool ReachedDesiredAngle()
     {
         if (gameObject.GetComponent<Rigidbody2D>().rotation - desiredAngle < 1.0f)
         {
-            Debug.Log("Hit max");
+            Debug.Log("Hit desired");
             return true;
         }
 
-        Debug.Log("gameObject.GetComponent<Rigidbody2D>().rotation" + gameObject.GetComponent<Rigidbody2D>().rotation);
         return false;
     }
 }
