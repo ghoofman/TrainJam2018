@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine;
 
 public class Tail : MonoBehaviour {
+	float mass = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,17 @@ public class Tail : MonoBehaviour {
         {
             Debug.Log("Adding K");
             gameObject.GetComponent<Rigidbody2D>().AddTorque(100.0f);
-        }
+		}
+		if (Input.GetKeyUp(KeyCode.M))
+		{
+			mass += 1.0f;
+			gameObject.GetComponent<Rigidbody2D> ().mass = mass;
+		}
+		if (Input.GetKeyUp(KeyCode.N))
+		{
+			mass -= 1.0f;
+			gameObject.GetComponent<Rigidbody2D> ().mass = mass;
+		}
 		
 	}
 }
