@@ -51,7 +51,6 @@ public class LevelController : MonoBehaviour
 	public void FinishTransition() {
 		if (canTransition) {
 			SceneManager.UnloadSceneAsync ("Transition");
-			Globals.horse.parent.parent.GetComponent<Horse> ().enabled = true;
 		}
 	}
 
