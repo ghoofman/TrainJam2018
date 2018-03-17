@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 4081025390522626}
   - component: {fileID: 50214945810245690}
   - component: {fileID: 114422262020179146}
+  - component: {fileID: 114830142676761600}
   m_Layer: 8
   m_Name: Tail
   m_TagString: Untagged
@@ -241,6 +242,7 @@ GameObject:
   - component: {fileID: 114859099683637340}
   - component: {fileID: 114640835746315274}
   - component: {fileID: 114831803138281980}
+  - component: {fileID: 114800602246833766}
   m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
@@ -864,6 +866,32 @@ MonoBehaviour:
   DestroyOnCollide: 0
   AppliedForce: 1000
   MaxLifeTime: 2
+--- !u!114 &114800602246833766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942037200134970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2fb074cb2ec45f68e88579e17992a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 0
+  Trigger: RT
+--- !u!114 &114830142676761600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118258486095304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2fb074cb2ec45f68e88579e17992a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 0
+  Trigger: LT
 --- !u!114 &114831803138281980
 MonoBehaviour:
   m_ObjectHideFlags: 1
