@@ -24,6 +24,7 @@ public class ArrowCannon : MonoBehaviour {
 			bombArrow.isAlive = true;
 			bombArrow.collided = false;
 			bombArrow.started = false;
+			bombArrow.oneJump = false;
 			// currentArrow = Instantiate (ArrowPrefab, transform.position, Quaternion.identity);
 			currentArrow.transform.SetParent (transform);
 			currentArrow.transform.position = transform.position; // + new Vector3(0.1f, 0.1f, 0);
