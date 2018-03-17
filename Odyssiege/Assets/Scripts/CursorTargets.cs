@@ -59,7 +59,7 @@ public class CursorTargets : MonoBehaviour {
                             if (!playerChosen.Any(x => !x))
                             {
                                 // all players have chosen a horse target
-                                Globals.levelController.LoadNextLevel();
+                                Globals.levelController.LoadTransition();
                             }
                         }
                     }
