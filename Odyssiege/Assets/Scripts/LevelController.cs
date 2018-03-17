@@ -10,7 +10,7 @@ public class LevelController : MonoBehaviour
 
 	private void Awake() {
 		Globals.levelController = this;
-		Globals.currentLevel = 1;
+		// Globals.currentLevel = 1;
 	}
 
     public void LoadNextLevel()
@@ -19,14 +19,14 @@ public class LevelController : MonoBehaviour
 		canTransition = false;
 
         Globals.currentLevel++;
-        if (Globals.currentLevel <= levelCount)
-        {
+//        if (Globals.currentLevel <= levelCount)
+//        {
 			SceneManager.LoadSceneAsync("Level" + Globals.currentLevel, LoadSceneMode.Additive);
-        }
-        else
-        {
-			SceneManager.LoadSceneAsync("Victory", LoadSceneMode.Additive);
-        }
+        //}
+//        else
+//        {
+//			SceneManager.LoadSceneAsync("Victory", LoadSceneMode.Additive);
+//        }
 	}
 
 	bool isLoaded(string name) {
@@ -39,6 +39,10 @@ public class LevelController : MonoBehaviour
 	}
 
 	public void LoadTransition() {
+		if (Globals.currentLevel == levelCount) {
+			SceneManager.LoadScene("Victory");
+			return;
+		}
 		canTransition = false;
 		SceneManager.LoadSceneAsync ("Transition", LoadSceneMode.Additive);
 	}

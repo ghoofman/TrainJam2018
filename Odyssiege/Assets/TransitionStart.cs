@@ -9,7 +9,7 @@ public class TransitionStart : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		var text = gameObject.GetComponent<Text> ();
-		text.text = "Level " + Globals.currentLevel;
+		text.text = "Level " + (Globals.currentLevel + 1);
 		text.DOColor (new Color (255.0f, 255.0f, 255.0f, 1.0f), 0.75f);
 	}
 	

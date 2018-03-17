@@ -642,11 +642,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4054049702707850, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.792
+      value: -20.57
       objectReference: {fileID: 0}
     - target: {fileID: 4054049702707850, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.57
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 4054049702707850, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -705,6 +705,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 114786177052742756, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
     - {fileID: 61154966989585290, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
+    - {fileID: 50847980186108144, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1178606007 stripped
@@ -733,11 +734,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4054049702707850, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -24.661
+      value: -23.439
       objectReference: {fileID: 0}
     - target: {fileID: 4054049702707850, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.57
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 4054049702707850, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -800,6 +801,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 114786177052742756, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
     - {fileID: 61154966989585290, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
+    - {fileID: 50847980186108144, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 12fa700e000444b3a95b13ec5e6761b1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1566165910 stripped
