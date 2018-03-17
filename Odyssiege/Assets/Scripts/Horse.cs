@@ -10,7 +10,7 @@ public class Horse : MonoBehaviour {
 
     private void Awake()
     {
-        Globals.horse = transform.GetChild(0);
+        Globals.horse = transform.GetChild(0).GetChild(0);
     }
 
     // Use this for initialization
