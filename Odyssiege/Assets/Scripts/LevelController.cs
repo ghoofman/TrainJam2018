@@ -5,6 +5,10 @@ public class LevelController : MonoBehaviour
 {
     private int levelCount = 2;
 
+	private void Awake() {
+		Globals.levelController = this;
+	}
+
     public void LoadNextLevel()
     {
         Globals.currentLevel++;
