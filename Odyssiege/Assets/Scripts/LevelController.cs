@@ -18,4 +18,9 @@ public class LevelController : MonoBehaviour
         }
     }
 
+	public void Reset() {
+		Globals.currentLevel = 0;
+		SceneManager.LoadScene("HorseSelector");
+	}
+
 }
