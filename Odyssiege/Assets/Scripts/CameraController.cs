@@ -40,10 +40,14 @@ public class CameraController : MonoBehaviour {
 		followController = follow.parent.parent.GetComponent<Horse>();
 		yOffset = transform.position.y - follow.position.y;
         // init offset values
-        mountainReset = mountains.localScale.x * Mathf.Abs(mountains.GetChild(0).localPosition.x - mountains.GetChild(1).localPosition.x);
-        hillReset = hills.localScale.x * Mathf.Abs(hills.GetChild(0).localPosition.x - hills.GetChild(1).localPosition.x);
-        hillReset2 = hills2.localScale.x * Mathf.Abs(hills2.GetChild(0).localPosition.x - hills2.GetChild(1).localPosition.x);
-        hillReset3 = hills3.localScale.x * Mathf.Abs(hills3.GetChild(0).localPosition.x - hills3.GetChild(1).localPosition.x);
+        if (mountains != null)
+            mountainReset = mountains.localScale.x * Mathf.Abs(mountains.GetChild(0).localPosition.x - mountains.GetChild(1).localPosition.x);
+        if (hills != null)
+            hillReset = hills.localScale.x * Mathf.Abs(hills.GetChild(0).localPosition.x - hills.GetChild(1).localPosition.x);
+        if (hills2 != null)
+            hillReset2 = hills2.localScale.x * Mathf.Abs(hills2.GetChild(0).localPosition.x - hills2.GetChild(1).localPosition.x);
+        if (hills3 != null)
+            hillReset3 = hills3.localScale.x * Mathf.Abs(hills3.GetChild(0).localPosition.x - hills3.GetChild(1).localPosition.x);
 
         var cam = GetComponent<Camera> ();
 		cameraHeight = cam.orthographicSize;
@@ -80,41 +84,53 @@ public class CameraController : MonoBehaviour {
 
     private void MoveMountains(Vector3 deltaPos)
     {
-        mountains.position += deltaPos / 1.5f;
-        hills.position += deltaPos / 2f;
-        hills2.position += deltaPos / 3f;
-        hills3.position += deltaPos / 4f;
-        if (mountains.position.x > transform.position.x)
+        if (mountains != null)
         {
-            mountains.position -= new Vector3(mountainReset, 0f, 0f);
+            mountains.position += deltaPos / 1.5f;
+            if (mountains.position.x > transform.position.x)
+            {
+                mountains.position -= new Vector3(mountainReset, 0f, 0f);
+            }
+            if (mountains.position.x < transform.position.x - mountainReset)
+            {
+                mountains.position += new Vector3(mountainReset, 0f, 0f);
+            }
         }
-        if (mountains.position.x < transform.position.x - mountainReset)
+        if (hills != null)
         {
-            mountains.position += new Vector3(mountainReset, 0f, 0f);
+            hills.position += deltaPos / 2f;
+            if (hills.position.x > transform.position.x)
+            {
+                hills.position -= new Vector3(hillReset, 0f, 0f);
+            }
+            if (hills.position.x < transform.position.x - hillReset)
+            {
+                hills.position += new Vector3(hillReset, 0f, 0f);
+            }
         }
-        if (hills.position.x > transform.position.x)
+        if (hills2)
         {
-            hills.position -= new Vector3(hillReset, 0f, 0f);
+            hills2.position += deltaPos / 3f;
+            if (hills2.position.x > transform.position.x)
+            {
+                hills2.position -= new Vector3(hillReset2, 0f, 0f);
+            }
+            if (hills2.position.x < transform.position.x - hillReset2)
+            {
+                hills2.position += new Vector3(hillReset2, 0f, 0f);
+            }
         }
-        if (hills.position.x < transform.position.x - hillReset)
+        if (hills3)
         {
-            hills.position += new Vector3(hillReset, 0f, 0f);
-        }
-        if (hills2.position.x > transform.position.x)
-        {
-            hills2.position -= new Vector3(hillReset2, 0f, 0f);
-        }
-        if (hills2.position.x < transform.position.x - hillReset2)
-        {
-            hills2.position += new Vector3(hillReset2, 0f, 0f);
-        }
-        if (hills3.position.x > transform.position.x)
-        {
-            hills3.position -= new Vector3(hillReset3, 0f, 0f);
-        }
-        if (hills3.position.x < transform.position.x - hillReset3)
-        {
-            hills3.position += new Vector3(hillReset3, 0f, 0f);
+            hills3.position += deltaPos / 4f;
+            if (hills3.position.x > transform.position.x)
+            {
+                hills3.position -= new Vector3(hillReset3, 0f, 0f);
+            }
+            if (hills3.position.x < transform.position.x - hillReset3)
+            {
+                hills3.position += new Vector3(hillReset3, 0f, 0f);
+            }
         }
     }
 
