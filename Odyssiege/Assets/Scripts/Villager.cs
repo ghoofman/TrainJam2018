@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Villager : MonoBehaviour {
+    public GameObject bloodPrefab;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,6 +18,8 @@ public class Villager : MonoBehaviour {
 
     void Die()
     {
+        GameObject blood = Instantiate(bloodPrefab);
+        blood.transform.position = gameObject.transform.position;
         Destroy(gameObject);
     }
 
@@ -24,7 +28,17 @@ public class Villager : MonoBehaviour {
         if (collision2D.gameObject.GetComponent<Tail>() != null)
         {
             Die();
+            return;
         }
-        Debug.Log("Collided");
+
+        Rigidbody2D rigidBody2D = collision2D.gameObject.GetComponent<Rigidbody2D>();
+        if (rigidBody2D != null)
+        {
+            if (rigidBody2D.mass > gameObject.GetComponent<Rigidbody2D>().mass)
+            {
+                Die();
+            }
+        }
+
     }
 }

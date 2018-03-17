@@ -34,9 +34,9 @@ public class Horse : MonoBehaviour {
             ToggleMultiplayer();
         }
 
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.R) || ReInput.players.GetPlayer(0).GetButtonUp("Start") || ReInput.players.GetPlayer(1).GetButtonUp("Start") || ReInput.players.GetPlayer(2).GetButtonUp("Start") || ReInput.players.GetPlayer(3).GetButtonUp("Start"))
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
