@@ -6,7 +6,7 @@ using System;
 
 public class Tail : MonoBehaviour {
     public string axis = "LT";
-    Player player;
+    public Player player;
     public int playerId = 0;
     public float minAngle = 20.0f;
     private float desiredAngle = 0.0f;

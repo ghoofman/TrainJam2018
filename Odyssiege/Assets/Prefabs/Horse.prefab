@@ -156,6 +156,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4533496374650196}
+  - component: {fileID: 114388820532573236}
   m_Layer: 8
   m_Name: Horse
   m_TagString: Untagged
@@ -645,6 +646,18 @@ MonoBehaviour:
   DestroyOnCollide: 0
   AppliedForce: 1000
   MaxLifeTime: 2
+--- !u!114 &114388820532573236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863032892332948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff0677905eb22b41877e930f21156e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplayerEnabled: 0
 --- !u!114 &114422262020179146
 MonoBehaviour:
   m_ObjectHideFlags: 1
