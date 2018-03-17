@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DangerZone : MonoBehaviour {
+	public GameObject Prefab;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,9 @@ public class DangerZone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown (KeyCode.D)) {
+			Die ();
+		}
 	}
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
@@ -33,8 +36,12 @@ public class DangerZone : MonoBehaviour {
     }
 
     private void Die()
-    {
+	{
+		Debug.Log("Die");
+		var position = transform.position;
+		var rotation = transform.rotation;
         Horse horse = gameObject.GetComponentInParent<Horse>();
-        Destroy(horse.gameObject);
+		Destroy(horse.gameObject);
+		Instantiate(Prefab, position, Quaternion.identity);
     }
 }
