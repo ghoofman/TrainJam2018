@@ -6,7 +6,7 @@ using UnityEngine;
 public class Wheel : MonoBehaviour {
     private const float directionalSensitivity = 0.25f;
     public int playerId = 0;
-    Player player;
+    public Player player;
     public string xAxis = "LeftStickX";
     public string yAxis = "LeftStickY";
 
