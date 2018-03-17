@@ -314,23 +314,6 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4371831321443360, guid: 38747830b513e456e903764cef1216ea, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.52775633
-      objectReference: {fileID: 0}
-    - target: {fileID: 4371831321443360, guid: 38747830b513e456e903764cef1216ea, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 14.903491
-      objectReference: {fileID: 0}
-    - target: {fileID: 50944850213103464, guid: 38747830b513e456e903764cef1216ea,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4371831321443360, guid: 38747830b513e456e903764cef1216ea, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.4350001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38747830b513e456e903764cef1216ea, type: 2}
   m_IsPrefabParent: 0
