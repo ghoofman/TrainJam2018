@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class CursorTargets : MonoBehaviour {
 
@@ -18,7 +19,12 @@ public class CursorTargets : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        var d = 0.5f;
+        foreach (var cursor in cursors)
+        {
+            cursor.rectTransform.DOAnchorPosX(cursor.rectTransform.anchoredPosition.x - 300f, 1f).SetDelay(d).SetEase(Ease.OutCubic).From();
+            d -= 0.1f;
+        }
 	}
 	
 	// Update is called once per frame
