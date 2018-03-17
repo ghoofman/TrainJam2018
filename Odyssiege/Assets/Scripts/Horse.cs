@@ -22,11 +22,11 @@ public class Horse : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Globals.horse.GetComponent<Rigidbody2D>().AddForce(new Vector2(500f, 0f));
+            Globals.horse.parent.GetComponent<Rigidbody2D>().AddForce(new Vector2(500f, 0f));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Globals.horse.GetComponent<Rigidbody2D>().AddForce(new Vector2(-500f, 0f));
+            Globals.horse.parent.GetComponent<Rigidbody2D>().AddForce(new Vector2(-500f, 0f));
         }
 
         if (Input.GetKeyUp(KeyCode.M))
