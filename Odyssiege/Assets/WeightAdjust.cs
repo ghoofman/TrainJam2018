@@ -21,6 +21,6 @@ public class WeightAdjust : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float tempXAxis = player.GetAxis(Trigger);
-		GetComponent<Rigidbody2D> ().mass = 10.0f + (50.0f * tempXAxis);
+		GetComponent<Rigidbody2D> ().mass = 10.0f + (30.0f * tempXAxis);
 	}
 }

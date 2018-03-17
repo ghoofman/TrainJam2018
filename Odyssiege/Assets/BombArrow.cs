@@ -62,7 +62,9 @@ public class BombArrow : MonoBehaviour {
 						if (OnImpact != null) {
 							if (collided) {
 								OnImpact.Invoke (contactPoint);
-								collidedWith.AddForceAtPosition (new Vector2 (ExplosionForce, 0), contactPoint);
+								if (collidedWith) {
+									collidedWith.AddForceAtPosition (new Vector2 (ExplosionForce, 0), contactPoint);
+								}
 								isAlive = false;
 							} else {
 								if (!oneJump) {
@@ -74,6 +76,8 @@ public class BombArrow : MonoBehaviour {
 									isAlive = false;
 								}
 							}
+						} else {
+							isAlive = false;
 						}
 						// Destroy (gameObject);
 					}
