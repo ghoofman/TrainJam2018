@@ -13,9 +13,9 @@ public class DangerZone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.D)) {
-			Die ();
-		}
+//		if (Input.GetKeyDown (KeyCode.D)) {
+//			Die ();
+//		}
 	}
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)

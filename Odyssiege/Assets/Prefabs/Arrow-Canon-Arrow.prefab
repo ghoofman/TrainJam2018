@@ -132,8 +132,9 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   started: 0
   collided: 0
+  oneJump: 0
   ForceToAdd: 500
-  ExplosionForce: 5000
+  ExplosionForce: 500
   startingDir: {x: 0, y: 0, z: 0}
   isAlive: 0
 --- !u!212 &212055049023119384

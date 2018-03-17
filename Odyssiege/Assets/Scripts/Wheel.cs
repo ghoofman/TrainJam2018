@@ -9,6 +9,8 @@ public class Wheel : MonoBehaviour {
     public Player player;
     public string xAxis = "LeftStickX";
     public string yAxis = "LeftStickY";
+	public float liftOff = 100.0f;
+	public string liftOffButton = "LS";
 
     private Vector2 lastDirection;
 
@@ -35,5 +37,9 @@ public class Wheel : MonoBehaviour {
             float newRotation = Vector2.SignedAngle(Vector2.right, normalized);
             GetComponent<Rigidbody2D>().MoveRotation(newRotation);
         }
+
+		if (player.GetButtonDown (liftOffButton)) {
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, liftOff));
+		}
     }
 }
