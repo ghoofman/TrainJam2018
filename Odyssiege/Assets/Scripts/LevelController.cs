@@ -3,9 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-	private int levelCount = 2;
-	private bool loadingTransition = false;
-	private bool loadingLevel = false;
+	private int levelCount = 10;
 	private bool canTransition = true;
 
 	private void Awake() {
@@ -15,7 +13,6 @@ public class LevelController : MonoBehaviour
 
     public void LoadNextLevel()
 	{
-		loadingLevel = true;
 		canTransition = false;
 
         Globals.currentLevel++;
@@ -39,17 +36,18 @@ public class LevelController : MonoBehaviour
 	}
 
 	public void LoadTransition() {
-//		if (Globals.currentLevel == levelCount) {
-//			SceneManager.LoadScene("Victory");
-//			return;
-//		}
 		canTransition = false;
 		SceneManager.LoadSceneAsync ("Transition", LoadSceneMode.Additive);
 	}
 
 	public void BeginLoadingSequence() {
 		if (Globals.currentLevel <= levelCount) {
-			SceneManager.UnloadSceneAsync ("Level" + Globals.currentLevel);
+			if (Globals.currentLevel == 0) {
+				SceneManager.UnloadSceneAsync ("HorseSelector");
+			} else {
+				SceneManager.UnloadSceneAsync ("Level" + Globals.currentLevel);
+			}
+			Debug.Log ("Unloading: Level" + Globals.currentLevel);
 		}
 		LoadNextLevel ();
 	}

@@ -39,7 +39,14 @@ public class Wheel : MonoBehaviour {
         }
 
 		if (player.GetButtonDown (liftOffButton)) {
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, liftOff));
-		}
+            if (liftOffButton == "RS")
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, liftOff * 2.0f));
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, liftOff));
+            }
+        }
     }
 }
