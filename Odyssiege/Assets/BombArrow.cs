@@ -5,40 +5,65 @@ using Destructible2D;
 
 public class BombArrow : MonoBehaviour {
 	public D2dVector2Event OnImpact;
-	private bool started = false;
-	private bool collided = false;
+	public bool started = false;
+	public bool collided = false;
 	private Vector2 contactPoint;
 
 	public float ForceToAdd = 500.0f;
 	private Rigidbody2D collidedWith;
 	public float ExplosionForce = 500.0f;
+	public Vector3 startingDir;
+
+	public bool isAlive = false;
 
 	// Use this for initialization
 	void Start () {
 		var rigid = gameObject.GetComponent<Rigidbody2D> ();
 		rigid.simulated = false;
+		startingDir = gameObject.transform.rotation * (new Vector3 (1, 0, 0));
+		isAlive = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		var rigid = gameObject.GetComponent<Rigidbody2D> ();
+
+		if (started && !collided) {
+			var normalVector = rigid.velocity.normalized;
+			var dir3 = new Vector3 (normalVector.x, 0, normalVector.y);
+			var angle = Vector3.Angle (new Vector3(1,0,0), dir3);
+
+			if (dir3.z < 0) {
+				transform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
+			} else {
+				transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+			}
+
+
+			Debug.Log ("Angle: " + angle);
+			Debug.Log ("Dir: " + dir3.x + ", " + dir3.y + ", " + dir3.z);
+		}
+
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			if (!started) {
 				started = true;
-				var rigid = gameObject.GetComponent<Rigidbody2D> ();
-				var forceDir = gameObject.transform.rotation * (new Vector3 (1, 0, 0));
+				var forceDir = (gameObject.transform.rotation * (new Vector3 (1, 0, 0)));
+				rigid.velocity = new Vector2 (forceDir.x, forceDir.y);
 				rigid.AddForce (forceDir * ForceToAdd);
 				rigid.simulated = true;
-				rigid.AddTorque (-gameObject.transform.rotation.eulerAngles.z);
+				transform.SetParent (null);
+				// rigid.AddTorque (-gameObject.transform.rotation.eulerAngles.z);
 			} else {
 				if (OnImpact != null) {
 					if (collided) {
 						OnImpact.Invoke (contactPoint);
 						collidedWith.AddForceAtPosition (new Vector2 (ExplosionForce, 0), contactPoint);
-						Destroy (gameObject);
 					} else {
 						OnImpact.Invoke (transform.position);
 					}
 				}
+				isAlive = false;
+				// Destroy (gameObject);
 			}
 		}
 //		var rigid = gameObject.GetComponent<Rigidbody2D> ();
@@ -53,10 +78,11 @@ public class BombArrow : MonoBehaviour {
 			collided = true;
 			var rigid = gameObject.GetComponent<Rigidbody2D> ();
 			rigid.simulated = false;
+			Debug.Log ("Collided");
 
 			contactPoint = contacts[0].point;
 			collidedWith = contacts [0].rigidbody;
-			gameObject.transform.SetParent(collidedWith.transform);
+			// gameObject.transform.SetParent(collidedWith.transform);
 		}
 	}
 }
