@@ -8,9 +8,11 @@ public class TransitionStart : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		var text = gameObject.GetComponent<Text> ();
-		text.text = "Level " + (Globals.currentLevel + 1);
-		text.DOColor (new Color (255.0f, 255.0f, 255.0f, 1.0f), 0.75f);
+		if (Globals.currentLevel + 1 < 3) {
+			var text = gameObject.GetComponent<Text> ();
+			text.text = "Level " + (Globals.currentLevel + 1);
+			text.DOColor (new Color (255.0f, 255.0f, 255.0f, 1.0f), 0.75f);
+		}
 	}
 	
 	// Update is called once per frame

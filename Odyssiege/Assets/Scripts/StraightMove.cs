@@ -13,6 +13,9 @@ public class StraightMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!ObjectToTransition) {
+			return;
+		}
 		if (ObjectToTransition.GetComponent<TransitionFade> ().CanRunAnimation) {
 			var pos = transform.position;
 			pos.x += 10.0f * Time.deltaTime;

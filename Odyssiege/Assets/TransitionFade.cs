@@ -33,8 +33,10 @@ public class TransitionFade : MonoBehaviour {
 		ending = true;
 		var spriteRenderer = gameObject.GetComponent<SpriteRenderer> ();
 
-		Globals.horse.parent.parent.GetComponent<Horse> ().enabled = true;
-		Globals.horse.parent.GetComponent<Rigidbody2D> ().velocity = new Vector2 (10, 0);
+		if (Globals.horse) {
+			Globals.horse.parent.parent.GetComponent<Horse> ().enabled = true;
+			Globals.horse.parent.GetComponent<Rigidbody2D> ().velocity = new Vector2 (10, 0);
+		}
 
 		spriteRenderer.DOColor (new Color (0, 0, 0, 0.0f), 0.75f).OnComplete(() => {
 			Globals.levelController.FinishTransition();

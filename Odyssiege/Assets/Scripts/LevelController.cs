@@ -19,14 +19,14 @@ public class LevelController : MonoBehaviour
 		canTransition = false;
 
         Globals.currentLevel++;
-//        if (Globals.currentLevel <= levelCount)
-//        {
+        if (Globals.currentLevel <= levelCount)
+        {
 			SceneManager.LoadSceneAsync("Level" + Globals.currentLevel, LoadSceneMode.Additive);
-        //}
-//        else
-//        {
-//			SceneManager.LoadSceneAsync("Victory", LoadSceneMode.Additive);
-//        }
+        }
+        else
+        {
+			SceneManager.LoadSceneAsync("Victory", LoadSceneMode.Additive);
+        }
 	}
 
 	bool isLoaded(string name) {
@@ -39,16 +39,18 @@ public class LevelController : MonoBehaviour
 	}
 
 	public void LoadTransition() {
-		if (Globals.currentLevel == levelCount) {
-			SceneManager.LoadScene("Victory");
-			return;
-		}
+//		if (Globals.currentLevel == levelCount) {
+//			SceneManager.LoadScene("Victory");
+//			return;
+//		}
 		canTransition = false;
 		SceneManager.LoadSceneAsync ("Transition", LoadSceneMode.Additive);
 	}
 
 	public void BeginLoadingSequence() {
-		SceneManager.UnloadSceneAsync ("Level" + Globals.currentLevel);
+		if (Globals.currentLevel <= levelCount) {
+			SceneManager.UnloadSceneAsync ("Level" + Globals.currentLevel);
+		}
 		LoadNextLevel ();
 	}
 
