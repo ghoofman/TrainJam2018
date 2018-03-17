@@ -1,7 +1,9 @@
 ﻿using Rewired;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CursorTargets : MonoBehaviour {
@@ -42,7 +44,17 @@ public class CursorTargets : MonoBehaviour {
                         {
                             playerChosen[i] = true;
                             targetChosen[j] = true;
+                            cursors[i].transform.position = targets[j].transform.position;
+                            cursors[i].GetComponent<Outline>().effectColor = Color.grey;
+                            cursors[i].transform.GetChild(0).GetComponent<Text>().color = Color.grey;
+                            Globals.playerMap[j] = i;
                             Debug.Log("Player " + i + " chose " + j);
+                            if (!playerChosen.Any(x => !x))
+                            {
+                                // all players have chosen a horse target
+                                // TODO: LOAD NEXT SCENE
+                                SceneManager.LoadScene("Level1");
+                            }
                         }
                     }
                 }

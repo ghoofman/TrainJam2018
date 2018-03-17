@@ -8,14 +8,28 @@ public class Horse : MonoBehaviour {
 
     public bool multiplayerEnabled = false;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        Globals.horse = transform.GetChild(0);
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp(KeyCode.M))
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Globals.horse.GetComponent<Rigidbody2D>().AddForce(new Vector2(500f, 0f));
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            Globals.horse.GetComponent<Rigidbody2D>().AddForce(new Vector2(-500f, 0f));
+        }
+
+        if (Input.GetKeyUp(KeyCode.M))
         {
             ToggleMultiplayer();
         }
