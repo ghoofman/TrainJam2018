@@ -7,4 +7,5 @@ public static class Globals
     public static Transform horse;
     public static int currentLevel = 0;
     public static LevelController levelController;
+    public static SoundManager soundManager;
 }
