@@ -36,7 +36,7 @@ public class Horse : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.R))
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
