@@ -42,8 +42,12 @@ public class LevelController : MonoBehaviour
 
 	public void BeginLoadingSequence() {
 		if (Globals.currentLevel <= levelCount) {
+			if (Globals.currentLevel == 0) {
+				SceneManager.UnloadSceneAsync ("HorseSelector");
+			} else {
+				SceneManager.UnloadSceneAsync ("Level" + Globals.currentLevel);
+			}
 			Debug.Log ("Unloading: Level" + Globals.currentLevel);
-			SceneManager.UnloadSceneAsync ("Level" + Globals.currentLevel);
 		}
 		LoadNextLevel ();
 	}
