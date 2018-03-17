@@ -16,7 +16,7 @@ public class Villager : MonoBehaviour {
 		
 	}
 
-    void Die()
+    public void Die()
     {
         GameObject blood = Instantiate(bloodPrefab);
         blood.transform.position = gameObject.transform.position;
