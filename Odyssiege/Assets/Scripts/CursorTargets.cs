@@ -15,14 +15,15 @@ public class CursorTargets : MonoBehaviour {
     public Image[] cursors;
     private bool[] playerChosen = new bool[] { false, false, false, false };
     private bool[] targetChosen = new bool[] { false, false, false, false };
-    private float margin = 25f;
+    private float margin = 50f;
 
     // Use this for initialization
     void Start () {
+        Globals.playerMap = new int[4];
         var d = 0.5f;
         foreach (var cursor in cursors)
         {
-            cursor.rectTransform.DOAnchorPosX(cursor.rectTransform.anchoredPosition.x - 300f, 1f).SetDelay(d).SetEase(Ease.OutCubic).From();
+            cursor.rectTransform.DOAnchorPosY(cursor.rectTransform.anchoredPosition.y + 200f, 1f).SetDelay(d).SetEase(Ease.OutCubic).From();
             d -= 0.1f;
         }
 	}
