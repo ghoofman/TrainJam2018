@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HorseSelector.unity
+    guid: 6710b514cd4c56842a4ebd51d4c25bc3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: 9f6a9e1df3535cb41bbb9684fedb7a15
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: 91de0a24d915c49f39f568be624f76fc
