@@ -9,18 +9,22 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1478949075397578}
+  m_RootGameObject: {fileID: 1644491678401426}
   m_IsPrefabParent: 1
---- !u!1 &1272939664274718
+--- !u!1 &1540426168804516
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4730691989733730}
-  - component: {fileID: 60017651549346542}
-  - component: {fileID: 60012234047292812}
+  - component: {fileID: 4323321303527472}
+  - component: {fileID: 60894221864217846}
+  - component: {fileID: 60614342460402088}
+  - component: {fileID: 60287511539220722}
+  - component: {fileID: 60677301354485786}
+  - component: {fileID: 60822873027843624}
+  - component: {fileID: 60709549854634436}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -28,24 +32,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1478949075397578
+--- !u!1 &1644491678401426
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4836758324765774}
-  - component: {fileID: 114968123257703442}
-  - component: {fileID: 33310657741865044}
-  - component: {fileID: 23608660044171528}
-  - component: {fileID: 114844805235692504}
-  - component: {fileID: 114730062189647940}
-  - component: {fileID: 50498405058526690}
-  - component: {fileID: 114636203919766728}
-  - component: {fileID: 114537190843671526}
-  - component: {fileID: 114303573613086716}
-  - component: {fileID: 114354172223849376}
+  - component: {fileID: 4863969246976024}
+  - component: {fileID: 114424588470846358}
+  - component: {fileID: 33380679412696296}
+  - component: {fileID: 23188106371616606}
+  - component: {fileID: 114037482941217960}
+  - component: {fileID: 114478784876207890}
+  - component: {fileID: 50330388566253980}
+  - component: {fileID: 114473270740108374}
+  - component: {fileID: 114547722089115052}
+  - component: {fileID: 114441464479710634}
+  - component: {fileID: 114186204386216022}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Untagged
@@ -53,39 +57,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4730691989733730
+--- !u!4 &4323321303527472
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1272939664274718}
+  m_GameObject: {fileID: 1540426168804516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86, y: -2.5098386, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.03983871, z: 0}
+  m_LocalPosition: {x: -0.83, y: -2.4799998, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.019999998, z: 0}
   m_Children: []
-  m_Father: {fileID: 4836758324765774}
+  m_Father: {fileID: 4863969246976024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4836758324765774
+--- !u!4 &4863969246976024
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
-  m_LocalRotation: {x: 0, y: 0, z: -0.3275122, w: -0.944847}
-  m_LocalPosition: {x: 195.75209, y: -566.86646, z: 0}
+  m_GameObject: {fileID: 1644491678401426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5467531, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4730691989733730}
+  - {fileID: 4323321303527472}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23608660044171528
+--- !u!23 &23188106371616606
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
+  m_GameObject: {fileID: 1644491678401426}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -114,25 +118,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33310657741865044
+--- !u!33 &33380679412696296
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
+  m_GameObject: {fileID: 1644491678401426}
   m_Mesh: {fileID: 0}
---- !u!50 &50498405058526690
+--- !u!50 &50330388566253980
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
+  m_GameObject: {fileID: 1644491678401426}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 24.22
+  m_Mass: 102.71
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -141,12 +145,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60012234047292812
+--- !u!60 &60287511539220722
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1272939664274718}
+  m_GameObject: {fileID: 1540426168804516}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -165,56 +169,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 11.619719, y: 64.5}
-      - {x: 12.5, y: 64.00593}
-      - {x: 30.5, y: 64.00593}
-      - {x: 31.380281, y: 64.5}
-      - {x: 31.836065, y: 106.5}
-      - {x: 32.515385, y: 107.5}
-      - {x: 32.537594, y: 109.5}
-      - {x: 31.5, y: 111.5}
-      - {x: 32.973682, y: 118.5}
-      - {x: 40.828358, y: 122.5}
-      - {x: 41.452, y: 123.5}
-      - {x: 40.674603, y: 124.5}
-      - {x: 2.3253968, y: 124.5}
-      - {x: 1.5396825, y: 123.5}
-      - {x: 2.5, y: 122.094406}
-      - {x: 10.161871, y: 118.5}
-      - {x: 10.5, y: 117.5}
-      - {x: 10.5, y: 117.5}
-      - {x: 11.438461, y: 111.5}
-      - {x: 10.160494, y: 109.5}
-      - {x: 10.1603775, y: 107.5}
-      - {x: 11.613475, y: 105.5}
-      - {x: 11.619719, y: 95.5}
-      - {x: 12.5, y: 94.184494}
-      - {x: 13.5, y: 94.00196}
-      - {x: 17.5, y: 90.09259}
-      - {x: 18.5, y: 90.00196}
-      - {x: 21.00196, y: 87.5}
-      - {x: 20.98374, y: 86.5}
-      - {x: 20.00196, y: 85.5}
-      - {x: 20.00196, y: 84.5}
-      - {x: 19.00196, y: 82.5}
-      - {x: 19.00196, y: 81.5}
-      - {x: 18.016129, y: 80.5}
-      - {x: 17.852041, y: 78.5}
-      - {x: 17.00196, y: 77.5}
-      - {x: 17.00196, y: 76.5}
-      - {x: 16.00196, y: 75.5}
-      - {x: 16.00196, y: 74.5}
-      - {x: 15.5, y: 73.99804}
-      - {x: 13.5, y: 74.119514}
-      - {x: 12.5, y: 74.72891}
-      - {x: 11.809091, y: 74.5}
-      - {x: 11.619719, y: 73.5}
---- !u!60 &60017651549346542
+    - - {x: 21.758823, y: 64.5}
+      - {x: 22.5, y: 64.00394}
+      - {x: 60.5, y: 64.05173}
+      - {x: 61.111763, y: 64.5}
+      - {x: 61.241177, y: 127.5}
+      - {x: 60.5, y: 127.99606}
+      - {x: 22.5, y: 127.99606}
+      - {x: 21.758823, y: 127.5}
+--- !u!60 &60614342460402088
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1272939664274718}
+  m_GameObject: {fileID: 1540426168804516}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -233,48 +201,186 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 20.38889, y: 1.5}
-      - {x: 34.5, y: 2.85}
-      - {x: 35.462963, y: 3.5}
-      - {x: 35.5, y: 5.5}
-      - {x: 35.5, y: 5.5}
-      - {x: 31.380281, y: 63.5}
-      - {x: 30.5, y: 63.994072}
-      - {x: 12.5, y: 63.994072}
-      - {x: 11.619719, y: 63.5}
-      - {x: 11.294118, y: 14.5}
-      - {x: 8.5, y: 6.601695}
-      - {x: 7.1751595, y: 5.5}
-      - {x: 7.1973686, y: 3.5}
-      - {x: 7.5, y: 3.1377952}
-      - {x: 19.5, y: 1.560606}
---- !u!114 &114303573613086716
+    - - {x: 64.01822, y: 4.5}
+      - {x: 64.5, y: 3.8}
+      - {x: 69.253624, y: 4.5}
+      - {x: 69.74261, y: 5.5}
+      - {x: 69.5, y: 10.140625}
+      - {x: 69.28704, y: 10.5}
+      - {x: 67.5, y: 11.5}
+      - {x: 67.5, y: 11.5}
+      - {x: 64.5, y: 23.596775}
+      - {x: 64.12136, y: 21.5}
+--- !u!60 &60677301354485786
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540426168804516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 21.758823, y: 128.5}
+      - {x: 22.5, y: 128.00394}
+      - {x: 60.5, y: 128.00394}
+      - {x: 61.241177, y: 128.5}
+      - {x: 61.241177, y: 191.5}
+      - {x: 60.5, y: 191.99606}
+      - {x: 22.5, y: 191.99606}
+      - {x: 21.758823, y: 191.5}
+--- !u!60 &60709549854634436
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540426168804516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 64.12745, y: 235.5}
+      - {x: 64.5, y: 234.93704}
+      - {x: 81.06463, y: 243.5}
+      - {x: 81.68987, y: 244.5}
+      - {x: 81.5, y: 246.2069}
+      - {x: 81.206894, y: 246.5}
+      - {x: 64.5, y: 246.7426}
+      - {x: 64.25739, y: 246.5}
+      - {x: 64.00196, y: 236.5}
+--- !u!60 &60822873027843624
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540426168804516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 21.758823, y: 192.5}
+      - {x: 22.5, y: 192.00394}
+      - {x: 60.5, y: 192.00394}
+      - {x: 61.241177, y: 192.5}
+      - {x: 61.5, y: 210.39796}
+      - {x: 61.554348, y: 210.5}
+      - {x: 63.402172, y: 211.5}
+      - {x: 63.592197, y: 217.5}
+      - {x: 61.274193, y: 220.5}
+      - {x: 63.742603, y: 246.5}
+      - {x: 63.5, y: 246.7426}
+      - {x: 1.7931035, y: 246.5}
+      - {x: 1.5, y: 246.2069}
+      - {x: 1.3101265, y: 244.5}
+      - {x: 3.5, y: 241.49187}
+      - {x: 18.5, y: 235.20073}
+      - {x: 19.064707, y: 234.5}
+      - {x: 21.670069, y: 220.5}
+      - {x: 18.969513, y: 217.5}
+      - {x: 19.070312, y: 211.5}
+      - {x: 19.5, y: 211.17647}
+      - {x: 21.47701, y: 210.5}
+      - {x: 21.758823, y: 209.5}
+--- !u!60 &60894221864217846
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540426168804516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 38.18421, y: 1.5}
+      - {x: 63.5, y: 3.7075472}
+      - {x: 63.996063, y: 4.5}
+      - {x: 63.826317, y: 25.5}
+      - {x: 61.04706, y: 28.5}
+      - {x: 61.111763, y: 63.5}
+      - {x: 60.5, y: 63.948277}
+      - {x: 22.5, y: 63.996063}
+      - {x: 21.758823, y: 63.5}
+      - {x: 21.5, y: 27.842857}
+      - {x: 20.5, y: 26.5}
+      - {x: 20.5, y: 26.5}
+      - {x: 16.5, y: 12.264151}
+      - {x: 13.174797, y: 10.5}
+      - {x: 13.121849, y: 4.5}
+      - {x: 13.5, y: 4.2352943}
+      - {x: 37.5, y: 1.5935252}
+--- !u!114 &114037482941217960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1644491678401426}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fbcb04c243139438f8b0b3f28d0e81, type: 3}
+  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 3
-  Fade: 0
-  FadeDuration: 1
-  Shrink: 0
-  ShrinkDuration: 1
-  RandomizeOnEnable: 0
-  LifeMin: 3
-  LifeMax: 5
-  startColor: {r: 0, g: 0, b: 0, a: 0}
-  startLocalScale: {x: 0, y: 0, z: 0}
---- !u!114 &114354172223849376
+--- !u!114 &114186204386216022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
+  m_GameObject: {fileID: 1644491678401426}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
@@ -295,7 +401,7 @@ MonoBehaviour:
   OnRequirementMet:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114303573613086716}
+      - m_Target: {fileID: 114441464479710634}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -309,72 +415,12 @@ MonoBehaviour:
     m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   met: 0
---- !u!114 &114537190843671526
+--- !u!114 &114424588470846358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MassPerSolidPixel: 0.01
---- !u!114 &114636203919766728
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3c1fd85e053f64ab748a5f998a9f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114730062189647940
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17edb0917bef22a4e8ae01c185e2d25b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsTrigger: 0
-  Material: {fileID: 0}
-  child: {fileID: 1272939664274718}
-  awoken: 1
-  CellSize: 64
-  Detail: 0.9
-  Weld: 0.01
-  expectedCellSize: 64
-  expectedWidth: 43
-  expectedHeight: 126
-  cellWidth: 1
-  cellHeight: 2
-  cells:
-  - Collider: {fileID: 60017651549346542}
-  - Collider: {fileID: 60012234047292812}
---- !u!114 &114844805235692504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114968123257703442
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1478949075397578}
+  m_GameObject: {fileID: 1644491678401426}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee430af1422046f4c8f35812bff0e6a9, type: 3}
@@ -437,14 +483,90 @@ MonoBehaviour:
     height: 4.91
   alphaRect:
     serializedVersion: 2
-    x: -0.86
-    y: -2.5098386
-    width: 1.72
-    height: 5.019677
-  alphaWidth: 43
-  alphaHeight: 126
-  alphaCount: 2422
-  originalAlphaCount: 2541
-  alphaData: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004101d2a3a506778817e715f4835291d120700000000000000000000000000000000000000042f5067778597b0c5d3e0edf8fcfdfdfbf5e9dcd1c5b39c887c705f481f0000000000000000000000000016aeecf7fcfdfdfefefefefefffffffffffffefefefefefdfdfdfaf4e87c000000000000000000000000001bc4fefffffffffffffffffffffffffffffffffffffffffffffffffffe8c0000000000000000000000000016b3fbfefffffffffffffffffffffffffffffffffffffffffffffffef98000000000000000000000000000043a8ce7fefffffffffffffffffffffffffffffefdfefffffffffff3932900000000000000000000000000000016b7fefffffffffffffffffffffffffffffef6fafffffffffed93200000000000000000000000000000000028ffdfffffffffffffffffffffffffffffdf3f9fffffffffebc18000000000000000000000000000000000072fbfffffffffffffffffffffffffffffdf4fdfffffffffd940400000000000000000000000000000000004debfefffffffffffffffffffffffffffdf4fffffffffffb750000000000000000000000000000000000002cd4fefffffffffffffffffffffffffffdfafffffffffeec5000000000000000000000000000000000000015b6fdfffffffffffffffffffffffffffefefffffffffed52c000000000000000000000000000000000000026decfefffffffffffffffffffffffffffffffffffef2920f00000000000000000000000000000000000000149cfcfffffffffffffffffffffffffffffffffff8961c0000000000000000000000000000000000000000006ffcfffffffffffffffffffffffffffffffffff45f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff660000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff661000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffff864000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffc6d000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006fa6323d00fffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000000000000000003bfffffffffffffffffffffffffd6f0000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffd6f0000000000000000000000000000000000000000000000000000000000f8fffffffffffffffffffffffd6f000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffd6f000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000000089fffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffd6f0000000000000000000000000000000000000000000000000000000000000009fffffffffffffffffffd6f0000000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000000012fffffffffffffffffffffd6f000000000000000000000000000000000000000000000000000000000000fefffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000000000d8fffffffffffffffffffffffffd6f000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffffd6f0000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffffffd6f00000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffffffffd6f0000000000000000000000000000000000000000000000bbfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f000000000000000000000000000000000000000000006ffdfffffffffffffffffffffffffffffffffffd6f0000000000000000000000000000000000000000000070fdfffffdfaf9f9f9f9f9fcfffffffffffffffd7000000000000000000000000000000000000000000640a9fdfffffbe8e2e2e2e2e3f3fffffffffffffffda92f0000000000000000000000000000000000000017b6f7fdfffffffffffffffffffffffffffffffffffef882000000000000000000000000000000000000001ac4fefffffffffffffffffffffffffffffffffffffffd8b0000000000000000000000000000000000000015b7fcfefffffffffffffffffffffffffffffffffffefb8500000000000000000000000000000000000000035ad9fcfffffffffffffffffffffffffffffffffffcd04100000000000000000000000000000000000000000688fcfffffffffffffffffffffffffffffffffffc800300000000000000000000000000000000000000000085fdfffffffffffffffffffffffffffffffffffd820000000000000000000000000000000000000000000da7fdfffffffffffffffffffffffffffffffffffda60c000000000000000000000000000000000000000023cbfefffffffffffffffffffffffffffffffffffecc2400000000000000000000000000000000000000003ee2fefffffffffffffffffffffffffffffffffffee542000000000000000000000000000000000000000064f6fffffffffffffffffffffffffffffffffffffff86b000000000000000000000000000000000000000080fdfffffffffffffffffffffffffffffffffffffffd8a0100000000000000000000000000000000000324affdfffffffffffffffffffffffffffffffffffffffebf3a0a00000000000000000000000000000b397cc1f3fefffffffffffffffffffffffffffffffffefefefef7d498561d0200000000000000000119559ad9f9fefffffffffefefefefefefefefefffffffffffefbfcfefefefcebbc7c3b0d00000000002b73b6ebfdfffffffffffffff3d7d4d4d4d4d4d9f5fffffffffffee9d3d4d4d4d4d4d4cfb176260000002ebaf8fefffffffffffffffffff9ebe9e9e9e9e9ecfafffffffffffef6e9e9e9e9e9e9e9e9e9e7ac2600007bf9fdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefdf77a00004c8b8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8b4c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  alphaScale: {x: 0.9360465, y: 0.97815055}
-  alphaOffset: {x: -0.034161493, y: -0.01116877}
+    x: -0.83
+    y: -2.4799998
+    width: 1.66
+    height: 4.9599996
+  alphaWidth: 83
+  alphaHeight: 248
+  alphaCount: 10271
+  originalAlphaCount: 10271
+  alphaData: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000031526384b5f7386929183715f4d3d2d1c0a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000031526384b5f738699adbfd0e2f5fefefefefefefefef7e7d7c6b4a29282715f4d3d2d1c0a00000000000000000000000000000000000000000000000000000000000000000000000000031526384b5f738699adbfd0e2f5fefefefefefffffffffffffffffffffffffffffffffffefefefefef7e7d7c6b4a29282715f4d3d2d1c0a000000000000000000000000000000000000000000000000000036adbfd0e2f5fefefefefefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefefef7e7d7c6b46f0000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa9000000000000000000000000000000000000000000000000002da8e7fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcd56900000000000000000000000000000000000000000000000000000b4082d1feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe8802b02000000000000000000000000000000000000000000000000000000000067fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f7ffffffffffffffffffffffffffb90f0000000000000000000000000000000000000000000000000000000000000040eafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f5fffffffffffffffffffffffffe9300000000000000000000000000000000000000000000000000000000000000001ec8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeeefffffffffffffffffffffffffe6e000000000000000000000000000000000000000000000000000000000000000004a7fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeaedfffffffffffffffffffffffff44e00000000000000000000000000000000000000000000000000000000000000000083fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeebfcffffffffffffffffffffffffd32900000000000000000000000000000000000000000000000000000000000000000064fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffee3fffffffffffffffffffffffffeae0700000000000000000000000000000000000000000000000000000000000000000040eafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffee0fffffffffffffffffffffffffe8e000000000000000000000000000000000000000000000000000000000000000000001ec8fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffee2fffffffffffffffffffffffffe690000000000000000000000000000000000000000000000000000000000000000000004a7fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffee1ffffffffffffffffffffffffee44000000000000000000000000000000000000000000000000000000000000000000000083fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefeffffffffffffffffffffffffce24000000000000000000000000000000000000000000000000000000000000000000000064fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffea806000000000000000000000000000000000000000000000000000000000000000000000040eafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe830000000000000000000000000000000000000000000000000000000000000000000000001ec6fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe640000000000000000000000000000000000000000000000000000000000000000000000000469ecfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcbe29000000000000000000000000000000000000000000000000000000000000000000000000000980f3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff59f270000000000000000000000000000000000000000000000000000000000000000000000000000001298fafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff18514000000000000000000000000000000000000000000000000000000000000000000000000000000000052faffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdd3300000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe73d00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe83e00000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04600000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd5300000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5400000000000000000000000000000000000000000000000000000000000000000000000000000000000054fefffffffffffffffefefefefefefefefefefefefefefffffffffffffffffffffffffffffffffe54000000000000000000000000000000000000000000000000000000000000000000000000000000000d2b82feffffffffffffffe2aaaaaaaaaaaaaaaaaaaaaab1e9fffffffffffffffffffffffffffffffffe8529060000000000000000000000000000000000000000000000000000000000000000000000000037b7d5f3fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6d3770000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000000000000000000000000000054feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa90000000000000000000000000000000000000000000000000000000000000000000000000053fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffea80000000000000000000000000000000000000000000000000000000000000000000000000033d7fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb8d00000000000000000000000000000000000000000000000000000000000000000000000000004dd7fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdb6230000000000000000000000000000000000000000000000000000000000000000000000000000004dd2fbfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc22f000000000000000000000000000000000000000000000000000000000000000000000000000000000067fafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff85d0000000000000000000000000000000000000000000000000000000000000000000000000000000000006efefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe6400000000000000000000000000000000000000000000000000000000000000000000000000000000000091fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe87000000000000000000000000000000000000000000000000000000000000000000000000000000000009b1fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeaa060000000000000000000000000000000000000000000000000000000000000000000000000000000027d1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf250000000000000000000000000000000000000000000000000000000000000000000000000000000049f1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff149000000000000000000000000000000000000000000000000000000000000000000000000000000006afefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe6c000000000000000000000000000000000000000000000000000000000000000000000000000000008efefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe9100000000000000000000000000000000000000000000000000000000000000000000000000000006acfefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeb50d000000000000000000000000000000000000000000000000000000000000000000000000000024ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd82e000000000000000000000000000000000000000000000000000000000000000000000000000044eefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff653000000000000000000000000000000000000000000000000000000000000000000000000000067fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe79000000000000000000000000000000000000000000000000000000000000000000000000000087fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe9a0000000000000000000000000000000000000000000000000000000000000000000000000004a7feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf1500000000000000000000000000000000000000000000000000000000000000000000000020caffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe345000000000000000000000000000000000000000000000000000000000000000000001759a9f3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffacc87450d00000000000000000000000000000000000000000000000000000000043277bef3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeaae6c29020000000000000000000000000000000000000000000000125097dafcfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffad393521600000000000000000000000000000000000002296eb5effefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefffffffffffffffffffffffef1ba793506000000000000000000000000000d478cd3fafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f4fffffffffffffffffffffffffffffede9e5c1d0000000000000000062665aaeafefffffffffffffffffffffffffffffffffffff9cfbfbfbfbfbfbfbfbfbfbfbfbfbfd4ffffffffffffffffffffffffffffe4bbbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfb5853e0500000000000e81d0f8fffffffffffffffffffffffffffffffffffffffffff9cfbfbfbfbfbfbfbfbfbfbfbfbfbfd4fffffffffffffffffffffffffffff3c8bfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfb85c02000000046ff1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffede500000004bdffefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed34000009efefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe9e0000a9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa900006fa9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a96f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  alphaScale: {x: 0.96987957, y: 0.9899194}
+  alphaOffset: {x: -0.015527936, y: -0.0050916206}
+--- !u!114 &114441464479710634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644491678401426}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fbcb04c243139438f8b0b3f28d0e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 3
+  Fade: 0
+  FadeDuration: 1
+  Shrink: 0
+  ShrinkDuration: 1
+  RandomizeOnEnable: 0
+  LifeMin: 3
+  LifeMax: 5
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  startLocalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &114473270740108374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644491678401426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3c1fd85e053f64ab748a5f998a9f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114478784876207890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644491678401426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17edb0917bef22a4e8ae01c185e2d25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTrigger: 0
+  Material: {fileID: 0}
+  child: {fileID: 1540426168804516}
+  awoken: 1
+  CellSize: 64
+  Detail: 0.9
+  Weld: 0.01
+  expectedCellSize: 64
+  expectedWidth: 83
+  expectedHeight: 248
+  cellWidth: 2
+  cellHeight: 4
+  cells:
+  - Collider: {fileID: 60894221864217846}
+  - Collider: {fileID: 60614342460402088}
+  - Collider: {fileID: 60287511539220722}
+  - Collider: {fileID: 0}
+  - Collider: {fileID: 60677301354485786}
+  - Collider: {fileID: 0}
+  - Collider: {fileID: 60822873027843624}
+  - Collider: {fileID: 60709549854634436}
+--- !u!114 &114547722089115052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644491678401426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassPerSolidPixel: 0.01
