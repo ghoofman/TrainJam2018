@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 233955586975575464}
   - component: {fileID: 235244240141236576}
   - component: {fileID: 235397097525169322}
+  - component: {fileID: 114407235791614872}
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
@@ -461,7 +462,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863032892332948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.72, y: -0.76, z: 0}
+  m_LocalPosition: {x: -19.06, y: -1.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4993360314606786}
@@ -864,6 +865,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplayerEnabled: 0
+--- !u!114 &114407235791614872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969176911043366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d581f988f26641e9a47d04b0de2d837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 0
+  liftOff: 1000
 --- !u!114 &114422262020179146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1514,7 +1528,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 4.2953653, y: -0.103652075}
-  m_ConnectedAnchor: {x: 7.7153645, y: 0.10634792}
+  m_ConnectedAnchor: {x: 7.7153654, y: 0.10634792}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1537,7 +1551,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 6.5535827, y: 0.37285155}
-  m_ConnectedAnchor: {x: 7.2635827, y: -0.74714845}
+  m_ConnectedAnchor: {x: 7.263582, y: -0.74714845}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
