@@ -38,15 +38,15 @@ public class Wheel : MonoBehaviour {
             GetComponent<Rigidbody2D>().MoveRotation(newRotation);
         }
 
-		if (player.GetButtonDown (liftOffButton)) {
-            if (liftOffButton == "RS")
-            {
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, liftOff * 2.0f));
-            }
-            else
-            {
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, liftOff));
-            }
-        }
+//		if (player.GetButtonDown (liftOffButton)) {
+//            if (liftOffButton == "RS")
+//            {
+//                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, liftOff * 2.0f));
+//            }
+//            else
+//            {
+//                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, liftOff));
+//            }
+//        }
     }
 }
