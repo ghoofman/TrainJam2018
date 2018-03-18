@@ -10,7 +10,7 @@ public class BombArrow : MonoBehaviour {
 	public bool collided = false;
 	public bool oneJump = false;
 	private Vector2 contactPoint;
-	private Player player;
+	public Player player;
 
 	public float ForceToAdd = 500.0f;
 	private Rigidbody2D collidedWith;
